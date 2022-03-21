@@ -1,5 +1,11 @@
+import Indice from './modules/Indice'
+
 const App = () => {
-    return <div>Hola</div>
+    return (
+        <>
+            <Indice />
+        </>
+    )
 }
 
 export default App

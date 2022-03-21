@@ -11,31 +11,49 @@ const DISTANCES = {
 }
 
 const COLORS = {
-    gray: '#EBEBEB',
-    lightGray: '#F7F7F7',
-    darkGray: '#969696',
-    black: '#000000',
-    white: '#FFFFFF',
+    gray01: '#F2F2F2',
+    gray02: '#D9D9D9',
+    gray03: '#BFBFBF',
+    gray04: '#A6A6A6',
+    gray05: '#8C8C8C',
+    gray06: '#595959',
+    gray07: '#262626',
+    gray08: '#0D0D0D',
 }
 
+const GRID = {
+    numColumns: 12,
+    columnGap: DISTANCES.small,
+    rowGap: DISTANCES.long,
+    horizontalSpace: DISTANCES.medium,
+    verticalSpace: DISTANCES.long,
+}
+
+const Text = css`
+    color: ${props => props.color || ''};
+`
+
 const TextSmall = css`
+    ${Text}
     font-size: 1rem;
-    line-height: 20px;
+    line-height: 25px;
 `
 
 const TextMedium = css`
-    font-size: 1.125rem;
-    line-height: 21px;
+    ${Text}
+    font-size: 1.188rem;
+    line-height: 29px;
 `
 
 const TextLarge = css`
+    ${Text}
     font-size: 1.875rem;
-    line-height: 36px;
+    line-height: 40px;
 `
 
 const GridLayout = css`
     display: grid;
-    column-gap: ${DISTANCES.small};
+    column-gap: ${GRID.columnGap};
 `
 
 const GlobalStyles = createGlobalStyle`
@@ -53,5 +71,5 @@ const GlobalStyles = createGlobalStyle`
     }
 `
 
-export { COLORS, TextSmall, TextMedium, TextLarge, GridLayout }
+export { COLORS, DISTANCES, GRID, TextSmall, TextMedium, TextLarge, GridLayout }
 export default GlobalStyles

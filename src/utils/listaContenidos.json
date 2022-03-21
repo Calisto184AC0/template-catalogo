@@ -1,0 +1,121 @@
+[
+    {
+        "title": "Dolcker soluciona",
+        "link": "#introduccion"
+    },
+    {
+        "title": "Ventajas del sistema Dolcker",
+        "link": "#ventajas"
+    },
+    {
+        "title": "Aplicaciones",
+        "subList": [
+            {
+                "title": "Rehabilitación",
+                "link": "#rehabilitacion"
+            },
+            {
+                "title": "Obra nueva",
+                "subList": [
+                    {
+                        "title": "Fachadas",
+                        "link": "#fachadas"
+                    },
+                    {
+                        "title": "Terrazas, suelos elevados, techos y soluciones",
+                        "link": "#terrazas"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Diseño",
+        "subList": [
+            {
+                "title": "Formatos",
+                "link": "#formatos"
+            },
+            {
+                "title": "Despieces",
+                "link": "#despieces"
+            },
+            {
+                "title": "Acabados y espesores",
+                "link": "#acabados"
+            },
+            {
+                "title": "Piezas especiales",
+                "link": "#piezas"
+            },
+            {
+                "title": "Series",
+                "subList": [
+                    {
+                        "title": "Piedra",
+                        "link": "#piedra"
+                    },
+                    {
+                        "title": "Cemento",
+                        "link": "#cemento"
+                    },
+                    {
+                        "title": "Madera",
+                        "link": "#madera"
+                    },
+                    {
+                        "title": "Terrazo",
+                        "link": "#terrazo"
+                    },
+                    {
+                        "title": "Monocolor",
+                        "link": "#monocolor"
+                    },
+                    {
+                        "title": "Volumen",
+                        "subList": [
+                            {
+                                "title": "Prueba",
+                                "link": "#"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Características",
+        "subList": [
+            {
+                "title": "Características especiales",
+                "link": "#caracteristicas"
+            },
+            {
+                "title": "Datos técnicos",
+                "link": "#datos-tecnicos"
+            }
+        ]
+    },
+    {
+        "title": "Sistemas",
+        "subList": [
+            {
+                "title": "Dolcker & Clip",
+                "link": "#dolcker-and-clip"
+            },
+            {
+                "title": "Dol-TC10",
+                "link": "#dol-tc10"
+            },
+            {
+                "title": "Dol-TC14",
+                "link": "#dol-tc14"
+            },
+            {
+                "title": "Dol-HC20",
+                "link": "#dol-hc20"
+            }
+        ]
+    }
+]
