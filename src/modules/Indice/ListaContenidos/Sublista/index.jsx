@@ -9,6 +9,7 @@ const OpenSublista = styled.div`
     height: 1rem;
     border-radius: 0.5rem;
     background-color: ${props => props.backgroundColor || ''};
+    transition: background-color 0.3s linear;
 `
 
 const Sublista = React.forwardRef(function SublistaRef(

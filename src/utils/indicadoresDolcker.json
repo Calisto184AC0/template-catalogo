@@ -1,0 +1,27 @@
+[
+    {
+        "top": "25%",
+        "left": "30%",
+        "text": "punto 1"
+    },
+    {
+        "top": "25%",
+        "left": "35%",
+        "text": "punto 2"
+    },
+    {
+        "top": "70%",
+        "left": "35%",
+        "text": "punto 3"
+    },
+    {
+        "top": "55%",
+        "left": "55%",
+        "text": "punto 4"
+    },
+    {
+        "top": "40%",
+        "left": "85%",
+        "text": "punto 5"
+    }
+]

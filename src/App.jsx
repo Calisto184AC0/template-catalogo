@@ -1,3 +1,4 @@
+import Dolcker from './modules/Dolcker'
 import Indice from './modules/Indice'
 import Introduccion from './modules/Introduccion'
 
@@ -6,6 +7,7 @@ const App = () => {
         <>
             <Introduccion />
             <Indice />
+            <Dolcker id='dolcker' />
         </>
     )
 }

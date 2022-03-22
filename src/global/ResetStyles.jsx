@@ -9,6 +9,7 @@ const ResetStyles = createGlobalStyle`
     }
 
     img {
+        display: block;
         width: 100%;
         height: auto;
         object-fit: contain;
