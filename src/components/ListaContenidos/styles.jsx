@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { GRID, TextMedium, COLORS } from '../../../global/GlobalStyles'
+import { GRID, TextMedium, COLORS } from '../../global/GlobalStyles'
 import StyledSublista from './Sublista/styles'
 
 const StyledListaContenidos = styled.nav`

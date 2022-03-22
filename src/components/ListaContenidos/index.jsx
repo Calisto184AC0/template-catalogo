@@ -1,7 +1,7 @@
-import useListaContenidos from '../../../hooks/useListaContenidos'
+import useListaContenidos from '../../hooks/useListaContenidos'
 import StyledListaContenidos from './styles'
 import { useContext } from 'react'
-import ListaContenidosContext from '../../../contexts/ListaContenidosContext'
+import ListaContenidosContext from '../../contexts/ListaContenidosContext'
 
 const ListaContenidos = () => {
     const contendiosJSON = useContext(ListaContenidosContext)

@@ -1,6 +1,6 @@
 import { useRef } from 'react'
-import ElementoLista from '../modules/Indice/ListaContenidos/ElementoLista'
-import Sublista from '../modules/Indice/ListaContenidos/Sublista'
+import ElementoLista from '../components/ListaContenidos/ElementoLista'
+import Sublista from '../components/ListaContenidos/Sublista'
 
 const useListaContenidos = (elementosJSON, parentRefs = []) => {
     let elementos = []

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { COLORS, TextMedium } from '../../../../global/GlobalStyles'
+import { COLORS, TextMedium } from '../../../global/GlobalStyles'
 
 const StyledElementoLista = styled.li`
     a {

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { COLORS, GRID, TextMedium } from '../../../../global/GlobalStyles'
+import { COLORS, GRID, TextMedium } from '../../../global/GlobalStyles'
 
 const StyledSublista = styled.li`
     display: grid;

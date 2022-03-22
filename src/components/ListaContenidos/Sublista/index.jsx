@@ -1,8 +1,8 @@
 import React from 'react'
 import StyledSublista from './styles'
-import useOpenSublista from '../../../../hooks/useOpenSublista'
+import useOpenSublista from '../../../hooks/useOpenSublista'
 import styled from 'styled-components'
-import { COLORS } from '../../../../global/GlobalStyles'
+import { COLORS } from '../../../global/GlobalStyles'
 
 const OpenSublista = styled.div`
     width: 1rem;

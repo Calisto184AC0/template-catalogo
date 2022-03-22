@@ -1,6 +1,6 @@
+import ListaContenidos from '../../components/ListaContenidos'
 import { Titulo } from '../../components/Titulos'
 import { COLORS } from '../../global/GlobalStyles'
-import ListaContenidos from './ListaContenidos'
 import StyledIndice from './styles'
 
 const Indice = () => {
