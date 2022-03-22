@@ -1,18 +1,14 @@
-import styled from 'styled-components'
 import ImageWithCaption from '../../components/ImageWithCaption'
 import { Titulo } from '../../components/Titulos'
 import StyledDolcker from './styles'
-import { COLORS, TextMedium } from '../../global/GlobalStyles'
+import { COLORS } from '../../global/GlobalStyles'
 
 import img1 from '../../assets/images/Dolcker/catalogo3-1-6.png'
 import img2 from '../../assets/images/Dolcker/catalogo3-1-5.png'
 import img3 from '../../assets/images/Dolcker/catalogo3-1-7.png'
 import indicadores from '../../utils/indicadoresDolcker.json'
 import VisualizadorNota from '../../components/VisualizadorNota'
-
-const Text = styled.p`
-    ${TextMedium}
-`
+import Text from '../../components/Text'
 
 const Dolcker = ({ id }) => {
     const propsVisualizador = {
