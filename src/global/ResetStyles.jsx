@@ -8,6 +8,12 @@ const ResetStyles = createGlobalStyle`
         box-sizing: border-box;
     }
 
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
     /* http://meyerweb.com/eric/tools/css/reset/ 
     v2.0 | 20110126
     License: none (public domain)

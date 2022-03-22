@@ -73,12 +73,7 @@
                     },
                     {
                         "title": "Volumen",
-                        "subList": [
-                            {
-                                "title": "Prueba",
-                                "link": "#"
-                            }
-                        ]
+                        "link": "#volumen"
                     }
                 ]
             }
