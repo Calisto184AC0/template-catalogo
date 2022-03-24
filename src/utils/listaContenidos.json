@@ -11,12 +11,20 @@
         "title": "Aplicaciones",
         "subList": [
             {
+                "title": "Aplicaciones",
+                "link": "#aplicaciones"
+            },
+            {
                 "title": "Rehabilitación",
                 "link": "#rehabilitacion"
             },
             {
                 "title": "Obra nueva",
                 "subList": [
+                    {
+                        "title": "Obra nueva",
+                        "link": "#obra-nueva"
+                    },
                     {
                         "title": "Fachadas",
                         "link": "#fachadas"
@@ -32,6 +40,10 @@
     {
         "title": "Diseño",
         "subList": [
+            {
+                "title": "Diseño",
+                "link": "#diseno"
+            },
             {
                 "title": "Formatos",
                 "link": "#formatos"
@@ -51,6 +63,10 @@
             {
                 "title": "Series",
                 "subList": [
+                    {
+                        "title": "Series",
+                        "link": "#series"
+                    },
                     {
                         "title": "Piedra",
                         "link": "#piedra"
@@ -83,8 +99,12 @@
         "title": "Características",
         "subList": [
             {
-                "title": "Características especiales",
+                "title": "Características",
                 "link": "#caracteristicas"
+            },
+            {
+                "title": "Características especiales",
+                "link": "#caracteristicas-especiales"
             },
             {
                 "title": "Datos técnicos",
@@ -95,6 +115,10 @@
     {
         "title": "Sistemas",
         "subList": [
+            {
+                "title": "Sistemas",
+                "link": "#sistemas"
+            },
             {
                 "title": "Dolcker & Clip",
                 "link": "#dolcker-and-clip"

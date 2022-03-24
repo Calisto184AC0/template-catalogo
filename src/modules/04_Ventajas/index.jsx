@@ -3,10 +3,11 @@ import { Titulo } from '../../components/Titulos'
 import StyledVentajas from './styles'
 import img1 from '../../assets/images/Ventajas/catalogo3-1-8.png'
 import Text from '../../components/Text'
+import { COLORS } from '../../global/GlobalStyles'
 
 const Ventajas = ({ id }) => {
     return (
-        <StyledVentajas id={id}>
+        <StyledVentajas id={id} backgroundColor={COLORS.gray02}>
             <Titulo>Ventajas del sistema Dolcker</Titulo>
             <ImageWithCaption
                 src={img1}

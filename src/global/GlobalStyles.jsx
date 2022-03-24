@@ -51,6 +51,12 @@ const TextLarge = css`
     line-height: 40px;
 `
 
+const TextExtraLarge = css`
+    ${Text}
+    font-size: 3.75rem;
+    line-height: 70px;
+`
+
 const GridLayout = css`
     display: grid;
     column-gap: ${GRID.columnGap};
@@ -71,5 +77,14 @@ const GlobalStyles = createGlobalStyle`
     }
 `
 
-export { COLORS, DISTANCES, GRID, TextSmall, TextMedium, TextLarge, GridLayout }
+export {
+    COLORS,
+    DISTANCES,
+    GRID,
+    TextExtraLarge,
+    TextSmall,
+    TextMedium,
+    TextLarge,
+    GridLayout,
+}
 export default GlobalStyles
