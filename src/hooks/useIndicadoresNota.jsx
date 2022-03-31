@@ -2,11 +2,12 @@
 import { Children, useRef } from 'react'
 import Indicador from '../components/Indicador'
 
-const useIndicadores = indicadores => {
+const useIndicadoresNota = indicadores => {
     const containerRef = useRef()
     const textRef = useRef()
 
     const showContainer = text => {
+        containerRef.current.style.visibility = 'visible'
         containerRef.current.style.opacity = 0.7
         textRef.current.innerHTML = text
         textRef.current.getAnimations()[0].play()
@@ -14,6 +15,7 @@ const useIndicadores = indicadores => {
 
     const hideContainer = () => {
         containerRef.current.style.opacity = 0
+        containerRef.current.style.visibility = 'hidden'
     }
 
     const listaIndicadores = Children.toArray(
@@ -36,4 +38,4 @@ const useIndicadores = indicadores => {
     }
 }
 
-export default useIndicadores
+export default useIndicadoresNota

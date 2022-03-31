@@ -45,16 +45,20 @@
                 "link": "#diseno"
             },
             {
-                "title": "Formatos",
-                "link": "#formatos"
+                "title": "Formato",
+                "link": "#formato"
             },
             {
                 "title": "Despieces",
                 "link": "#despieces"
             },
             {
-                "title": "Acabados y espesores",
+                "title": "Acabados",
                 "link": "#acabados"
+            },
+            {
+                "title": "Espesores",
+                "link": "#espesores"
             },
             {
                 "title": "Piezas especiales",

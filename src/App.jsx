@@ -3,6 +3,7 @@ import Indice from './modules/02_Indice'
 import Introduccion from './modules/01_Introduccion'
 import Ventajas from './modules/04_Ventajas'
 import Aplicaciones from './modules/05_Aplicaciones'
+import Disenos from './modules/06_Diseno'
 
 const App = () => {
     return (
@@ -18,6 +19,16 @@ const App = () => {
                     'obra-nueva',
                     'fachadas',
                     'terrazas',
+                ]}
+            />
+            <Disenos
+                id={[
+                    'diseno',
+                    'formato',
+                    'despiece',
+                    'acabados',
+                    'espesores',
+                    'piezas-especiales',
                 ]}
             />
         </>

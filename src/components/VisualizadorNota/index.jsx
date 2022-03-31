@@ -1,4 +1,4 @@
-import useIndicadores from '../../hooks/useIndicadoresNota'
+import useIndicadoresNota from '../../hooks/useIndicadoresNota'
 import VisualizadorWithAnotacion from '../VisualizadorWithAnotacion'
 import StyledVisualizadorNota from './styles'
 
@@ -10,7 +10,7 @@ const VisualizadorNota = ({
     alt = '',
 }) => {
     const { listaIndicadores, containerRef, textRef } =
-        useIndicadores(indicadores)
+        useIndicadoresNota(indicadores)
 
     return (
         <VisualizadorWithAnotacion type={type} text={text}>

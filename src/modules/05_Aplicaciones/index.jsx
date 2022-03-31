@@ -7,7 +7,7 @@ import img2 from '../../assets/images/Aplicaciones/catalogo3-1-10.png'
 import img3 from '../../assets/images/Aplicaciones/catalogo3-1-11.png'
 import img4 from '../../assets/images/Aplicaciones/catalogo3-1-12.png'
 import img5 from '../../assets/images/Aplicaciones/catalogo3-1-13.png'
-import Cita from '../../components/CIta'
+import Cita from '../../components/Cita'
 
 const Aplicaciones = ({ id }) => {
     return (
@@ -27,7 +27,8 @@ const Aplicaciones = ({ id }) => {
                     big
                     cita='El trabajo del arquitecto de hoy es crear hermosos edificios. Eso es todo.'
                     author='Philip Johnson'
-                    color={COLORS.gray01}
+                    colorCita={COLORS.gray01}
+                    colorAutor={COLORS.gray03}
                 />
             </StyledAplicaciones>
             <StyledAplicaciones
@@ -44,7 +45,8 @@ const Aplicaciones = ({ id }) => {
                 <Cita
                     cita='Vivimos en un mundo maravilloso que está lleno de belleza, encanto y aventura. No hay un límite para las aventuras que podemos tener siempre y cuando las busquemos con los ojos bien abiertos.'
                     author='Jawaharial Nehru'
-                    color={COLORS.gray01}
+                    colorCita={COLORS.gray01}
+                    colorAutor={COLORS.gray03}
                 />
             </StyledAplicaciones>
             <StyledAplicaciones
@@ -61,7 +63,8 @@ const Aplicaciones = ({ id }) => {
                 <Cita
                     cita='Cuando estoy trabajando en un problema, nunca pienso en su belleza. Solo pienso en cómo resolver el problema. Pero cuando lo termino, si la solución no es bella, se que está equivocada'
                     author='Richard Buckminster Fuller'
-                    color={COLORS.gray01}
+                    colorCita={COLORS.gray01}
+                    colorAutor={COLORS.gray03}
                 />
             </StyledAplicaciones>
             <StyledAplicaciones id={id[3]} backgroundColor={COLORS.gray08}>

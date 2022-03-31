@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { COLORS, TextExtraLarge, TextMedium } from '../../global/GlobalStyles'
+import { TextExtraLarge, TextMedium } from '../../global/GlobalStyles'
 import StyledCita from './styles'
 
 const BigCita = styled.p`
@@ -14,18 +14,17 @@ const NormalCita = styled.p`
 
 const AuthorText = styled.p`
     ${TextMedium}
-    color: ${COLORS.gray03};
 `
 
-const Cita = ({ cita, author, big, color }) => {
+const Cita = ({ cita, author, big, colorCita, colorAutor }) => {
     return (
         <StyledCita>
             {big ? (
-                <BigCita color={color}>{cita}</BigCita>
+                <BigCita color={colorCita}>{cita}</BigCita>
             ) : (
-                <NormalCita color={color}>{cita}</NormalCita>
+                <NormalCita color={colorCita}>{cita}</NormalCita>
             )}
-            <AuthorText>{author}</AuthorText>
+            <AuthorText color={colorAutor}>{author}</AuthorText>
         </StyledCita>
     )
 }

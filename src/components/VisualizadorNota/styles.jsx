@@ -24,8 +24,9 @@ const StyledVisualizadorNota = styled.div`
 
         background-color: ${COLORS.gray01};
         opacity: 0;
+        visibility: hidden;
 
-        transition: opacity 0.3s;
+        transition: visibility 0.3s, opacity 0.3s;
 
         .visualizador-nota {
             animation: slide-right-fade-in 0.3s;
