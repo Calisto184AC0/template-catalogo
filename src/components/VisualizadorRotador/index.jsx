@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import useConfigRotador from '../../hooks/useConfigRotador'
 import Menu from '../VisualizadorVariaciones/Menu'
 import StyledVisualizadorRotador from './styles'
@@ -26,6 +26,13 @@ const VisualizadorRotador = ({ config }) => {
         }
     }
 
+    const initDragMobile = ({ touches }) => {
+        setIsMouseDown(() => {
+            setInitPos(touches[0].clientX)
+            return true
+        })
+    }
+
     const initDrag = ({ clientX }) => {
         setIsMouseDown(() => {
             setInitPos(clientX)
@@ -49,6 +56,24 @@ const VisualizadorRotador = ({ config }) => {
         }
     }
 
+    const handleTouchMove = ({ touches }) => {
+        const clientX = touches[0].clientX
+
+        if (isMouseDown) {
+            if (clientX - initPos > 10) {
+                setIndexRotador(prevIndex => {
+                    setInitPos(clientX)
+                    return prevIndex - 1
+                })
+            } else if (clientX - initPos < -10) {
+                setIndexRotador(prevIndex => {
+                    setInitPos(clientX)
+                    return prevIndex + 1
+                })
+            }
+        }
+    }
+
     return (
         <StyledVisualizadorRotador>
             <img src='' alt={fondoAlt} ref={currentRef} />
@@ -56,9 +81,12 @@ const VisualizadorRotador = ({ config }) => {
                 className='indicadores'
                 onClick={handleClick}
                 onMouseDown={initDrag}
+                onTouchStart={initDragMobile}
                 onMouseMove={handleMouseMove}
+                onTouchMove={handleTouchMove}
                 onMouseUp={() => setIsMouseDown(false)}
                 onMouseLeave={() => setIsMouseDown(false)}
+                onTouchEnd={() => setIsMouseDown(false)}
             >
                 {indicadores}
             </div>

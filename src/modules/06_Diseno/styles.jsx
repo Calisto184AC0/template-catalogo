@@ -21,6 +21,7 @@ const StyledDisenos = styled(Seccion)`
     }
 
     ${StyledVisualizadorVariaciones}, ${StyledVisualizadorRotador} {
+        align-self: flex-end;
         grid-column: 5 / span 8;
     }
 `

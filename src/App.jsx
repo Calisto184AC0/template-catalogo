@@ -28,7 +28,7 @@ const App = () => {
                     'despiece',
                     'acabados',
                     'espesores',
-                    'piezas-especiales',
+                    'piezas',
                 ]}
             />
         </>

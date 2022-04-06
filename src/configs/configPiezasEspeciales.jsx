@@ -1,9 +1,5 @@
 import { selects } from '../assets/images/Diseno/Formato'
 
-const imgsGlob = import.meta.glob(
-    '../assets/images/Diseno/Piezas especiales/**/*.jpg'
-)
-
 let albardilla = import.meta.glob(
         '../assets/images/Diseno/Piezas especiales/ALBARDILLA/*.jpg'
     ),
