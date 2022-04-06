@@ -4,6 +4,7 @@ import StyledAnotacion from '../../components/Anotacion/styles'
 import StyledCita from '../../components/Cita/styles'
 import StyledImageWithCaption from '../../components/ImageWithCaption/styles'
 import Seccion from '../../components/Seccion'
+import StyledVisualizadorRotador from '../../components/VisualizadorRotador/styles'
 import StyledVisualizadorVariaciones from '../../components/VisualizadorVariaciones/styles'
 
 const StyledDisenos = styled(Seccion)`
@@ -19,7 +20,7 @@ const StyledDisenos = styled(Seccion)`
         grid-column: 3 / span 2;
     }
 
-    ${StyledVisualizadorVariaciones} {
+    ${StyledVisualizadorVariaciones}, ${StyledVisualizadorRotador} {
         grid-column: 5 / span 8;
     }
 `

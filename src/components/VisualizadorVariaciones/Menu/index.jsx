@@ -24,10 +24,10 @@ const Menu = ({
         } else {
             setIsOverflow(false)
         }
-    }, [idMenu, isOpen])
+    }, [selectores, menuContainerRef, isOverflow])
 
     const menuStyles = css`
-        opacity: ${isOpen ? '0.7' : '0'};
+        opacity: ${isOpen ? '1' : '0'};
         visibility: ${isOpen ? 'visible' : 'hidden'};
 
         ${StyledSelector}:nth-child(${seleccionado + 1}) {
@@ -63,7 +63,7 @@ const Menu = ({
                 <img
                     src={izq}
                     alt='Desplazar izquierda'
-                    style={{ opacity: 0 }}
+                    style={{ opacity: 0, cursor: 'auto' }}
                 />
             )}
             <div
@@ -84,7 +84,11 @@ const Menu = ({
                     }}
                 />
             ) : (
-                <img src={der} alt='Desplazar derecha' style={{ opacity: 0 }} />
+                <img
+                    src={der}
+                    alt='Desplazar derecha'
+                    style={{ opacity: 0, cursor: 'auto' }}
+                />
             )}
         </StyledMenu>
     )

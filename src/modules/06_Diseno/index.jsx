@@ -8,6 +8,9 @@ import fondo from '../../assets/images/Diseno/Formato/fondo.jpg'
 import indicadoresFormato from '../../utils/indicadoresFormato'
 import Anotacion from '../../components/Anotacion'
 import VisualizadorVariaciones from '../../components/VisualizadorVariaciones'
+import Anotaciones from '../../components/Anotacion/Anotaciones'
+import VisualizadorRotador from '../../components/VisualizadorRotador'
+import config from '../../configs/configPiezasEspeciales'
 
 const Disenos = ({ id }) => {
     const propsFormato = {
@@ -56,6 +59,17 @@ const Disenos = ({ id }) => {
             </StyledDisenos>
             <StyledDisenos id={id[5]} backgroundColor={COLORS.gray02}>
                 <Titulo2>Piezas especiales</Titulo2>
+                <Anotaciones>
+                    <Anotacion
+                        type='normal'
+                        text='Pulsa en el punto para ver todas las posibilidades de piezas especiales'
+                    />
+                    <Anotacion
+                        type='swipe'
+                        text='Desliza con el ratón o el dedo para rotar la imagen 360º'
+                    />
+                </Anotaciones>
+                <VisualizadorRotador config={config} />
             </StyledDisenos>
         </>
     )

@@ -1,15 +1,12 @@
 import styled from 'styled-components'
-import StyledMenu from './Menu/styles'
+import StyledMenu from '../VisualizadorVariaciones/Menu/styles'
 
-const StyledVisualizadorVariaciones = styled.div`
+const StyledVisualizadorRotador = styled.div`
     position: relative;
+    user-select: none;
 
-    .img-foreground {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        // No pongo más porque ya está definido en img {widht y height 100%}
+    img {
+        user-select: none;
     }
 
     .indicadores {
@@ -30,4 +27,4 @@ const StyledVisualizadorVariaciones = styled.div`
     }
 `
 
-export default StyledVisualizadorVariaciones
+export default StyledVisualizadorRotador

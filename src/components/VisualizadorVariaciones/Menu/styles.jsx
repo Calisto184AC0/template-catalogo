@@ -32,6 +32,17 @@ const StyledMenu = styled.div`
         padding: ${DISTANCES.small};
 
         scroll-behavior: smooth;
+
+        ::-webkit-scrollbar {
+            width: 7px;
+            height: 7px;
+            background-color: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 7px;
+            background: ${COLORS.gray04};
+        }
     }
 `
 
