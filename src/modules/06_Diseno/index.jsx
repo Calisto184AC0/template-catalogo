@@ -11,6 +11,7 @@ import VisualizadorVariaciones from '../../components/VisualizadorVariaciones'
 import Anotaciones from '../../components/Anotacion/Anotaciones'
 import VisualizadorRotador from '../../components/VisualizadorRotador'
 import config from '../../configs/configPiezasEspeciales'
+import Series from './06_1_Series'
 
 const Disenos = ({ id }) => {
     const propsFormato = {
@@ -71,6 +72,16 @@ const Disenos = ({ id }) => {
                 </Anotaciones>
                 <VisualizadorRotador config={config} />
             </StyledDisenos>
+            <Series
+                ids={[
+                    'piedra',
+                    'Cemento',
+                    'Madera',
+                    'Terrazo',
+                    'Monocolor',
+                    'Volumen',
+                ]}
+            />
         </>
     )
 }

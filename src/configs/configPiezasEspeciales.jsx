@@ -1,6 +1,6 @@
 import { selects } from '../assets/images/Diseno/Formato'
 
-let albardilla = import.meta.glob(
+const albardilla = import.meta.glob(
         '../assets/images/Diseno/Piezas especiales/ALBARDILLA/*.jpg'
     ),
     peldano1 = import.meta.glob(
