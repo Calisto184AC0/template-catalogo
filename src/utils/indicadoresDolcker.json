@@ -1,27 +1,42 @@
 [
     {
-        "top": "25%",
-        "left": "30%",
-        "text": "punto 1"
+        "top": "21%",
+        "left": "23%",
+        "text": "Recercos"
     },
     {
-        "top": "25%",
-        "left": "35%",
-        "text": "punto 2"
+        "top": "5%",
+        "left": "33%",
+        "text": "Tapa coronación"
     },
     {
-        "top": "70%",
-        "left": "35%",
-        "text": "punto 3"
+        "top": "27%",
+        "left": "43%",
+        "text": "Fachada ventilada"
     },
     {
-        "top": "55%",
+        "top": "21%",
         "left": "55%",
-        "text": "punto 4"
+        "text": "Esquina full body"
     },
     {
-        "top": "40%",
-        "left": "85%",
-        "text": "punto 5"
+        "top": "34.5%",
+        "left": "51%",
+        "text": "Rejilla techo"
+    },
+    {
+        "top": "60%",
+        "left": "90%",
+        "text": "Suelo elevado"
+    },
+    {
+        "top": "69%",
+        "left": "32%",
+        "text": "Rejilla piscina"
+    },
+    {
+        "top": "76%",
+        "left": "70%",
+        "text": "Peldaño"
     }
 ]

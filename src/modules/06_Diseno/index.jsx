@@ -3,7 +3,7 @@ import ImageWithCaption from '../../components/ImageWithCaption'
 import { Titulo, Titulo2 } from '../../components/Titulos'
 import { COLORS } from '../../global/GlobalStyles'
 import StyledDisenos from './styles'
-import img1 from '../../assets/images/Diseno/catalogo3-1-14.png'
+import img1 from '../../assets/images/Diseno/catalogo3-1-14.jpg'
 import fondo from '../../assets/images/Diseno/Formato/fondo.jpg'
 import indicadoresFormato from '../../utils/indicadoresFormato'
 import Anotacion from '../../components/Anotacion'
@@ -11,6 +11,7 @@ import VisualizadorVariaciones from '../../components/VisualizadorVariaciones'
 import Anotaciones from '../../components/Anotacion/Anotaciones'
 import VisualizadorRotador from '../../components/VisualizadorRotador'
 import config from '../../configs/configPiezasEspeciales'
+import configAcabados from '../../configs/configAcabados'
 import Series from './06_1_Series'
 
 const Disenos = ({ id }) => {
@@ -54,6 +55,20 @@ const Disenos = ({ id }) => {
             </StyledDisenos>
             <StyledDisenos id={id[3]} backgroundColor={COLORS.gray02}>
                 <Titulo2>Acabados</Titulo2>
+                <Anotaciones>
+                    <Anotacion
+                        type='normal'
+                        text='Pulsa en el punto para ver todas las posibilidades de piezas especiales'
+                    />
+                    <Anotacion
+                        type='swipe'
+                        text='Desliza con el ratón o el dedo para rotar la imagen 360º'
+                    />
+                </Anotaciones>
+                <VisualizadorRotador
+                    config={configAcabados}
+                    isDesplazador='true'
+                />
             </StyledDisenos>
             <StyledDisenos id={id[4]} backgroundColor={COLORS.gray02}>
                 <Titulo2>Espesores</Titulo2>
@@ -74,12 +89,20 @@ const Disenos = ({ id }) => {
             </StyledDisenos>
             <Series
                 ids={[
-                    'piedra',
-                    'Cemento',
-                    'Madera',
-                    'Terrazo',
-                    'Monocolor',
-                    'Volumen',
+                    'basalt',
+                    'dolm',
+                    'dquartz',
+                    'marble',
+                    'stone',
+                    'quarcity',
+                    'crete',
+                    'portland',
+                    'space',
+                    'tzment',
+                    'wood',
+                    'terrazo',
+                    'arquitect',
+                    'volumen',
                 ]}
             />
         </>

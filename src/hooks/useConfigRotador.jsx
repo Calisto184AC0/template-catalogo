@@ -241,21 +241,33 @@ const getIndicadores = ({
     return <Indicador {...indicadorProps} />
 }
 
-const useConfigRotador = config => {
+const useConfigRotador = (config, isDesplazador) => {
     const [indexRotador, setIndexRotador] = useState(0)
     const [rotador, setRotador] = useState([])
     const currentRef = useRef()
 
     useEffect(() => {
         if (rotador.length > 0) {
-            if (indexRotador === rotador.length) {
-                setIndexRotador(0)
-            } else if (indexRotador < 0) {
-                setIndexRotador(rotador.length - 1)
+            if (isDesplazador) {
+                if (indexRotador === rotador.length) {
+                    setIndexRotador(rotador.length - 1)
+                } else if (indexRotador < 0) {
+                    setIndexRotador(0)
+                } else {
+                    rotador[indexRotador]().then(
+                        res => (currentRef.current.src = res.default)
+                    )
+                }
             } else {
-                rotador[indexRotador]().then(
-                    res => (currentRef.current.src = res.default)
-                )
+                if (indexRotador === rotador.length) {
+                    setIndexRotador(0)
+                } else if (indexRotador < 0) {
+                    setIndexRotador(rotador.length - 1)
+                } else {
+                    rotador[indexRotador]().then(
+                        res => (currentRef.current.src = res.default)
+                    )
+                }
             }
         }
     }, [indexRotador, rotador])

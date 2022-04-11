@@ -3,7 +3,7 @@ import useConfigRotador from '../../hooks/useConfigRotador'
 import Menu from '../VisualizadorVariaciones/Menu'
 import StyledVisualizadorRotador from './styles'
 
-const VisualizadorRotador = ({ config }) => {
+const VisualizadorRotador = ({ config, isDesplazador }) => {
     const {
         currentRef,
         fondoAlt,
@@ -15,7 +15,7 @@ const VisualizadorRotador = ({ config }) => {
         idMenu,
         changeSeleccionado,
         setIndexRotador,
-    } = useConfigRotador(config)
+    } = useConfigRotador(config, isDesplazador)
 
     const [isMouseDown, setIsMouseDown] = useState(false)
     const [initPos, setInitPos] = useState(0)
@@ -40,38 +40,44 @@ const VisualizadorRotador = ({ config }) => {
         })
     }
 
-    const handleMouseMove = ({ clientX }) => {
+    const movement = posX => {
         if (isMouseDown) {
-            if (clientX - initPos > 25) {
-                setIndexRotador(prevIndex => {
-                    setInitPos(clientX)
-                    return prevIndex - 1
-                })
-            } else if (clientX - initPos < -25) {
-                setIndexRotador(prevIndex => {
-                    setInitPos(clientX)
-                    return prevIndex + 1
-                })
+            if (isDesplazador) {
+                if (posX - initPos > 70) {
+                    setIndexRotador(prevIndex => {
+                        setInitPos(posX)
+                        return prevIndex + 1
+                    })
+                } else if (posX - initPos < -70) {
+                    setIndexRotador(prevIndex => {
+                        setInitPos(posX)
+                        return prevIndex - 1
+                    })
+                }
+            } else {
+                if (posX - initPos > 25) {
+                    setIndexRotador(prevIndex => {
+                        setInitPos(posX)
+                        return prevIndex - 1
+                    })
+                } else if (posX - initPos < -25) {
+                    setIndexRotador(prevIndex => {
+                        setInitPos(posX)
+                        return prevIndex + 1
+                    })
+                }
             }
         }
     }
 
-    const handleTouchMove = ({ touches }) => {
-        const clientX = touches[0].clientX
+    const handleMouseMove = ({ clientX }) => {
+        movement(clientX)
+    }
 
-        if (isMouseDown) {
-            if (clientX - initPos > 10) {
-                setIndexRotador(prevIndex => {
-                    setInitPos(clientX)
-                    return prevIndex - 1
-                })
-            } else if (clientX - initPos < -10) {
-                setIndexRotador(prevIndex => {
-                    setInitPos(clientX)
-                    return prevIndex + 1
-                })
-            }
-        }
+    const handleTouchMove = ({ touches }) => {
+        const posX = touches[0].clientX
+
+        movement(posX)
     }
 
     return (

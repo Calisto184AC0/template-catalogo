@@ -1,7 +1,7 @@
 import ImageWithCaption from '../../components/ImageWithCaption'
 import { Titulo } from '../../components/Titulos'
 import StyledVentajas from './styles'
-import img1 from '../../assets/images/Ventajas/catalogo3-1-8.png'
+import img1 from '../../assets/images/Ventajas/catalogo3-1-8.jpg'
 import Text from '../../components/Text'
 import { COLORS } from '../../global/GlobalStyles'
 

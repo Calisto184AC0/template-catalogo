@@ -1,13 +1,13 @@
 const ejemplosImports = import.meta.glob(
-    '../assets/images/Series/Arquitect/ejemplos/*.jpg'
+    '../../assets/images/Series/ARQUITECT/AMBIENTES/**'
 )
 
 const muestrasImports = import.meta.glob(
-    '../assets/images/Series/Arquitect/muestras/*.jpg'
+    '../../assets/images/Series/ARQUITECT/DESPIECE/**'
 )
 
 const acabadosImports = import.meta.glob(
-    '../assets/images/Series/Arquitect/acabados/*.png'
+    '../../assets/images/Series/ARQUITECT/acabados/**'
 )
 
 const execPromises = async imports => {
@@ -20,10 +20,12 @@ const ejemplos = await execPromises(ejemplosImports)
 const muestras = await execPromises(muestrasImports)
 const acabados = await execPromises(acabadosImports)
 
+console.log(ejemplos)
+
 const configArquitect = {
     titulo: 'DO&ARQUITECT',
     descripcion:
-        'La serie ARQUITEC es el resultado de la innovación y la funcionalidad, la unión entre la técnica más avanzada y versatilidad. Los formatos de la colección, sus tonalidades neutras y su aspecto monocromático, le permite protagonizar cualquier espacio.',
+        'La serie ARQUITECT es el resultado de la innovación y la funcionalidad, la unión entre la técnica más avanzada y versatilidad. Los formatos de la colección, sus tonalidades neutras y su aspecto monocromático, le permite protagonizar cualquier espacio.',
     ejemplos: [
         {
             imagen: ejemplos[0],

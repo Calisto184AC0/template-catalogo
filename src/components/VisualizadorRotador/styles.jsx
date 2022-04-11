@@ -10,6 +10,7 @@ const StyledVisualizadorRotador = styled.div`
     }
 
     .indicadores {
+        cursor: col-resize;
         position: absolute;
         top: 0;
         right: 0;

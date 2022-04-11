@@ -33,6 +33,10 @@ const StyledMenu = styled.div`
 
         scroll-behavior: smooth;
 
+        span {
+            width: max-content;
+        }
+
         ::-webkit-scrollbar {
             width: 7px;
             height: 7px;

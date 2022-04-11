@@ -35,7 +35,7 @@ const StyledDolcker = styled(Seccion)`
     }
 
     ${StyledVisualizadorNota} {
-        grid-column: 5 / span 7;
+        grid-column: 5 / span 8;
         grid-row-start: 2;
     }
 `

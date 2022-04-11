@@ -4,12 +4,7 @@ import StyledImageWithCaption from '../../../components/ImageWithCaption/styles'
 import Seccion from '../../../components/Seccion'
 import Text from '../../../components/Text'
 import { Titulo } from '../../../components/Titulos'
-import {
-    COLORS,
-    DISTANCES,
-    GRID,
-    GridLayout,
-} from '../../../global/GlobalStyles'
+import { COLORS, DISTANCES, GridLayout } from '../../../global/GlobalStyles'
 
 const StyledSerie = styled(Seccion)`
     row-gap: ${DISTANCES.medium};
@@ -67,6 +62,7 @@ const StyledSerie = styled(Seccion)`
         grid-column: 5 / -1;
 
         ${GridLayout}
+        row-gap: ${DISTANCES.small};
         grid-template-columns: repeat(4, 1fr);
 
         img {
