@@ -1,14 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-import FontStyles from './global/FontStyles'
+// import FontStyles from './global/FontStyles'
+import './assets/fonts/fonts.css'
 import GlobalStyles from './global/GlobalStyles'
 import ResetStyles from './global/ResetStyles'
 
 ReactDOM.render(
     <React.StrictMode>
         <ResetStyles />
-        <FontStyles />
+        {/* <FontStyles /> */}
         <GlobalStyles />
         <App />
     </React.StrictMode>,

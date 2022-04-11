@@ -2,7 +2,7 @@ import { css } from 'styled-components'
 import { createGlobalStyle } from 'styled-components'
 
 const FONT_SIZE_DEFAULT = '16px'
-const FONT_FAMILY = 'Inter'
+const FONT_FAMILY = 'Poppins'
 
 const DISTANCES = {
     small: '1.563rem',
@@ -69,7 +69,7 @@ const GlobalStyles = createGlobalStyle`
 
     body {
         font-size: ${FONT_SIZE_DEFAULT};
-        font-family: ${FONT_FAMILY};
+        /* font-family: ${FONT_FAMILY}; */
     }
 
     strong {

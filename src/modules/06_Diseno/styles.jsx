@@ -6,8 +6,11 @@ import StyledImageWithCaption from '../../components/ImageWithCaption/styles'
 import Seccion from '../../components/Seccion'
 import StyledVisualizadorRotador from '../../components/VisualizadorRotador/styles'
 import StyledVisualizadorVariaciones from '../../components/VisualizadorVariaciones/styles'
+import { COLORS, DISTANCES, GridLayout } from '../../global/GlobalStyles'
 
 const StyledDisenos = styled(Seccion)`
+    row-gap: ${DISTANCES.medium};
+
     ${StyledImageWithCaption} {
         grid-column: 5 / span 8;
     }
@@ -20,6 +23,53 @@ const StyledDisenos = styled(Seccion)`
         grid-column: 3 / span 2;
     }
 
+    .espesores-ejemplos {
+        grid-column: 5 / span 7;
+
+        ${GridLayout}
+        grid-template-columns: repeat(7, 1fr);
+
+        img {
+            height: min-content;
+        }
+
+        img:nth-of-type(1) {
+            grid-column: 1 / span 4;
+        }
+        img:nth-of-type(2) {
+            grid-column: 5 / span 3;
+        }
+    }
+
+    .espesor {
+        grid-row: 2;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+
+            strong {
+                padding: ${DISTANCES.small} 0;
+            }
+
+            li {
+                border-top: 1px solid ${COLORS.gray05};
+                padding: ${DISTANCES.small} 0;
+            }
+        }
+    }
+
+    .espesor-1 {
+        grid-column: 5 / span 2;
+    }
+
+    .espesor-2 {
+        grid-column: 7 / span 2;
+    }
+
+    .espesor-3 {
+        grid-column: 9 / span 2;
+    }
     ${StyledVisualizadorVariaciones}, ${StyledVisualizadorRotador} {
         align-self: flex-end;
         grid-column: 5 / span 8;

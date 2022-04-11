@@ -38,12 +38,12 @@ const config = {
             },
             {
                 selectorImg: selects[1],
-                titulo: 'Tipo 1',
+                titulo: 'Lapado',
                 rotador: lapadoImports,
             },
             {
                 selectorImg: selects[1],
-                titulo: 'Tipo 2',
+                titulo: 'Mate',
                 rotador: mateImports,
             },
         ],

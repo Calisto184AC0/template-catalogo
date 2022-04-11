@@ -85,7 +85,7 @@ const reducer = (state, { type, payload }) => {
                 }
             }
 
-            //console.log(newMenu)
+            //
 
             return newMenu
         }

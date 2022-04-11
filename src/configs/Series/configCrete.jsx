@@ -1,26 +1,20 @@
-const ejemplosImports = import.meta.glob(
+import getDataFromModules from '../../helpers/getDataFromModules'
+
+const ejemplosImports = import.meta.globEager(
     '../../assets/images/Series/CRETE/AMBIENTES/**'
 )
 
-const muestrasImports = import.meta.glob(
+const muestrasImports = import.meta.globEager(
     '../../assets/images/Series/CRETE/DESPIECE/**'
 )
 
-const acabadosImports = import.meta.glob(
-    '../../assets/images/Series/AQUITECT/acabados/**'
+const acabadosImports = import.meta.globEager(
+    '../../assets/images/Series/CRETE/acabados/**'
 )
 
-const execPromises = async imports => {
-    const promises = Object.values(imports).map(importFunc => importFunc())
-    const modules = await Promise.all(promises)
-    return modules.map(elem => elem.default)
-}
-
-const ejemplos = await execPromises(ejemplosImports)
-const muestras = await execPromises(muestrasImports)
-const acabados = await execPromises(acabadosImports)
-
-console.log(ejemplos)
+const ejemplos = getDataFromModules(ejemplosImports)
+const muestras = getDataFromModules(muestrasImports)
+const acabados = getDataFromModules(acabadosImports)
 
 const configCRETE = {
     titulo: 'DO&CRETE',
