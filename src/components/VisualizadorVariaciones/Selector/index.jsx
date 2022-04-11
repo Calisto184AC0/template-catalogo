@@ -17,9 +17,7 @@ const Selector = ({
 
             if (Array.isArray(primerPlano)) {
                 setRotador(primerPlano)
-                primerPlano[indexRotador]().then(
-                    res => (foregroundImgRef.current.src = res.default)
-                )
+                foregroundImgRef.current.src = primerPlano[indexRotador]
             } else {
                 foregroundImgRef.current.src = primerPlano
             }

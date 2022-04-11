@@ -129,9 +129,7 @@ const getSelectores = ({
             if (menu === undefined) {
                 if (seleccionado === index) {
                     // Esto sirve para que las capas ya tengan un preseleccionado
-                    rotador[indexRotador]().then(
-                        res => (currentRef.current.src = res.default)
-                    )
+                    currentRef.current.src = rotador[indexRotador]
                     setRotador(rotador)
                 }
 
@@ -247,6 +245,10 @@ const useConfigRotador = (config, isDesplazador) => {
     const currentRef = useRef()
 
     useEffect(() => {
+        rotador.map(img => new Image(img))
+    }, [rotador])
+
+    useEffect(() => {
         if (rotador.length > 0) {
             if (isDesplazador) {
                 if (indexRotador === rotador.length) {
@@ -254,9 +256,7 @@ const useConfigRotador = (config, isDesplazador) => {
                 } else if (indexRotador < 0) {
                     setIndexRotador(0)
                 } else {
-                    rotador[indexRotador]().then(
-                        res => (currentRef.current.src = res.default)
-                    )
+                    currentRef.current.src = rotador[indexRotador]
                 }
             } else {
                 if (indexRotador === rotador.length) {
@@ -264,9 +264,7 @@ const useConfigRotador = (config, isDesplazador) => {
                 } else if (indexRotador < 0) {
                     setIndexRotador(rotador.length - 1)
                 } else {
-                    rotador[indexRotador]().then(
-                        res => (currentRef.current.src = res.default)
-                    )
+                    currentRef.current.src = rotador[indexRotador]
                 }
             }
         }

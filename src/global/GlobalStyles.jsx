@@ -73,7 +73,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     strong {
-        font-weight: bold;
+        font-weight: bold !important;
     }
 `
 
