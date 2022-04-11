@@ -244,8 +244,21 @@ const useConfigRotador = (config, isDesplazador) => {
     const [rotador, setRotador] = useState([])
     const currentRef = useRef()
 
+    const cacheImages = async srcArray => {
+        const promises = await srcArray.map(src => {
+            return new Promise((res, rej) => {
+                const img = new Image()
+                img.src = src
+                img.onload = res()
+                img.onerror = rej()
+            })
+        })
+
+        await Promise.all(promises)
+    }
+
     useEffect(() => {
-        rotador.map(img => new Image(img))
+        cacheImages(rotador)
     }, [rotador])
 
     useEffect(() => {
