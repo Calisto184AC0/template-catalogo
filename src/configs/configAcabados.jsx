@@ -11,20 +11,9 @@ const flamed = import.meta.globEager(
         '../assets/images/Diseno/Acabados/RENDER MATE/**'
     )
 
-const ordenar = imgs => {
-    return imgs.sort((a, b) => {
-        const aAux = Number.parseInt(a.match(/(?<=\()[0-9]+(?=\))/g)[0])
-        const bAux = Number.parseInt(b.match(/(?<=\()[0-9]+(?=\))/g)[0])
-
-        if (aAux < bAux) return -1
-        if (aAux > bAux) return 1
-        return 0
-    })
-}
-
-const flamedImports = ordenar(getDataFromModules(flamed)),
-    lapadoImports = ordenar(getDataFromModules(lapado)),
-    mateImports = ordenar(getDataFromModules(mate))
+const flamedImports = getDataFromModules(flamed),
+    lapadoImports = getDataFromModules(lapado),
+    mateImports = getDataFromModules(mate)
 
 const config = {
     top: '90%',

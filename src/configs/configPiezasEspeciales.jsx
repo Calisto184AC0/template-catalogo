@@ -26,25 +26,14 @@ const albardilla = import.meta.globEager(
         '../assets/images/Diseno/Piezas especiales/VIERTEAGUAS/*.jpg'
     )
 
-const ordenar = imgs => {
-    return imgs.sort((a, b) => {
-        const aAux = Number.parseInt(a.match(/(?<=\()[0-9]+(?=\))/g)[0])
-        const bAux = Number.parseInt(b.match(/(?<=\()[0-9]+(?=\))/g)[0])
-
-        if (aAux < bAux) return -1
-        if (aAux > bAux) return 1
-        return 0
-    })
-}
-
-const albardillaImports = ordenar(getDataFromModules(albardilla)),
-    peldano1Imports = ordenar(getDataFromModules(peldano1)),
-    peldano2Imports = ordenar(getDataFromModules(peldano2)),
-    peldano3Imports = ordenar(getDataFromModules(peldano3)),
-    rejillaImports = ordenar(getDataFromModules(rejilla)),
-    sueloElevadoImports = ordenar(getDataFromModules(sueloElevado)),
-    techoImports = ordenar(getDataFromModules(techo)),
-    vierteaguasImports = ordenar(getDataFromModules(vierteaguas))
+const albardillaImports = getDataFromModules(albardilla),
+    peldano1Imports = getDataFromModules(peldano1),
+    peldano2Imports = getDataFromModules(peldano2),
+    peldano3Imports = getDataFromModules(peldano3),
+    rejillaImports = getDataFromModules(rejilla),
+    sueloElevadoImports = getDataFromModules(sueloElevado),
+    techoImports = getDataFromModules(techo),
+    vierteaguasImports = getDataFromModules(vierteaguas)
 
 const config = {
     top: '90%',

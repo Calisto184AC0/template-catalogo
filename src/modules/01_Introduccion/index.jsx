@@ -1,39 +1,34 @@
-import styled from 'styled-components'
 import StyledIntroduccion from './styles'
-import { COLORS, TextMedium } from '../../global/GlobalStyles'
-import ImageWithCaption from '../../components/ImageWithCaption'
-
-import img1 from '../../assets/images/Introduccion/catalogo3-1-1.png'
-import img2 from '../../assets/images/Introduccion/catalogo3-1-2.png'
-import img3 from '../../assets/images/Introduccion/catalogo-1.png'
-import img4 from '../../assets/images/Introduccion/catalogo3-1-4.png'
-import img5 from '../../assets/images/Introduccion/catalogo3-1-3.png'
-
-const Text = styled.h2`
-    ${TextMedium}
-
-    grid-column: 5 / span 2;
-`
+import { COLORS } from '../../global/GlobalStyles'
+import logo from '../../assets/images/Introduccion/logo.svg'
+import Cita from '../../components/Cita'
+import { useEffect } from 'react'
+import { totalDuration } from './animationsConfig'
+import Scroll from 'react-scroll'
 
 const Introduccion = () => {
+    useEffect(() => {
+        if (window.scrollY === 0) {
+            document.body.style.overflow = 'hidden'
+            setTimeout(() => {
+                Scroll.animateScroll.scrollTo(window.innerHeight, {
+                    duration: 2000,
+                    smooth: true,
+                })
+                document.body.style.overflow = 'auto'
+            }, (totalDuration + 1) * 1000)
+        }
+    }, [])
+
     return (
-        <StyledIntroduccion backgroundColor={COLORS.gray02}>
-            <Text>Catálogo general 2022</Text>
-            <ImageWithCaption
-                src={img1}
-                alt='Imagen del catálogo 1'
-                caption='SISTEMA DOLCKER &CLIP Seguridad mecánica y elástica en el mismo sistema'
+        <StyledIntroduccion backgroundColor={COLORS.gray01}>
+            <img src={logo} alt='logo' />
+            <Cita
+                cita='La arquitectura es el encuentro de la luz con la forma'
+                author='Le Corbusier'
+                big
+                colorAutor={COLORS.gray04}
             />
-            <ImageWithCaption
-                src={img2}
-                alt='Imagen del catálogo 2'
-                caption='DOLCKER &CLIP. Do&Wood Manzano / Do&Crete Gris'
-            />
-            <div>
-                <img src={img3} alt='Imagen del catálogo 3' />
-                <img src={img4} alt='Imagen del catálogo 4' />
-                <img src={img5} alt='Imagen del catálogo 5' />
-            </div>
         </StyledIntroduccion>
     )
 }

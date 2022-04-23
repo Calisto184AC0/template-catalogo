@@ -1,3 +1,4 @@
+import { useRef, useState } from 'react'
 import Anotacion from '../../../components/Anotacion'
 import Text from '../../../components/Text'
 import { Titulo } from '../../../components/Titulos'
@@ -8,15 +9,34 @@ const Serie = ({ id, config, setFullScreenSrc }) => {
     const { titulo, descripcion, imgsEjemplo, imgsMuestra, imgsAcabados } =
         useSerie(config, setFullScreenSrc)
 
+    const [isOverflow, setIsOverflow] = useState(false)
+    const divEjemplosRef = useRef()
+
+    const handleOnLoad = () => {
+        const overflowBoolean =
+            divEjemplosRef.current.scrollWidth >
+            divEjemplosRef.current.clientWidth
+        setIsOverflow(overflowBoolean)
+    }
+
     return (
         <StyledSerie id={id}>
             <Titulo>{titulo}</Titulo>
-            <Anotacion
-                type='swipe'
-                text='Desliza con el ratón o el dedo para ver todas las imágenes'
-                className='anotacion-ejemplo'
-            />
-            <div className='ejemplo-container'>{imgsEjemplo}</div>
+            {isOverflow ? (
+                <Anotacion
+                    type='swipe'
+                    text='Desliza con el ratón o el dedo para ver todas las imágenes'
+                    className='anotacion-ejemplo'
+                />
+            ) : undefined}
+
+            <div
+                className='ejemplo-container'
+                onLoad={handleOnLoad}
+                ref={divEjemplosRef}
+            >
+                {imgsEjemplo}
+            </div>
             <Text className='text-descripcion'>{descripcion}</Text>
             <Anotacion
                 type='click'

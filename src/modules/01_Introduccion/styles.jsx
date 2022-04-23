@@ -1,44 +1,69 @@
 import styled from 'styled-components'
-import StyledImageWithCaption from '../../components/ImageWithCaption/styles'
 import Seccion from '../../components/Seccion'
-import { DISTANCES, GRID, GridLayout } from '../../global/GlobalStyles'
+import StyledCita from '../../components/Cita/styles'
+import {
+    fadeLogoDelay,
+    fadeLogoDuration,
+    showCitaDelay,
+    showCitaDuration,
+    showLogoDelay,
+    showLogoDuration,
+} from './animationsConfig'
 
 const StyledIntroduccion = styled(Seccion)`
-    row-gap: ${GRID.rowGap};
+    min-height: 100vh;
+    align-items: center;
 
-    ${StyledImageWithCaption} {
-        grid-row: 2 / span 2;
+    img,
+    ${StyledCita} {
+        opacity: 0;
+        grid-column: 5 / span 6;
+        grid-row: 1;
     }
 
-    ${StyledImageWithCaption}:nth-of-type(1) {
-        grid-column: 1 / span 4;
+    img {
+        width: 219px;
+        animation: showLogo ${showLogoDuration}s ease-out ${showLogoDelay}s 1
+                normal forwards,
+            fadeLogo ${fadeLogoDuration}s linear ${fadeLogoDelay}s 1 normal
+                forwards;
     }
 
-    ${StyledImageWithCaption}:nth-of-type(2) {
-        grid-column: 5 / span 4;
+    ${StyledCita} {
+        animation: showCita ${showCitaDuration}s linear ${showCitaDelay}s 1
+            normal forwards;
     }
 
-    > div {
-        grid-row: 2;
-        grid-column: 9 / span 4;
-
-        ${GridLayout}
-        grid-template-columns: repeat(4, 1fr);
-        row-gap: ${DISTANCES.small};
-
-        > img:nth-of-type(1) {
-            grid-column: 3 / span 2;
-            grid-row: 1;
+    @keyframes showLogo {
+        from {
+            transform: translateY(200px);
+            opacity: 0;
         }
-
-        > img:nth-of-type(2) {
-            grid-column: 1 / span 2;
-            grid-row: 2;
+        to {
+            transform: translateY(0);
+            opacity: 1;
         }
+    }
 
-        > img:nth-of-type(3) {
-            grid-column: 3 / span 2;
-            grid-row: 2;
+    @keyframes fadeLogo {
+        from {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateY(-200px);
+            opacity: 0;
+        }
+    }
+
+    @keyframes showCita {
+        from {
+            transform: translateY(200px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
         }
     }
 `

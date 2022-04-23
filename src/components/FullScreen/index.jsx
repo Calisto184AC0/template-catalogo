@@ -11,21 +11,19 @@ const FullScreen = ({ imgSrc, setFullScreenSrc }) => {
             document.body.style.overflow = 'hidden'
         } else {
             setIsShow(false)
-            document.body.style.overflow = 'auto'
         }
     }, [imgSrc])
 
     return (
         <StyledFullScreen display={isShow ? 'flex' : 'none'}>
-            <img
-                src={imgSrc}
-                alt='Imagen a pantalla completa'
-                className='hide'
-            />
+            <img src={imgSrc} alt='Imagen a pantalla completa' />
             <Indicador
                 top='10%'
                 left='90%'
-                onClick={() => setFullScreenSrc('')}
+                onClick={() => {
+                    setFullScreenSrc('')
+                    document.body.style.overflow = 'auto'
+                }}
                 style={{ cursor: 'pointer' }}
             />
         </StyledFullScreen>
