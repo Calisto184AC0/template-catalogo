@@ -3,7 +3,9 @@ import StyledElementoLista from './styles'
 const ElementoLista = ({ link, title }) => {
     return (
         <StyledElementoLista>
-            <a href={link}>{title}</a>
+            <a href={link}>
+                <span>{title}</span>
+            </a>
         </StyledElementoLista>
     )
 }

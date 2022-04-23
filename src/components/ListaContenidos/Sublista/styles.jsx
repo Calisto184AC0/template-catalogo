@@ -6,7 +6,7 @@ const StyledSublista = styled.li`
     column-gap: ${GRID.columnGap};
     align-items: flex-start;
 
-    > span {
+    > div {
         grid-column: 1 / -1;
 
         display: flex;
@@ -14,11 +14,34 @@ const StyledSublista = styled.li`
         align-items: center;
 
         border-top: 1px solid ${COLORS.gray01};
-        padding: 0.625rem 0;
+
+        overflow-x: hidden;
 
         cursor: pointer;
         color: ${COLORS.gray01};
         ${TextMedium}
+
+        span {
+            padding: 0.625rem 0;
+            transition: all 0.2s linear;
+        }
+
+        img {
+            width: 16px;
+            transition: all 0.2s linear;
+        }
+
+        :hover {
+            span {
+                transform: translateX(20px);
+            }
+            .openItemList {
+                transform: rotate(90deg);
+            }
+            .closeItemList {
+                transform: rotate(180deg);
+            }
+        }
     }
 
     > ul {

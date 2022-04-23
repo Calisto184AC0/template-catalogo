@@ -1,16 +1,8 @@
 import React from 'react'
 import StyledSublista from './styles'
 import useOpenSublista from '../../../hooks/useOpenSublista'
-import styled from 'styled-components'
-import { COLORS } from '../../../global/GlobalStyles'
-
-const OpenSublista = styled.div`
-    width: 1rem;
-    height: 1rem;
-    border-radius: 0.5rem;
-    background-color: ${props => props.backgroundColor || ''};
-    transition: background-color 0.3s linear;
-`
+import openItemList from '../../../assets/icons/indice/open-item-list.svg'
+import closeItemList from '../../../assets/icons/indice/close-item-list.svg'
 
 const Sublista = React.forwardRef(function SublistaRef(
     { title, children, parents },
@@ -25,14 +17,22 @@ const Sublista = React.forwardRef(function SublistaRef(
 
     return (
         <StyledSublista>
-            <span onClick={toggleSublista}>
-                {title}
+            <div onClick={toggleSublista}>
+                <span className='titleText'>{title}</span>
                 {isOpen ? (
-                    <OpenSublista backgroundColor={COLORS.gray01} />
+                    <img
+                        src={closeItemList}
+                        alt='Cerrar sublista'
+                        className='closeItemList'
+                    />
                 ) : (
-                    <OpenSublista backgroundColor={COLORS.gray06} />
+                    <img
+                        src={openItemList}
+                        alt='Abrir sublista'
+                        className='openItemList'
+                    />
                 )}
-            </span>
+            </div>
             <ul ref={ref}>{children}</ul>
         </StyledSublista>
     )
