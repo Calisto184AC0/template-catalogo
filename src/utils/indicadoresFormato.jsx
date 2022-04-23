@@ -1,4 +1,5 @@
 import { backgrounds, selects } from '../assets/images/Diseno/Formato'
+import selectorFormato from '../assets/icons/formatos/formato.svg'
 
 const config = {
     fachada: [
@@ -9,7 +10,7 @@ const config = {
                 seleccionado: 0,
                 selectores: [
                     {
-                        selectorImg: selects[0],
+                        selectorImg: selectorFormato,
                         titulo: 'Formato',
                         menu: {
                             seleccionado: 0,

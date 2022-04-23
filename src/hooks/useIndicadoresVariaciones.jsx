@@ -201,6 +201,7 @@ const getMenu = ({ padre, menu, closeMenu, currentRef, ...dispatch }) => {
 }
 
 const getIndicadores = ({
+    isOpen,
     config,
     capasRef,
     openMenu,
@@ -227,6 +228,7 @@ const getIndicadores = ({
                     idMenu,
                     changeMenu,
                     openMenu,
+                    isOpen,
                 }
 
                 return <Indicador {...indicadorProps} />
@@ -284,6 +286,7 @@ const useIndicadoresVariaciones = config => {
     useEffect(() => {
         addIndicadores(
             getIndicadores({
+                isOpen,
                 config,
                 capasRef,
                 openMenu,

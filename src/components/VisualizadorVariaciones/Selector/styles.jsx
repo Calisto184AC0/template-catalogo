@@ -8,7 +8,7 @@ const StyledSelector = styled.div`
     cursor: pointer;
 
     img {
-        width: auto;
+        width: 7rem;
     }
 `
 

@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import useIndicadoresVariaciones from '../../hooks/useIndicadoresVariaciones'
 import Menu from './Menu'
 import StyledVisualizadorVariaciones from './styles'

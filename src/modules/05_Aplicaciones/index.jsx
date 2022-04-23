@@ -51,7 +51,7 @@ const Aplicaciones = ({ id }) => {
             </StyledAplicaciones>
             <StyledAplicaciones
                 id={id[2]}
-                backgroundColor={COLORS.gray08}
+                backgroundColor={COLORS.gray07}
                 rowGap={DISTANCES.medium}
             >
                 <Titulo2 color={COLORS.gray01}>Obra nueva</Titulo2>
@@ -67,7 +67,7 @@ const Aplicaciones = ({ id }) => {
                     colorAutor={COLORS.gray03}
                 />
             </StyledAplicaciones>
-            <StyledAplicaciones id={id[3]} backgroundColor={COLORS.gray08}>
+            <StyledAplicaciones id={id[3]} backgroundColor={COLORS.gray07}>
                 <Titulo3 color={COLORS.gray01}>Fachadas</Titulo3>
                 <ImageWithCaption
                     src={img4}
@@ -75,7 +75,7 @@ const Aplicaciones = ({ id }) => {
                     caption='DOL -TC20. Do&Space Ivory'
                 />
             </StyledAplicaciones>
-            <StyledAplicaciones id={id[4]} backgroundColor={COLORS.gray08}>
+            <StyledAplicaciones id={id[4]} backgroundColor={COLORS.gray07}>
                 <Titulo3 color={COLORS.gray01}>
                     Terrazas, suelos elevados, techos y soluciones
                 </Titulo3>

@@ -1,5 +1,7 @@
-import { selects } from '../assets/images/Diseno/Formato'
 import getDataFromModules from '../helpers/getDataFromModules'
+
+const selectoresImports = import.meta.globEager('../assets/icons/piezas/**')
+const selectores = getDataFromModules(selectoresImports)
 
 const albardilla = import.meta.globEager(
         '../assets/images/Diseno/Piezas especiales/ALBARDILLA/*.jpg'
@@ -42,27 +44,27 @@ const config = {
         seleccionado: 0,
         selectores: [
             {
-                selectorImg: selects[1],
+                selectorImg: selectores[0],
                 titulo: 'Albardilla',
                 rotador: albardillaImports,
             },
             {
-                selectorImg: selects[1],
+                selectorImg: selectores[1],
                 titulo: 'Peldaño',
                 menu: {
                     selectores: [
                         {
-                            selectorImg: selects[1],
+                            selectorImg: selectores[1],
                             titulo: 'Tipo 1',
                             rotador: peldano1Imports,
                         },
                         {
-                            selectorImg: selects[1],
+                            selectorImg: selectores[2],
                             titulo: 'Tipo 2',
                             rotador: peldano2Imports,
                         },
                         {
-                            selectorImg: selects[1],
+                            selectorImg: selectores[3],
                             titulo: 'Tipo 3',
                             rotador: peldano3Imports,
                         },
@@ -70,45 +72,22 @@ const config = {
                 },
             },
             {
-                selectorImg: selects[1],
-                titulo: 'Peldaño',
-                menu: {
-                    selectores: [
-                        {
-                            selectorImg: selects[1],
-                            titulo: 'Tipo 1',
-                            rotador: peldano1Imports,
-                        },
-                        {
-                            selectorImg: selects[1],
-                            titulo: 'Tipo 2',
-                            rotador: peldano2Imports,
-                        },
-                        {
-                            selectorImg: selects[1],
-                            titulo: 'Tipo 3',
-                            rotador: peldano3Imports,
-                        },
-                    ],
-                },
-            },
-            {
-                selectorImg: selects[1],
+                selectorImg: selectores[4],
                 titulo: 'Rejilla',
                 rotador: rejillaImports,
             },
             {
-                selectorImg: selects[1],
+                selectorImg: selectores[5],
                 titulo: 'Suelo elevado',
                 rotador: sueloElevadoImports,
             },
             {
-                selectorImg: selects[1],
+                selectorImg: selectores[6],
                 titulo: 'Techo',
                 rotador: techoImports,
             },
             {
-                selectorImg: selects[1],
+                selectorImg: selectores[7],
                 titulo: 'Vierteaguas',
                 rotador: vierteaguasImports,
             },

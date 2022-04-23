@@ -53,11 +53,6 @@ const Disenos = ({ id }) => {
                 <Anotacion {...propsFormato.anotacion} />
                 <VisualizadorVariaciones {...propsFormato.visualizador} />
             </StyledDisenos>
-            {/* <StyledDisenos id={id[2]} backgroundColor={COLORS.gray02}>
-                <Titulo2>Despiece</Titulo2>
-                <Anotacion {...propsFormato.anotacion} />
-                <VisualizadorVariaciones {...propsFormato.visualizador} />
-            </StyledDisenos> */}
             <StyledDisenos id={id[3]} backgroundColor={COLORS.gray02}>
                 <Titulo2>Acabados</Titulo2>
                 <Anotaciones>
@@ -67,7 +62,7 @@ const Disenos = ({ id }) => {
                     />
                     <Anotacion
                         type='swipe'
-                        text='Desliza con el ratón o el dedo para rotar la imagen 360º'
+                        text='Desliza con el ratón o el dedo para apreciar la textura'
                     />
                 </Anotaciones>
                 <VisualizadorRotador

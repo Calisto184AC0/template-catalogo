@@ -1,21 +1,13 @@
 import styled from 'styled-components'
-import { COLORS, DISTANCES } from '../../../global/GlobalStyles'
 
-const DIAMETER = DISTANCES.small
-
-const StyledIndicador = styled.div`
+const StyledIndicador = styled.img`
+    width: 1.563rem;
     position: absolute;
-    top: ${props => props.top || '0px'};
-    left: ${props => props.left || '0px'};
-
-    width: ${DIAMETER};
-    height: ${DIAMETER};
-
-    border-radius: calc(${DIAMETER} / 2);
-
-    background-color: ${COLORS.gray08};
-
+    top: ${props => props.position.Y || '0px'};
+    left: ${props => props.position.X || '0px'};
     cursor: pointer;
+
+    transition: all 0.2s linear;
 `
 
 export default StyledIndicador
