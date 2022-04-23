@@ -8,9 +8,7 @@ const muestrasImports = import.meta.globEager(
     '../../assets/images/Series/ARQUITECT/DESPIECE/**'
 )
 
-const acabadosImports = import.meta.globEager(
-    '../../assets/images/Series/ARQUITECT/acabados/**'
-)
+const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
 
 const ejemplos = getDataFromModules(ejemplosImports)
 const muestras = getDataFromModules(muestrasImports)
@@ -84,6 +82,14 @@ const configArquitect = {
         {
             imagen: acabados[0],
             titulo: 'Flamed',
+        },
+        {
+            imagen: acabados[1],
+            titulo: 'Honed',
+        },
+        {
+            imagen: acabados[2],
+            titulo: 'Mate',
         },
     ],
 }

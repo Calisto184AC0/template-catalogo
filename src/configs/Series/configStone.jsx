@@ -8,9 +8,7 @@ const muestrasImports = import.meta.globEager(
     '../../assets/images/Series/STONE/DESPIECE/**'
 )
 
-const acabadosImports = import.meta.globEager(
-    '../../assets/images/Series/STONE/acabados/**'
-)
+const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
 
 const ejemplos = getDataFromModules(ejemplosImports)
 const muestras = getDataFromModules(muestrasImports)

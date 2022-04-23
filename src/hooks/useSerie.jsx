@@ -21,11 +21,15 @@ const useSerie = (config, setFullScreenSrc) => {
         })
     )
 
-    const imgsAcabados = Children.toArray(
-        config.acabados.map(({ titulo, imagen }) => {
-            return <ImageWithCaption src={imagen} caption={titulo} />
-        })
-    )
+    let imgsAcabados
+
+    if (config.acabados) {
+        imgsAcabados = Children.toArray(
+            config.acabados.map(({ titulo, imagen }) => {
+                return <ImageWithCaption src={imagen} caption={titulo} />
+            })
+        )
+    }
 
     return {
         titulo: config.titulo,

@@ -8,9 +8,7 @@ const muestrasImports = import.meta.globEager(
     '../../assets/images/Series/WOOD/DESPIECE/**'
 )
 
-const acabadosImports = import.meta.globEager(
-    '../../assets/images/Series/WOOD/acabados/**'
-)
+const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
 
 const ejemplos = getDataFromModules(ejemplosImports)
 const muestras = getDataFromModules(muestrasImports)
@@ -56,6 +54,10 @@ const configWOOD = {
         {
             imagen: acabados[0],
             titulo: 'Flamed',
+        },
+        {
+            imagen: acabados[2],
+            titulo: 'Mate',
         },
     ],
 }

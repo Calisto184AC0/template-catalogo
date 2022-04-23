@@ -12,10 +12,18 @@ const StyledFullScreen = styled.div`
     background: rgba(0, 0, 0, 0.7);
     bottom: 0;
 
-    img {
+    .muestraFondo {
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+
+    .closeFullScreen {
+        width: 3rem;
+        position: absolute;
+        top: 10%;
+        left: 90%;
+        cursor: pointer;
     }
 `
 

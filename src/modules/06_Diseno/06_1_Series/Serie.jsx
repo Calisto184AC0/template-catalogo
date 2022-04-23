@@ -44,8 +44,12 @@ const Serie = ({ id, config, setFullScreenSrc }) => {
                 className='anotacion-muestra'
             />
             <div className='muestra-container'>{imgsMuestra}</div>
-            <Text className='text-acabados'>Acabados</Text>
-            <div className='acabado-container'>{imgsAcabados}</div>
+            {imgsAcabados ? (
+                <>
+                    <Text className='text-acabados'>Acabados</Text>
+                    <div className='acabado-container'>{imgsAcabados}</div>
+                </>
+            ) : undefined}
         </StyledSerie>
     )
 }

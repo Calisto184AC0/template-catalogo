@@ -8,9 +8,7 @@ const muestrasImports = import.meta.globEager(
     '../../assets/images/Series/CRETE/DESPIECE/**'
 )
 
-const acabadosImports = import.meta.globEager(
-    '../../assets/images/Series/CRETE/acabados/**'
-)
+const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
 
 const ejemplos = getDataFromModules(ejemplosImports)
 const muestras = getDataFromModules(muestrasImports)
@@ -52,6 +50,10 @@ const configCRETE = {
         {
             imagen: acabados[0],
             titulo: 'Flamed',
+        },
+        {
+            imagen: acabados[2],
+            titulo: 'Mate',
         },
     ],
 }

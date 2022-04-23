@@ -8,9 +8,7 @@ const muestrasImports = import.meta.globEager(
     '../../assets/images/Series/DOLM/DESPIECE/**'
 )
 
-const acabadosImports = import.meta.globEager(
-    '../../assets/images/Series/DOLM/acabados/**'
-)
+const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
 
 const ejemplos = getDataFromModules(ejemplosImports)
 const muestras = getDataFromModules(muestrasImports)
@@ -52,6 +50,14 @@ const configDOLM = {
         {
             imagen: acabados[0],
             titulo: 'Flamed',
+        },
+        {
+            imagen: acabados[1],
+            titulo: 'Hoden',
+        },
+        {
+            imagen: acabados[2],
+            titulo: 'Mate',
         },
     ],
 }

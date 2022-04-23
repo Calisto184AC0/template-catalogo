@@ -8,9 +8,7 @@ const muestrasImports = import.meta.globEager(
     '../../assets/images/Series/QUARCITY/DESPIECE/**'
 )
 
-const acabadosImports = import.meta.globEager(
-    '../../assets/images/Series/QUARCITY/acabados/**'
-)
+const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
 
 const ejemplos = getDataFromModules(ejemplosImports)
 const muestras = getDataFromModules(muestrasImports)
@@ -52,6 +50,10 @@ const configQUARCITY = {
         {
             imagen: acabados[0],
             titulo: 'Flamed',
+        },
+        {
+            imagen: acabados[1],
+            titulo: 'Honed',
         },
     ],
 }

@@ -4,7 +4,7 @@ import openIndicador from '../../assets/icons/open-indicator.svg'
 const Indicador = props => {
     return (
         <StyledIndicador
-            src={openIndicador}
+            src={props.icon ? props.icon : openIndicador}
             alt=''
             position={{ X: props.left, Y: props.top }}
             {...props}

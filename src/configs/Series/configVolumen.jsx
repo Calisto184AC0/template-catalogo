@@ -8,13 +8,8 @@ const muestrasImports = import.meta.globEager(
     '../../assets/images/Series/VOLUMEN/DESPIECE/**'
 )
 
-const acabadosImports = import.meta.globEager(
-    '../../assets/images/Series/VOLUMEN/acabados/**'
-)
-
 const ejemplos = getDataFromModules(ejemplosImports)
 const muestras = getDataFromModules(muestrasImports)
-const acabados = getDataFromModules(acabadosImports)
 
 const configVOLUMEN = {
     titulo: 'DO&VOLUMEN',
@@ -49,12 +44,6 @@ const configVOLUMEN = {
         {
             imagen: muestras[5],
             titulo: '',
-        },
-    ],
-    acabados: [
-        {
-            imagen: acabados[0],
-            titulo: 'Flamed',
         },
     ],
 }
