@@ -1,8 +1,20 @@
 import styled from 'styled-components'
-import { GRID, TextMedium, COLORS } from '../../global/GlobalStyles'
+import {
+    GRID,
+    TextMedium,
+    COLORS,
+    Column6,
+    TABLET_SIZE,
+} from '../../global/GlobalStyles'
 import StyledSublista from './Sublista/styles'
 
 const StyledListaContenidos = styled.nav`
+    ${Column6}
+
+    @media (max-width: ${TABLET_SIZE}) {
+        grid-column: 2 / -1;
+    }
+
     counter-reset: counter;
 
     > ul > * {

@@ -1,7 +1,10 @@
 import styled from 'styled-components'
+import { Column8 } from '../../global/GlobalStyles'
 import StyledMenu from '../VisualizadorVariaciones/Menu/styles'
 
 const StyledVisualizadorRotador = styled.div`
+    ${Column8}
+
     position: relative;
     user-select: none;
 

@@ -1,7 +1,10 @@
 import styled from 'styled-components'
+import { Column8 } from '../../global/GlobalStyles'
 import StyledMenu from './Menu/styles'
 
 const StyledVisualizadorVariaciones = styled.div`
+    ${Column8}
+
     position: relative;
 
     .img-foreground {

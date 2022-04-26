@@ -2,22 +2,23 @@ import styled from 'styled-components'
 import StyledImageWithCaption from '../../components/ImageWithCaption/styles'
 import Seccion from '../../components/Seccion'
 import Text from '../../components/Text'
-import { DISTANCES, TextMedium } from '../../global/GlobalStyles'
+import {
+    Column4,
+    Column6,
+    DISTANCES,
+    TextMedium,
+} from '../../global/GlobalStyles'
 import check from '../../assets/icons/check.svg'
 
 const StyledVentajas = styled(Seccion)`
     row-gap: ${DISTANCES.medium};
 
-    ${StyledImageWithCaption} {
-        grid-column: 5 / span 6;
-    }
-
     ${Text} {
-        grid-column: 5 / span 4;
+        ${Column4}
     }
 
     > ul {
-        grid-column: 5 / span 6;
+        ${Column6}
         ${TextMedium}
 
         li {

@@ -10,6 +10,8 @@ const DISTANCES = {
     long: '6.25rem',
 }
 
+const TABLET_SIZE = '980px'
+
 const COLORS = {
     gray01: '#F2F2F2',
     gray02: '#D9D9D9',
@@ -29,32 +31,64 @@ const GRID = {
     verticalSpace: DISTANCES.long,
 }
 
+const Column4 = css`
+    grid-column: 5 / span 4;
+
+    @media (max-width: ${TABLET_SIZE}) {
+        grid-column: 1 / -1;
+    }
+`
+
+const Column6 = css`
+    grid-column: 5 / span 6;
+
+    @media (max-width: ${TABLET_SIZE}) {
+        grid-column: 1 / -1;
+    }
+`
+
+const Column7 = css`
+    grid-column: 5 / span 7;
+
+    @media (max-width: ${TABLET_SIZE}) {
+        grid-column: 1 / -1;
+    }
+`
+
+const Column8 = css`
+    grid-column: 5 / span 8;
+
+    @media (max-width: ${TABLET_SIZE}) {
+        grid-column: 1 / -1;
+    }
+`
+
 const Text = css`
     color: ${props => props.color || ''};
 `
 
 const TextSmall = css`
     ${Text}
-    font-size: 1rem;
-    line-height: 25px;
+    font-size: clamp(14px, 0.833vw, 1rem);
+    line-height: clamp(21px, 1.302vw, 25px);
 `
 
 const TextMedium = css`
     ${Text}
-    font-size: 1.188rem;
-    line-height: 29px;
+    font-size: clamp(16px,0.99vw,1.188rem);
+    line-height: clamp(25px, 1.51vw, 29px);
 `
 
 const TextLarge = css`
     ${Text}
-    font-size: 1.875rem;
-    line-height: 40px;
+    font-size: clamp(19px,1.563vw,1.875rem);
+    line-height: clamp(29px, 2.083vw, 40px);
 `
 
 const TextExtraLarge = css`
     ${Text}
-    font-size: 3.75rem;
-    line-height: 70px;
+    font-size: clamp(30px, 3.125vw, 3.75rem);
+    line-height: clamp(32px, 3.646vw, 70px);
 `
 
 const GridLayout = css`
@@ -86,5 +120,10 @@ export {
     TextMedium,
     TextLarge,
     GridLayout,
+    TABLET_SIZE,
+    Column4,
+    Column6,
+    Column7,
+    Column8,
 }
 export default GlobalStyles

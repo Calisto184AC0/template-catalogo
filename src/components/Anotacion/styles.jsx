@@ -1,7 +1,17 @@
 import styled from 'styled-components'
-import { DISTANCES, GRID, TextSmall } from '../../global/GlobalStyles'
+import {
+    DISTANCES,
+    GRID,
+    TABLET_SIZE,
+    TextSmall,
+} from '../../global/GlobalStyles'
 
 const StyledAnotacion = styled.div`
+    grid-column: 3 / span 2;
+    @media (max-width: ${TABLET_SIZE}) {
+        grid-column: 2 / -1 !important;
+    }
+
     display: flex;
     align-items: flex-end;
 

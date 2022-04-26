@@ -1,7 +1,9 @@
 import styled from 'styled-components'
-import { COLORS, DISTANCES } from '../../global/GlobalStyles'
+import { COLORS, Column8, DISTANCES } from '../../global/GlobalStyles'
 
 const StyledVisualizadorNota = styled.div`
+    ${Column8}
+
     position: relative;
 
     .indicadores-container {

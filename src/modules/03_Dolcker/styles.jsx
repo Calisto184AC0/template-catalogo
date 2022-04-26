@@ -1,16 +1,34 @@
 import styled from 'styled-components'
 import StyledImageWithCaption from '../../components/ImageWithCaption/styles'
 import Seccion from '../../components/Seccion'
-import { DISTANCES, GridLayout } from '../../global/GlobalStyles'
+import {
+    Column7,
+    DISTANCES,
+    GridLayout,
+    TABLET_SIZE,
+} from '../../global/GlobalStyles'
 import StyledAnotacion from '../../components/Anotacion/styles'
 import StyledVisualizadorNota from '../../components/VisualizadorNota/styles'
 
 const StyledDolcker = styled(Seccion)`
     row-gap: ${DISTANCES.long};
 
+    @media (max-width: ${TABLET_SIZE}) {
+        .dolcker-info {
+            grid-row-start: 2;
+        }
+
+        ${StyledAnotacion} {
+            grid-row-start: 3 !important;
+        }
+
+        ${StyledVisualizadorNota} {
+            grid-row-start: 4 !important;
+        }
+    }
+
     .dolcker-info {
-        grid-column: 5 / span 7;
-        grid-row: 1;
+        ${Column7}
 
         ${GridLayout}
         grid-template-columns: repeat(7, 1fr);
@@ -30,12 +48,10 @@ const StyledDolcker = styled(Seccion)`
     }
 
     ${StyledAnotacion} {
-        grid-column: 3 / span 2;
         grid-row-start: 2;
     }
 
     ${StyledVisualizadorNota} {
-        grid-column: 5 / span 8;
         grid-row-start: 2;
     }
 `

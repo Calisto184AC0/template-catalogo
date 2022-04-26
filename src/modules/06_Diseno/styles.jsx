@@ -6,7 +6,13 @@ import StyledImageWithCaption from '../../components/ImageWithCaption/styles'
 import Seccion from '../../components/Seccion'
 import StyledVisualizadorRotador from '../../components/VisualizadorRotador/styles'
 import StyledVisualizadorVariaciones from '../../components/VisualizadorVariaciones/styles'
-import { COLORS, DISTANCES, GridLayout } from '../../global/GlobalStyles'
+import {
+    COLORS,
+    Column7,
+    DISTANCES,
+    GridLayout,
+    TABLET_SIZE,
+} from '../../global/GlobalStyles'
 
 const StyledDisenos = styled(Seccion)`
     row-gap: ${DISTANCES.medium};
@@ -15,16 +21,12 @@ const StyledDisenos = styled(Seccion)`
         grid-column: 5 / span 8;
     }
 
-    ${StyledCita} {
-        grid-column: 5 / span 6;
-    }
-
     ${StyledAnotacion}, ${Anotaciones} {
         grid-column: 3 / span 2;
     }
 
     .espesores-ejemplos {
-        grid-column: 5 / span 7;
+        ${Column7}
 
         ${GridLayout}
         grid-template-columns: repeat(7, 1fr);
@@ -70,9 +72,23 @@ const StyledDisenos = styled(Seccion)`
     .espesor-3 {
         grid-column: 9 / span 2;
     }
+
+    @media (max-width: ${TABLET_SIZE}) {
+        .espesor-1 {
+            grid-column: 1 / span 4;
+        }
+
+        .espesor-2 {
+            grid-column: 5 / span 4;
+        }
+
+        .espesor-3 {
+            grid-column: 9 / span 4;
+        }
+    }
+
     ${StyledVisualizadorVariaciones}, ${StyledVisualizadorRotador} {
         align-self: flex-end;
-        grid-column: 5 / span 8;
     }
 `
 

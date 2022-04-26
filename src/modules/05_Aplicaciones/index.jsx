@@ -67,7 +67,11 @@ const Aplicaciones = ({ id }) => {
                     colorAutor={COLORS.gray03}
                 />
             </StyledAplicaciones>
-            <StyledAplicaciones id={id[3]} backgroundColor={COLORS.gray07}>
+            <StyledAplicaciones
+                id={id[3]}
+                backgroundColor={COLORS.gray07}
+                rowGap={DISTANCES.medium}
+            >
                 <Titulo3 color={COLORS.gray01}>— Fachadas</Titulo3>
                 <ImageWithCaption
                     src={img4}
@@ -75,7 +79,11 @@ const Aplicaciones = ({ id }) => {
                     caption='DOL -TC20. Do&Space Ivory'
                 />
             </StyledAplicaciones>
-            <StyledAplicaciones id={id[4]} backgroundColor={COLORS.gray07}>
+            <StyledAplicaciones
+                id={id[4]}
+                backgroundColor={COLORS.gray07}
+                rowGap={DISTANCES.medium}
+            >
                 <Titulo3 color={COLORS.gray01}>
                     — Terrazas, suelos elevados, techos y soluciones
                 </Titulo3>

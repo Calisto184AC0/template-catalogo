@@ -4,17 +4,58 @@ import StyledImageWithCaption from '../../../components/ImageWithCaption/styles'
 import Seccion from '../../../components/Seccion'
 import Text from '../../../components/Text'
 import { Titulo } from '../../../components/Titulos'
-import { COLORS, DISTANCES, GridLayout } from '../../../global/GlobalStyles'
+import {
+    COLORS,
+    Column6,
+    Column8,
+    DISTANCES,
+    GridLayout,
+    TABLET_SIZE,
+} from '../../../global/GlobalStyles'
 
 const StyledSerie = styled(Seccion)`
     row-gap: ${DISTANCES.medium};
+
+    @media (max-width: ${TABLET_SIZE}) {
+        > * {
+            grid-row: auto !important;
+        }
+
+        /* ${StyledAnotacion}.anotacion-ejemplo {
+            grid-row: 2 !important;
+        }
+
+        .ejemplo-container {
+            grid-row: 3 !important;
+        }
+
+        > ${Text}.text-descripcion {
+            grid-row: 4 !important;
+        }
+
+        > ${Text}.text-acabados {
+            grid-row: 5;
+        }
+
+        ${StyledAnotacion}.anotacion-muestra {
+            grid-row: 6 !important;
+        }
+
+        .muestra-container {
+            grid-row: 7 !important;
+        }
+
+        .acabado-container {
+            grid-row: 8 !important;
+        } */
+    }
 
     ${Titulo} {
         grid-row: 1;
     }
 
     > ${Text} {
-        grid-column: 5 / span 6;
+        ${Column6}
     }
 
     > ${Text}.text-descripcion {
@@ -27,7 +68,7 @@ const StyledSerie = styled(Seccion)`
 
     .ejemplo-container {
         grid-row: 1;
-        grid-column: 5 / -1;
+        ${Column8}
 
         display: flex;
         flex-basis: min-content;
@@ -59,7 +100,7 @@ const StyledSerie = styled(Seccion)`
 
     .muestra-container {
         grid-row: 3;
-        grid-column: 5 / -1;
+        ${Column8}
 
         ${GridLayout}
         row-gap: ${DISTANCES.small};
@@ -72,7 +113,7 @@ const StyledSerie = styled(Seccion)`
 
     .acabado-container {
         grid-row: 5;
-        grid-column: 5 / -1;
+        ${Column8}
 
         ${GridLayout}
         grid-template-columns: repeat(8, 1fr);
