@@ -23,7 +23,7 @@ const StyledMenu = styled.div`
 
     .menu-container {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         flex-wrap: nowrap;
         gap: ${DISTANCES.small};
         overflow-x: scroll;

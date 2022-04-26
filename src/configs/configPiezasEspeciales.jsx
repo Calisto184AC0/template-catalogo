@@ -50,7 +50,7 @@ const config = {
             },
             {
                 selectorImg: selectores[1],
-                titulo: 'Peldaño',
+                titulo: 'Peldaños',
                 menu: {
                     selectores: [
                         {

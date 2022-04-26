@@ -68,7 +68,7 @@ const Aplicaciones = ({ id }) => {
                 />
             </StyledAplicaciones>
             <StyledAplicaciones id={id[3]} backgroundColor={COLORS.gray07}>
-                <Titulo3 color={COLORS.gray01}>Fachadas</Titulo3>
+                <Titulo3 color={COLORS.gray01}>— Fachadas</Titulo3>
                 <ImageWithCaption
                     src={img4}
                     alt='Imagen de Aplicaciones 4'
@@ -77,7 +77,7 @@ const Aplicaciones = ({ id }) => {
             </StyledAplicaciones>
             <StyledAplicaciones id={id[4]} backgroundColor={COLORS.gray07}>
                 <Titulo3 color={COLORS.gray01}>
-                    Terrazas, suelos elevados, techos y soluciones
+                    — Terrazas, suelos elevados, techos y soluciones
                 </Titulo3>
                 <ImageWithCaption
                     src={img5}

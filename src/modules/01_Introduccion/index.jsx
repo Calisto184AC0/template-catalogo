@@ -16,7 +16,7 @@ const Introduccion = () => {
                     smooth: true,
                 })
                 document.body.style.overflow = 'auto'
-            }, (totalDuration + 1) * 1000)
+            }, (totalDuration + 1.5) * 1000)
         }
     }, [])
 

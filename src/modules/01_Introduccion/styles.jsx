@@ -36,7 +36,7 @@ const StyledIntroduccion = styled(Seccion)`
 
     @keyframes showLogo {
         from {
-            transform: translateY(200px);
+            transform: translateY(230px);
             opacity: 0;
         }
         to {
@@ -51,14 +51,14 @@ const StyledIntroduccion = styled(Seccion)`
             opacity: 1;
         }
         to {
-            transform: translateY(-200px);
+            transform: translateY(-230px);
             opacity: 0;
         }
     }
 
     @keyframes showCita {
         from {
-            transform: translateY(200px);
+            transform: translateY(230px);
             opacity: 0;
         }
         to {
