@@ -1,11 +1,18 @@
 import StyledIndicador from './styles'
 import openIndicador from '../../../assets/icons/open-indicator.svg'
-import { useEffect } from 'react'
+import { useContext } from 'react'
+import IsOpenContext from '../../../contexts/IsOpenMenuContext'
 
-const Indicador = ({ top, left, idMenu, changeMenu, openMenu, isOpen }) => {
+const Indicador = ({ top, left, idMenu, changeMenu, openMenu, closeMenu }) => {
+    const isOpen = useContext(IsOpenContext)
+
     const handleClick = () => {
-        openMenu()
-        changeMenu(idMenu)
+        if (isOpen) {
+            closeMenu()
+        } else {
+            openMenu()
+            changeMenu(idMenu)
+        }
     }
 
     const position = {
@@ -27,7 +34,7 @@ const Indicador = ({ top, left, idMenu, changeMenu, openMenu, isOpen }) => {
                 src={openIndicador}
                 onClick={handleClick}
                 position={position}
-                style={{ transform: 'rotate(45deg)' }}
+                style={{ transform: 'rotate(-45deg)' }}
             />
         )
     }

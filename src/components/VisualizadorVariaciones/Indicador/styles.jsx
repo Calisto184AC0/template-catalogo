@@ -8,6 +8,10 @@ const StyledIndicador = styled.img`
     cursor: pointer;
 
     transition: all 0.2s linear;
+
+    :hover {
+        transform: rotate(-45deg);
+    }
 `
 
 export default StyledIndicador

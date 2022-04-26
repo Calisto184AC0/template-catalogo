@@ -201,7 +201,6 @@ const getMenu = ({ padre, menu, closeMenu, currentRef, ...dispatch }) => {
 }
 
 const getIndicadores = ({
-    isOpen,
     config,
     capasRef,
     openMenu,
@@ -228,7 +227,7 @@ const getIndicadores = ({
                     idMenu,
                     changeMenu,
                     openMenu,
-                    isOpen,
+                    closeMenu,
                 }
 
                 return <Indicador {...indicadorProps} />
@@ -276,6 +275,7 @@ const useIndicadoresVariaciones = config => {
         dispatch({ type: ACTIONS.CLEAN_PREV_SELECCIONADOS })
 
     const [isOpen, setIsOpen] = useState(false)
+
     const openMenu = () => {
         setIsOpen(true)
         // Es porque cuando se abre otro indicador, es decir, otro elemento se debe limpiar los preseleccionados
@@ -286,7 +286,6 @@ const useIndicadoresVariaciones = config => {
     useEffect(() => {
         addIndicadores(
             getIndicadores({
-                isOpen,
                 config,
                 capasRef,
                 openMenu,
