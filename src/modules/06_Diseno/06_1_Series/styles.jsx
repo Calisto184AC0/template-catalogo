@@ -20,34 +20,6 @@ const StyledSerie = styled(Seccion)`
         > * {
             grid-row: auto !important;
         }
-
-        /* ${StyledAnotacion}.anotacion-ejemplo {
-            grid-row: 2 !important;
-        }
-
-        .ejemplo-container {
-            grid-row: 3 !important;
-        }
-
-        > ${Text}.text-descripcion {
-            grid-row: 4 !important;
-        }
-
-        > ${Text}.text-acabados {
-            grid-row: 5;
-        }
-
-        ${StyledAnotacion}.anotacion-muestra {
-            grid-row: 6 !important;
-        }
-
-        .muestra-container {
-            grid-row: 7 !important;
-        }
-
-        .acabado-container {
-            grid-row: 8 !important;
-        } */
     }
 
     ${Titulo} {
