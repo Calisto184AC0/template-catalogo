@@ -13,8 +13,6 @@ const Indicador = ({ top, left, idMenu, changeMenu, openMenu, isOpen }) => {
         X: left,
     }
 
-    useEffect(() => console.log(openMenu), [isOpen])
-
     if (!isOpen) {
         return (
             <StyledIndicador

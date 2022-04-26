@@ -73,6 +73,10 @@ const StyledDisenos = styled(Seccion)`
     }
 
     @media (max-width: ${TABLET_SIZE}) {
+        > * {
+            grid-row-start: auto !important;
+        }
+
         .espesor-1 {
             grid-column: 1 / span 4;
         }
