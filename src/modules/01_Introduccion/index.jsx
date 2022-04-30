@@ -15,8 +15,13 @@ const Introduccion = () => {
                     duration: 2000,
                     smooth: true,
                 })
+                setTimeout(() => {
+                    document.body.parentElement.style.scrollBehavior = 'smooth'
+                }, 2000)
                 document.body.style.overflow = 'auto'
             }, (totalDuration + 1.5) * 1000)
+        } else {
+            document.body.parentElement.style.scrollBehavior = 'smooth'
         }
     }, [])
 

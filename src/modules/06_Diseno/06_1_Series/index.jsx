@@ -14,6 +14,7 @@ import configTERRAZO from '../../../configs/Series/configTerrazo'
 import configTZMENT from '../../../configs/Series/configTzment'
 import configVOLUMEN from '../../../configs/Series/configVolumen'
 import configWOOD from '../../../configs/Series/configWood'
+import { COLORS } from '../../../global/GlobalStyles'
 import Serie from './Serie'
 
 const Series = ({ ids }) => {
@@ -24,76 +25,91 @@ const Series = ({ ids }) => {
             <FullScreen
                 imgSrc={fullScreenSrc}
                 setFullScreenSrc={setFullScreenSrc}
+                backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[0]}
                 config={configBASALT}
                 setFullScreenSrc={setFullScreenSrc}
+                backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[1]}
                 config={configDOLM}
                 setFullScreenSrc={setFullScreenSrc}
+                backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[2]}
                 config={configQUARTZ}
                 setFullScreenSrc={setFullScreenSrc}
+                backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[3]}
                 config={configMARBLE}
                 setFullScreenSrc={setFullScreenSrc}
+                backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[4]}
                 config={configSTONE}
                 setFullScreenSrc={setFullScreenSrc}
+                backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[5]}
                 config={configQUARCITY}
                 setFullScreenSrc={setFullScreenSrc}
+                backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[6]}
                 config={configCRETE}
                 setFullScreenSrc={setFullScreenSrc}
+                backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[7]}
                 config={configPORTLAND}
                 setFullScreenSrc={setFullScreenSrc}
+                backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[8]}
                 config={configSPACE}
                 setFullScreenSrc={setFullScreenSrc}
+                backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[9]}
                 config={configTZMENT}
                 setFullScreenSrc={setFullScreenSrc}
+                backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[10]}
                 config={configWOOD}
                 setFullScreenSrc={setFullScreenSrc}
+                backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[11]}
                 config={configTERRAZO}
                 setFullScreenSrc={setFullScreenSrc}
+                backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[12]}
                 config={configArquitect}
                 setFullScreenSrc={setFullScreenSrc}
+                backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[13]}
                 config={configVOLUMEN}
                 setFullScreenSrc={setFullScreenSrc}
+                backgroundColor={COLORS.gray01}
             />
         </>
     )

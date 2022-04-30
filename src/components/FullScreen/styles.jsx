@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { GRID } from '../../global/GlobalStyles'
 
 const StyledFullScreen = styled.div`
     position: fixed;
@@ -31,8 +32,8 @@ const StyledFullScreen = styled.div`
     .closeFullScreen {
         width: 3rem;
         position: absolute;
-        top: 10%;
-        left: 90%;
+        top: ${GRID.verticalSpace};
+        right: ${GRID.horizontalSpace};
         cursor: pointer;
     }
 `

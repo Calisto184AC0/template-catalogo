@@ -23,27 +23,27 @@ const configVOLUMEN = {
     muestras: [
         {
             imagen: muestras[0],
-            titulo: '',
+            titulo: 'Pieza 1',
         },
         {
             imagen: muestras[1],
-            titulo: '',
+            titulo: 'Pieza 2',
         },
         {
             imagen: muestras[2],
-            titulo: '',
+            titulo: 'Pieza 3',
         },
         {
             imagen: muestras[3],
-            titulo: '',
+            titulo: 'Pieza 4',
         },
         {
             imagen: muestras[4],
-            titulo: '',
+            titulo: 'Pieza 5',
         },
         {
             imagen: muestras[5],
-            titulo: '',
+            titulo: 'Pieza 6',
         },
     ],
 }

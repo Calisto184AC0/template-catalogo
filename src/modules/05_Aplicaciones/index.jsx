@@ -38,6 +38,7 @@ const Aplicaciones = ({ id }) => {
             >
                 <Titulo2 color={COLORS.gray01}>Rehabilitación</Titulo2>
                 <ImageWithCaption
+                    className='distinto'
                     src={img2}
                     alt='Imagen de Aplicaciones 1'
                     caption='DOL -TC11. Do&Dolm Nacar'
@@ -51,11 +52,12 @@ const Aplicaciones = ({ id }) => {
             </StyledAplicaciones>
             <StyledAplicaciones
                 id={id[2]}
-                backgroundColor={COLORS.gray07}
+                backgroundColor={COLORS.gray06}
                 rowGap={DISTANCES.medium}
             >
                 <Titulo2 color={COLORS.gray01}>Obra nueva</Titulo2>
                 <ImageWithCaption
+                    className='distinto'
                     src={img3}
                     alt='Imagen de Aplicaciones 1'
                     caption='DOL -TC14. Do&Quarz Grey / Do&Quarz Black'
@@ -69,11 +71,12 @@ const Aplicaciones = ({ id }) => {
             </StyledAplicaciones>
             <StyledAplicaciones
                 id={id[3]}
-                backgroundColor={COLORS.gray07}
+                backgroundColor={COLORS.gray06}
                 rowGap={DISTANCES.medium}
             >
                 <Titulo3 color={COLORS.gray01}>— Fachadas</Titulo3>
                 <ImageWithCaption
+                    className='distinto'
                     src={img4}
                     alt='Imagen de Aplicaciones 4'
                     caption='DOL -TC20. Do&Space Ivory'
@@ -81,13 +84,14 @@ const Aplicaciones = ({ id }) => {
             </StyledAplicaciones>
             <StyledAplicaciones
                 id={id[4]}
-                backgroundColor={COLORS.gray07}
+                backgroundColor={COLORS.gray06}
                 rowGap={DISTANCES.medium}
             >
                 <Titulo3 color={COLORS.gray01}>
                     — Terrazas, suelos elevados, techos y soluciones
                 </Titulo3>
                 <ImageWithCaption
+                    className='distinto'
                     src={img5}
                     alt='Imagen de Aplicaciones 5'
                     caption='DOL -TC11. Do&Space Ivory'

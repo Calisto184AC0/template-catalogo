@@ -7,8 +7,8 @@ import { Column6 } from '../../global/GlobalStyles'
 const StyledAplicaciones = styled(Seccion)`
     row-gap: ${props => props.rowGap || '0px'};
 
-    ${StyledImageWithCaption} {
-        grid-column: 5 / span 6;
+    ${StyledImageWithCaption}.distinto {
+        grid-column: 5 / span 4;
     }
 `
 

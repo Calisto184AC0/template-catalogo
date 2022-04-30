@@ -29,6 +29,7 @@ const App = () => {
                     'acabados',
                     'espesores',
                     'piezas',
+                    'series',
                 ]}
             />
         </>

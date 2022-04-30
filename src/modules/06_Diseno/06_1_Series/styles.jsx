@@ -46,7 +46,11 @@ const StyledSerie = styled(Seccion)`
         flex-basis: min-content;
         gap: ${DISTANCES.small};
 
-        margin-right: -${DISTANCES.medium};
+        margin-right: clamp(
+            -${DISTANCES.medium},
+            -2.604vw,
+            -${DISTANCES.small}
+        );
         overflow-x: auto;
 
         ${StyledImageWithCaption} {
@@ -54,7 +58,7 @@ const StyledSerie = styled(Seccion)`
 
             img {
                 width: auto;
-                height: 900px;
+                height: clamp(500px, 46.875vw, 900px);
             }
         }
 

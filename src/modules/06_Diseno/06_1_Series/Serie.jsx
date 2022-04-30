@@ -5,7 +5,7 @@ import { Titulo } from '../../../components/Titulos'
 import useSerie from '../../../hooks/useSerie'
 import StyledSerie from './styles'
 
-const Serie = ({ id, config, setFullScreenSrc }) => {
+const Serie = ({ id, config, setFullScreenSrc, backgroundColor }) => {
     const { titulo, descripcion, imgsEjemplo, imgsMuestra, imgsAcabados } =
         useSerie(config, setFullScreenSrc)
 
@@ -20,7 +20,7 @@ const Serie = ({ id, config, setFullScreenSrc }) => {
     }
 
     return (
-        <StyledSerie id={id}>
+        <StyledSerie id={id} backgroundColor={backgroundColor}>
             <Titulo>{titulo}</Titulo>
             {isOverflow ? (
                 <Anotacion

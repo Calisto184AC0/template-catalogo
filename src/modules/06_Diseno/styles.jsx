@@ -17,7 +17,7 @@ const StyledDisenos = styled(Seccion)`
     row-gap: ${DISTANCES.medium};
 
     ${StyledImageWithCaption} {
-        grid-column: 5 / span 8;
+        grid-column: 5 / span 6;
     }
 
     ${StyledAnotacion}, ${Anotaciones} {
@@ -35,10 +35,10 @@ const StyledDisenos = styled(Seccion)`
         }
 
         img:nth-of-type(1) {
-            grid-column: 1 / span 4;
+            grid-column: 1 / span 3;
         }
         img:nth-of-type(2) {
-            grid-column: 5 / span 3;
+            grid-column: 4 / span 2;
         }
     }
 

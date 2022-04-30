@@ -1,8 +1,8 @@
 import StyledImageWithCaption from './styles'
 
-const ImageWithCaption = ({ src, alt, caption, onClickFunc }) => {
+const ImageWithCaption = ({ src, alt, caption, onClickFunc, className }) => {
     return (
-        <StyledImageWithCaption>
+        <StyledImageWithCaption className={className}>
             <img src={src} alt={alt} onClick={onClickFunc} />
             <figcaption>{caption}</figcaption>
         </StyledImageWithCaption>

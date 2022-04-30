@@ -9,6 +9,7 @@ import {
     showLogoDelay,
     showLogoDuration,
 } from './animationsConfig'
+import { Column5 } from '../../global/GlobalStyles'
 
 const StyledIntroduccion = styled(Seccion)`
     min-height: 100vh;
@@ -17,7 +18,7 @@ const StyledIntroduccion = styled(Seccion)`
     img,
     ${StyledCita} {
         opacity: 0;
-        grid-column: 5 / span 6;
+        ${Column5}
         grid-row: 1;
     }
 

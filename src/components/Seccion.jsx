@@ -9,7 +9,8 @@ const Seccion = styled.section`
     ${GridLayout}
     grid-template-columns: repeat(12, 1fr);
 
-    padding: ${DISTANCES.long} ${DISTANCES.medium};
+    padding: ${DISTANCES.long}
+        clamp(${DISTANCES.small}, 2.604vw, ${DISTANCES.medium});
 
     background-color: ${props => props.backgroundColor || 'transparent'};
 

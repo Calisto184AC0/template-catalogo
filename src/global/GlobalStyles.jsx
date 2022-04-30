@@ -39,6 +39,14 @@ const Column4 = css`
     }
 `
 
+const Column5 = css`
+    grid-column: 5 / span 5;
+
+    @media (max-width: ${TABLET_SIZE}) {
+        grid-column: 1 / -1;
+    }
+`
+
 const Column6 = css`
     grid-column: 5 / span 6;
 
@@ -122,6 +130,7 @@ export {
     GridLayout,
     TABLET_SIZE,
     Column4,
+    Column5,
     Column6,
     Column7,
     Column8,

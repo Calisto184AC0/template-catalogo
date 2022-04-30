@@ -18,6 +18,7 @@ import img3 from '../../assets/images/Diseno/Espesores/img2.jpg'
 import ranurado11 from '../../assets/images/Diseno/Espesores/ranurado11mm.jpg'
 import ranurado14 from '../../assets/images/Diseno/Espesores/ranurado14.jpg'
 import ranurado20 from '../../assets/images/Diseno/Espesores/ranurado20.jpg'
+import useImagesSeries from '../../hooks/useImagesSeries'
 
 const Disenos = ({ id }) => {
     const propsFormato = {
@@ -31,6 +32,8 @@ const Disenos = ({ id }) => {
             altFondo: 'Imagen de fondo con indicadores',
         },
     }
+
+    const enlacesSeries = useImagesSeries()
 
     return (
         <>
@@ -122,6 +125,10 @@ const Disenos = ({ id }) => {
                     />
                 </Anotaciones>
                 <VisualizadorRotador config={config} />
+            </StyledDisenos>
+            <StyledDisenos id={id[6]} backgroundColor={COLORS.gray04}>
+                <Titulo2>Series</Titulo2>
+                {enlacesSeries}
             </StyledDisenos>
             <Series
                 ids={[

@@ -39,7 +39,7 @@ const StyledDolcker = styled(Seccion)`
         }
 
         ${StyledImageWithCaption}:nth-of-type(2) {
-            grid-column: 4 / span 4;
+            grid-column: 4 / span 3;
         }
 
         > p {
