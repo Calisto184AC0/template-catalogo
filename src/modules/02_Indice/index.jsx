@@ -6,7 +6,9 @@ import BtnIndice from './BtnIndice'
 import { StyledIndice, Container } from './styles'
 import openMenu from '../../assets/icons/indice/open-menu.svg'
 import closeMenu from '../../assets/icons/indice/close-menu.svg'
+import flecha from '../../assets/icons/flechita.svg'
 import { slideDown, slideUp } from '../../helpers/animations'
+import scrollTo from '../../helpers/scrollTo'
 
 const Indice = () => {
     const indiceRef = useRef()
@@ -91,6 +93,12 @@ const Indice = () => {
         }
     }
 
+    const handleClickFlecha = () => {
+        const position =
+            indiceRef.current.offsetHeight + indiceRef.current.offsetTop
+        scrollTo(position, 2000)
+    }
+
     return (
         <>
             <Container actualHeight={actualHeight}>
@@ -102,6 +110,12 @@ const Indice = () => {
                 >
                     <Titulo color={COLORS.gray01}>Índice</Titulo>
                     <ListaContenidos />
+                    <img
+                        src={flecha}
+                        alt=''
+                        className='flecha-indice'
+                        onClick={handleClickFlecha}
+                    />
                 </StyledIndice>
             </Container>
             <BtnIndice

@@ -1,11 +1,21 @@
 import styled from 'styled-components'
-import { Column8 } from '../../global/GlobalStyles'
+import { Column8, TextMedium } from '../../global/GlobalStyles'
 import StyledMenu from './Menu/styles'
 
 const StyledVisualizadorVariaciones = styled.div`
     ${Column8}
 
     position: relative;
+
+    > span {
+        ${TextMedium}
+        position: absolute;
+        top: 5%;
+        left: 4%;
+        z-index: 3;
+        color: white;
+        mix-blend-mode: difference;
+    }
 
     .img-foreground {
         position: absolute;

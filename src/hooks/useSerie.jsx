@@ -2,7 +2,7 @@
 import { Children } from 'react'
 import ImageWithCaption from '../components/ImageWithCaption'
 
-const useSerie = (config, setFullScreenSrc) => {
+const useSerie = (config, setFullScreenSrc, setFullScreenTitulo) => {
     const imgsEjemplo = Children.toArray(
         config.ejemplos.map(({ titulo, imagen }) => {
             return <ImageWithCaption src={imagen} caption={titulo} />
@@ -15,7 +15,10 @@ const useSerie = (config, setFullScreenSrc) => {
                 <ImageWithCaption
                     src={imagen}
                     caption={titulo}
-                    onClickFunc={() => setFullScreenSrc(imagen)}
+                    onClickFunc={() => {
+                        setFullScreenSrc(imagen)
+                        setFullScreenTitulo(titulo)
+                    }}
                 />
             )
         })

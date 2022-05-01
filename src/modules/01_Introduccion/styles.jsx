@@ -23,7 +23,7 @@ const StyledIntroduccion = styled(Seccion)`
     }
 
     img {
-        width: 219px;
+        width: clamp(109px, 11.40625vw, 219px);
         animation: showLogo ${showLogoDuration}s ease-out ${showLogoDelay}s 1
                 normal forwards,
             fadeLogo ${fadeLogoDuration}s linear ${fadeLogoDelay}s 1 normal

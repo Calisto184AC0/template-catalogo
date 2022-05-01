@@ -5,9 +5,15 @@ import { Titulo } from '../../../components/Titulos'
 import useSerie from '../../../hooks/useSerie'
 import StyledSerie from './styles'
 
-const Serie = ({ id, config, setFullScreenSrc, backgroundColor }) => {
+const Serie = ({
+    id,
+    config,
+    setFullScreenSrc,
+    setFullScreenTitulo,
+    backgroundColor,
+}) => {
     const { titulo, descripcion, imgsEjemplo, imgsMuestra, imgsAcabados } =
-        useSerie(config, setFullScreenSrc)
+        useSerie(config, setFullScreenSrc, setFullScreenTitulo)
 
     const [isOverflow, setIsOverflow] = useState(false)
     const divEjemplosRef = useRef()

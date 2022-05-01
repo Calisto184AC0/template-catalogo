@@ -114,6 +114,7 @@ const getSelectores = ({
     currentRef,
     setRotador,
     indexRotador,
+    setActualTitulo,
     ...dispatch
 }) => {
     let selectoresElem = []
@@ -124,6 +125,7 @@ const getSelectores = ({
             let selectorProps = {
                 selectorImg,
                 titulo,
+                setActualTitulo,
             }
 
             if (menu === undefined) {
@@ -131,6 +133,7 @@ const getSelectores = ({
                     // Esto sirve para que las capas ya tengan un preseleccionado
                     currentRef.current.src = rotador[indexRotador]
                     setRotador(rotador)
+                    setActualTitulo(titulo)
                 }
 
                 selectorProps.primerPlano = rotador
@@ -146,6 +149,7 @@ const getSelectores = ({
                     menu,
                     closeMenu,
                     currentRef,
+                    setActualTitulo,
                     ...dispatch,
                 })
 
@@ -169,6 +173,7 @@ const getMenu = ({
     setRotador,
     closeMenu,
     currentRef,
+    setActualTitulo,
     ...dispatch
 }) => {
     const idMenu = Math.floor((1 + Math.random()) * 0x10000)
@@ -187,6 +192,7 @@ const getMenu = ({
         selectores,
         closeMenu,
         currentRef,
+        setActualTitulo,
         ...dispatch,
     })
 
@@ -215,6 +221,7 @@ const getIndicadores = ({
     openMenu,
     closeMenu,
     currentRef,
+    setActualTitulo,
     ...dispatch
 }) => {
     const { top, left, menu } = config
@@ -224,6 +231,7 @@ const getIndicadores = ({
         menu,
         closeMenu,
         currentRef,
+        setActualTitulo,
         ...dispatch,
     })
     const { changeMenu } = dispatch
@@ -243,6 +251,7 @@ const useConfigRotador = (config, isDesplazador) => {
     const [indexRotador, setIndexRotador] = useState(0)
     const [rotador, setRotador] = useState([])
     const currentRef = useRef()
+    const [actualTitulo, setActualTitulo] = useState('')
 
     const cacheImages = async srcArray => {
         const promises = await srcArray.map(src => {
@@ -330,6 +339,7 @@ const useConfigRotador = (config, isDesplazador) => {
                 indexRotador,
                 config,
                 currentRef,
+                setActualTitulo,
                 setRotador,
                 openMenu,
                 closeMenu,
@@ -346,6 +356,7 @@ const useConfigRotador = (config, isDesplazador) => {
     }, [])
 
     return {
+        actualTitulo,
         indexRotador,
         setIndexRotador,
         currentRef,

@@ -8,6 +8,7 @@ import img3 from '../../assets/images/Aplicaciones/catalogo3-1-11.jpg'
 import img4 from '../../assets/images/Aplicaciones/catalogo3-1-12.jpg'
 import img5 from '../../assets/images/Aplicaciones/catalogo3-1-13.jpg'
 import Cita from '../../components/Cita'
+import { column_5_span4 } from '../../styles/grid'
 
 const Aplicaciones = ({ id }) => {
     return (
@@ -38,7 +39,7 @@ const Aplicaciones = ({ id }) => {
             >
                 <Titulo2 color={COLORS.gray01}>Rehabilitación</Titulo2>
                 <ImageWithCaption
-                    className='distinto'
+                    style={{ column_5_span4 }}
                     src={img2}
                     alt='Imagen de Aplicaciones 1'
                     caption='DOL -TC11. Do&Dolm Nacar'

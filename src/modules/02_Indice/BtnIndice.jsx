@@ -13,6 +13,7 @@ const BtnIndice = styled.img`
     opacity: 0;
     transform: translateY(-10vh);
     transition: all 0.5s ease-out;
+    mix-blend-mode: difference;
 `
 
 export default BtnIndice

@@ -4,7 +4,7 @@ import StyledFullScreen from './styles'
 import closeIcon from '../../assets/icons/indice/close-menu.svg'
 import { slideUp } from '../../helpers/animations'
 
-const FullScreen = ({ imgSrc, setFullScreenSrc }) => {
+const FullScreen = ({ imgSrc, setFullScreenSrc, titulo }) => {
     const [isShow, setIsShow] = useState(false)
     const fullScreenRef = useRef()
 
@@ -27,6 +27,7 @@ const FullScreen = ({ imgSrc, setFullScreenSrc }) => {
                 alt='Imagen a pantalla completa'
                 className='muestraFondo'
             />
+            <span>{titulo}</span>
             <img
                 src={closeIcon}
                 alt='Cerrar menú'

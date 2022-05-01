@@ -1,4 +1,3 @@
-import { useContext, useEffect } from 'react'
 import useIndicadoresVariaciones from '../../hooks/useIndicadoresVariaciones'
 import Menu from './Menu'
 import StyledVisualizadorVariaciones from './styles'
@@ -6,6 +5,7 @@ import IsOpenContext from '../../contexts/IsOpenMenuContext'
 
 const VisualizadorVariaciones = ({ config, srcfondo, altFondo }) => {
     const {
+        actualTitulo,
         capas,
         indicadores,
         selectores,
@@ -26,6 +26,7 @@ const VisualizadorVariaciones = ({ config, srcfondo, altFondo }) => {
         <StyledVisualizadorVariaciones>
             <img src={srcfondo} alt={altFondo} />
             {capas}
+            <span>{actualTitulo}</span>
             <div className='indicadores' onClick={handleClick}>
                 <IsOpenContext.Provider value={isOpen}>
                     {indicadores}

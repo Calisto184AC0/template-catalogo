@@ -5,6 +5,7 @@ import StyledVisualizadorRotador from './styles'
 
 const VisualizadorRotador = ({ config, isDesplazador }) => {
     const {
+        actualTitulo,
         currentRef,
         fondoAlt,
         indicadores,
@@ -83,6 +84,7 @@ const VisualizadorRotador = ({ config, isDesplazador }) => {
     return (
         <StyledVisualizadorRotador>
             <img src='' alt={fondoAlt} ref={currentRef} />
+            <span>{actualTitulo}</span>
             <div
                 className='indicadores'
                 onClick={handleClick}

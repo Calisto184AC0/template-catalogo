@@ -1,6 +1,7 @@
 import styled from 'styled-components'
-import { Column8 } from '../../global/GlobalStyles'
+import { Column8, TextMedium } from '../../global/GlobalStyles'
 import StyledMenu from '../VisualizadorVariaciones/Menu/styles'
+import swipe from '../../assets/icons/handswipe.svg'
 
 const StyledVisualizadorRotador = styled.div`
     ${Column8}
@@ -12,8 +13,18 @@ const StyledVisualizadorRotador = styled.div`
         user-select: none;
     }
 
+    > span {
+        ${TextMedium}
+        position: absolute;
+        top: 5%;
+        left: 4%;
+        z-index: 3;
+        //color: white;
+        //mix-blend-mode: difference;
+    }
+
     .indicadores {
-        cursor: col-resize;
+        cursor: url(${swipe}), col-resize;
         position: absolute;
         top: 0;
         right: 0;

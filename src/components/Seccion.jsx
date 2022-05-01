@@ -1,42 +1,40 @@
-import styled from 'styled-components'
-import { DISTANCES, GridLayout, TABLET_SIZE } from '../global/GlobalStyles'
+import styled, { css } from 'styled-components'
+import {
+    column_1_span2,
+    column_3_span2,
+    column_5_span6,
+    seccionLayout,
+} from '../styles/grid'
+import { mediaQueryTablet } from '../styles/sizes'
 import Anotaciones from './Anotacion/Anotaciones'
 import StyledAnotacion from './Anotacion/styles'
 import StyledImageWithCaption from './ImageWithCaption/styles'
 import { Titulo, Titulo2, Titulo3 } from './Titulos'
 
 const Seccion = styled.section`
-    ${GridLayout}
-    grid-template-columns: repeat(12, 1fr);
-
-    padding: ${DISTANCES.long}
-        clamp(${DISTANCES.small}, 2.604vw, ${DISTANCES.medium});
+    ${seccionLayout}
 
     background-color: ${props => props.backgroundColor || 'transparent'};
 
-    ${Titulo}, ${Titulo2}, ${Titulo3} {
-        grid-column: 1 / span 2;
-    }
-
-    @media (max-width: ${TABLET_SIZE}) {
-        ${Titulo}, ${Titulo2}, ${Titulo3} {
-            grid-row-start: 1;
-            grid-column: 1 / -1;
-        }
-
-        > ${StyledImageWithCaption} {
-            grid-column: 1 / -1 !important;
-        }
+    > ${Titulo}, > ${Titulo2}, > ${Titulo3} {
+        align-self: flex-start;
+        ${column_1_span2}
     }
 
     > ${StyledImageWithCaption} {
-        grid-column: 5 / span 6;
+        ${column_5_span6}
     }
 
     > ${Anotaciones}, > ${StyledAnotacion} {
-        grid-column: 3 / span 2;
+        ${column_3_span2}
         align-self: flex-end;
     }
+
+    ${mediaQueryTablet(css`
+        > ${StyledImageWithCaption} {
+            grid-column: 1 / -1 !important;
+        }
+    `)}
 `
 
 export default Seccion

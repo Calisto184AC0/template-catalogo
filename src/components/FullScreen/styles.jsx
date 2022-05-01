@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { GRID } from '../../global/GlobalStyles'
+import { GRID, TextMedium } from '../../global/GlobalStyles'
 
 const StyledFullScreen = styled.div`
     position: fixed;
@@ -23,6 +23,16 @@ const StyledFullScreen = styled.div`
         }
     }
 
+    > span {
+        ${TextMedium}
+        position: absolute;
+        top: ${GRID.verticalSpace};
+        left: ${GRID.horizontalSpace};
+        z-index: 3;
+        //color: white;
+        //mix-blend-mode: difference;
+    }
+
     .muestraFondo {
         width: 100%;
         height: 100%;
@@ -35,6 +45,7 @@ const StyledFullScreen = styled.div`
         top: ${GRID.verticalSpace};
         right: ${GRID.horizontalSpace};
         cursor: pointer;
+        filter: brightness(0);
     }
 `
 

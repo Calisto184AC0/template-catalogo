@@ -10,10 +10,13 @@ const Selector = ({
     foregroundImgRef,
     idMenu,
     changeMenu,
+    setActualTitulo,
 }) => {
     const handleClick = () => {
         if (primerPlano) {
             closeMenu()
+
+            setActualTitulo(titulo)
 
             if (Array.isArray(primerPlano)) {
                 setRotador(primerPlano)

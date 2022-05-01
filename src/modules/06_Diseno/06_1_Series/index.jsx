@@ -19,96 +19,112 @@ import Serie from './Serie'
 
 const Series = ({ ids }) => {
     const [fullScreenSrc, setFullScreenSrc] = useState('')
+    const [fullScreenTitulo, setFullScreenTitulo] = useState('')
 
     return (
         <>
             <FullScreen
                 imgSrc={fullScreenSrc}
                 setFullScreenSrc={setFullScreenSrc}
+                titulo={fullScreenTitulo}
                 backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[0]}
                 config={configBASALT}
                 setFullScreenSrc={setFullScreenSrc}
+                setFullScreenTitulo={setFullScreenTitulo}
                 backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[1]}
                 config={configDOLM}
                 setFullScreenSrc={setFullScreenSrc}
+                setFullScreenTitulo={setFullScreenTitulo}
                 backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[2]}
                 config={configQUARTZ}
                 setFullScreenSrc={setFullScreenSrc}
+                setFullScreenTitulo={setFullScreenTitulo}
                 backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[3]}
                 config={configMARBLE}
                 setFullScreenSrc={setFullScreenSrc}
+                setFullScreenTitulo={setFullScreenTitulo}
                 backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[4]}
                 config={configSTONE}
                 setFullScreenSrc={setFullScreenSrc}
+                setFullScreenTitulo={setFullScreenTitulo}
                 backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[5]}
                 config={configQUARCITY}
                 setFullScreenSrc={setFullScreenSrc}
+                setFullScreenTitulo={setFullScreenTitulo}
                 backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[6]}
                 config={configCRETE}
                 setFullScreenSrc={setFullScreenSrc}
+                setFullScreenTitulo={setFullScreenTitulo}
                 backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[7]}
                 config={configPORTLAND}
                 setFullScreenSrc={setFullScreenSrc}
+                setFullScreenTitulo={setFullScreenTitulo}
                 backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[8]}
                 config={configSPACE}
                 setFullScreenSrc={setFullScreenSrc}
+                setFullScreenTitulo={setFullScreenTitulo}
                 backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[9]}
                 config={configTZMENT}
                 setFullScreenSrc={setFullScreenSrc}
+                setFullScreenTitulo={setFullScreenTitulo}
                 backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[10]}
                 config={configWOOD}
                 setFullScreenSrc={setFullScreenSrc}
+                setFullScreenTitulo={setFullScreenTitulo}
                 backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[11]}
                 config={configTERRAZO}
                 setFullScreenSrc={setFullScreenSrc}
+                setFullScreenTitulo={setFullScreenTitulo}
                 backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[12]}
                 config={configArquitect}
                 setFullScreenSrc={setFullScreenSrc}
+                setFullScreenTitulo={setFullScreenTitulo}
                 backgroundColor={COLORS.gray01}
             />
             <Serie
                 id={ids[13]}
                 config={configVOLUMEN}
                 setFullScreenSrc={setFullScreenSrc}
+                setFullScreenTitulo={setFullScreenTitulo}
                 backgroundColor={COLORS.gray01}
             />
         </>

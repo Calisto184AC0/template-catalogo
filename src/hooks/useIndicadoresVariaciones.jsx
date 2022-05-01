@@ -85,8 +85,6 @@ const reducer = (state, { type, payload }) => {
                 }
             }
 
-            //
-
             return newMenu
         }
 
@@ -120,6 +118,7 @@ const getSelectores = ({
     selectores,
     closeMenu,
     currentRef,
+    setActualTitulo,
     ...dispatch
 }) => {
     let selectoresElem = []
@@ -130,12 +129,14 @@ const getSelectores = ({
             let selectorProps = {
                 selectorImg,
                 titulo,
+                setActualTitulo,
             }
 
             if (menu === undefined) {
                 if (seleccionado === index) {
                     // Esto sirve para que las capas ya tengan un preseleccionado
                     currentRef.current.src = primerPlano
+                    setActualTitulo(titulo)
                 }
 
                 selectorProps.primerPlano = primerPlano
@@ -147,6 +148,7 @@ const getSelectores = ({
                     menu,
                     closeMenu,
                     currentRef,
+                    setActualTitulo,
                     ...dispatch,
                 })
 
@@ -163,7 +165,14 @@ const getSelectores = ({
     return { selectoresElem, hijos }
 }
 
-const getMenu = ({ padre, menu, closeMenu, currentRef, ...dispatch }) => {
+const getMenu = ({
+    padre,
+    menu,
+    closeMenu,
+    currentRef,
+    setActualTitulo,
+    ...dispatch
+}) => {
     const idMenu = Math.floor((1 + Math.random()) * 0x10000)
         .toString(16)
         .substring(1)
@@ -178,6 +187,7 @@ const getMenu = ({ padre, menu, closeMenu, currentRef, ...dispatch }) => {
         selectores,
         closeMenu,
         currentRef,
+        setActualTitulo,
         ...dispatch,
     })
 
@@ -205,6 +215,7 @@ const getIndicadores = ({
     capasRef,
     openMenu,
     closeMenu,
+    setActualTitulo,
     ...dispatch
 }) => {
     return Children.toArray(
@@ -217,6 +228,7 @@ const getIndicadores = ({
                     menu,
                     closeMenu,
                     currentRef,
+                    setActualTitulo,
                     ...dispatch,
                 })
                 const { changeMenu } = dispatch
@@ -249,6 +261,8 @@ const useIndicadoresVariaciones = config => {
         prevSeleccionados: {},
         menus: {},
     })
+
+    const [actualTitulo, setActualTitulo] = useState('')
 
     const addMenu = menu =>
         dispatch({
@@ -288,6 +302,7 @@ const useIndicadoresVariaciones = config => {
             getIndicadores({
                 config,
                 capasRef,
+                setActualTitulo,
                 openMenu,
                 closeMenu,
                 addMenu,
@@ -303,6 +318,7 @@ const useIndicadoresVariaciones = config => {
     }, [])
 
     return {
+        actualTitulo,
         capas,
         indicadores: state.indicadores,
         seleccionado: state.actualSeleccionado,

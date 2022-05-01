@@ -4,20 +4,14 @@ import logo from '../../assets/images/Introduccion/logo.svg'
 import Cita from '../../components/Cita'
 import { useEffect } from 'react'
 import { totalDuration } from './animationsConfig'
-import Scroll from 'react-scroll'
+import scrollTo from '../../helpers/scrollTo'
 
 const Introduccion = () => {
     useEffect(() => {
         if (window.scrollY === 0) {
             document.body.style.overflow = 'hidden'
             setTimeout(() => {
-                Scroll.animateScroll.scrollTo(window.innerHeight, {
-                    duration: 2000,
-                    smooth: true,
-                })
-                setTimeout(() => {
-                    document.body.parentElement.style.scrollBehavior = 'smooth'
-                }, 2000)
+                scrollTo(window.innerHeight, 2000)
                 document.body.style.overflow = 'auto'
             }, (totalDuration + 1.5) * 1000)
         } else {
