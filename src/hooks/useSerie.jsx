@@ -17,7 +17,7 @@ const useSerie = (config, setFullScreenSrc, setFullScreenTitulo) => {
                     caption={titulo}
                     onClickFunc={() => {
                         setFullScreenSrc(imagen)
-                        setFullScreenTitulo(titulo)
+                        setFullScreenTitulo(config.titulo + ' - ' + titulo)
                     }}
                 />
             )

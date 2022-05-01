@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { COLORS } from '../global/GlobalStyles'
 import {
     column_1_span2,
     column_3_span2,
@@ -14,7 +15,7 @@ import { Titulo, Titulo2, Titulo3 } from './Titulos'
 const Seccion = styled.section`
     ${seccionLayout}
 
-    background-color: ${props => props.backgroundColor || 'transparent'};
+    background-color: ${props => props.backgroundColor || COLORS.gray01};
 
     > ${Titulo}, > ${Titulo2}, > ${Titulo3} {
         align-self: flex-start;

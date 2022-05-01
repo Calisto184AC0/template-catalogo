@@ -5,6 +5,7 @@ import Ventajas from './modules/04_Ventajas'
 import Aplicaciones from './modules/05_Aplicaciones'
 import Disenos from './modules/06_Diseno'
 import Caracteristicas from './modules/07_Caracteristicas'
+import Sistemas from './modules/08_Sistemas'
 
 const App = () => {
     return (
@@ -35,6 +36,15 @@ const App = () => {
             />
             <Caracteristicas
                 id={['caracteristicas-especiales', 'datos-tecnicos']}
+            />
+            <Sistemas
+                id={[
+                    'sistemas',
+                    'dolcker-and-clip',
+                    'dol-tc10',
+                    'dol-tc14',
+                    'dol-hc20',
+                ]}
             />
         </>
     )
