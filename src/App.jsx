@@ -4,6 +4,7 @@ import Introduccion from './modules/01_Introduccion'
 import Ventajas from './modules/04_Ventajas'
 import Aplicaciones from './modules/05_Aplicaciones'
 import Disenos from './modules/06_Diseno'
+import Caracteristicas from './modules/07_Caracteristicas'
 
 const App = () => {
     return (
@@ -31,6 +32,9 @@ const App = () => {
                     'piezas',
                     'series',
                 ]}
+            />
+            <Caracteristicas
+                id={['caracteristicas-especiales', 'datos-tecnicos']}
             />
         </>
     )

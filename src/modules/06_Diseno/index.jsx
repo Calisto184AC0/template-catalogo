@@ -43,6 +43,7 @@ const Disenos = ({ id }) => {
                     src={img1}
                     alt='Imagen de Diseños 1'
                     caption='DOLCKER &CLIP. Do&Dolm Grafito'
+                    columnSpan='6'
                 />
                 <Cita
                     big

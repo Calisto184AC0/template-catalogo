@@ -1,16 +1,15 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import {
     DISTANCES,
     GRID,
     TABLET_SIZE,
     TextSmall,
 } from '../../global/GlobalStyles'
+import { column_3_span2 } from '../../styles/grid'
+import { mediaQueryTablet } from '../../styles/sizes'
 
 const StyledAnotacion = styled.div`
-    grid-column: 3 / span 2;
-    @media (max-width: ${TABLET_SIZE}) {
-        grid-column: 2 / -1 !important;
-    }
+    ${column_3_span2}
 
     display: flex;
     align-items: flex-end;
@@ -28,6 +27,16 @@ const StyledAnotacion = styled.div`
         width: auto;
         max-height: calc(2 * ${DISTANCES.small});
     }
+
+    ${mediaQueryTablet(css`
+        gap: ${GRID.columnGap};
+        padding-bottom: 0 !important;
+
+        img {
+            position: relative;
+            right: auto;
+        }
+    `)}
 `
 
 export default StyledAnotacion

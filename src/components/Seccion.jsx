@@ -21,10 +21,6 @@ const Seccion = styled.section`
         ${column_1_span2}
     }
 
-    > ${StyledImageWithCaption} {
-        ${column_5_span6}
-    }
-
     > ${Anotaciones}, > ${StyledAnotacion} {
         ${column_3_span2}
         align-self: flex-end;

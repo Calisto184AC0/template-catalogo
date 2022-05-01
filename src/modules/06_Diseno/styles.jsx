@@ -16,10 +16,6 @@ import {
 const StyledDisenos = styled(Seccion)`
     row-gap: ${DISTANCES.medium};
 
-    ${StyledImageWithCaption} {
-        grid-column: 5 / span 6;
-    }
-
     ${StyledAnotacion}, ${Anotaciones} {
         grid-column: 3 / span 2;
     }

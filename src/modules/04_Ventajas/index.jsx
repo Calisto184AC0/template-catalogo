@@ -4,6 +4,7 @@ import StyledVentajas from './styles'
 import img1 from '../../assets/images/Ventajas/catalogo3-1-8.jpg'
 import Text from '../../components/Text'
 import { COLORS } from '../../global/GlobalStyles'
+import Listado from '../../components/Listado'
 
 const Ventajas = ({ id }) => {
     return (
@@ -13,6 +14,7 @@ const Ventajas = ({ id }) => {
                 src={img1}
                 alt='Imagen de Ventajas 1'
                 caption='DOLCKER &CLIP. Do&Wood Manzano / Do&Crete Gris'
+                columnSpan='6'
             />
             <Text>
                 Dispone de un desarrollo técnico de{' '}
@@ -20,7 +22,7 @@ const Ventajas = ({ id }) => {
                 para adaptarse a las necesidades tanto estéticas como
                 funcionales del proyecto.
             </Text>
-            <ul>
+            <Listado>
                 <li>
                     Sistema de fijación mecánica oculata + fijación elástica
                 </li>
@@ -43,7 +45,7 @@ const Ventajas = ({ id }) => {
                 <li>Fabricación de piezas con texturas mate, flamed y honed</li>
                 <li>Montaje rápido y seguro</li>
                 <li>Sistema versátil a la hora de diseñar la fachada</li>
-            </ul>
+            </Listado>
         </StyledVentajas>
     )
 }

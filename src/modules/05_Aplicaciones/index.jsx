@@ -23,6 +23,7 @@ const Aplicaciones = ({ id }) => {
                     src={img1}
                     alt='Imagen de Aplicaciones 1'
                     caption='DOLCKER &CLIP. Do&Marble Calacatta + Do&Wood Eucalipto'
+                    columnSpan='6'
                 />
                 <Cita
                     big
@@ -39,10 +40,10 @@ const Aplicaciones = ({ id }) => {
             >
                 <Titulo2 color={COLORS.gray01}>Rehabilitación</Titulo2>
                 <ImageWithCaption
-                    style={{ column_5_span4 }}
                     src={img2}
                     alt='Imagen de Aplicaciones 1'
                     caption='DOL -TC11. Do&Dolm Nacar'
+                    columnSpan='6'
                 />
                 <Cita
                     cita='Vivimos en un mundo maravilloso que está lleno de belleza, encanto y aventura. No hay un límite para las aventuras que podemos tener siempre y cuando las busquemos con los ojos bien abiertos.'
@@ -58,10 +59,10 @@ const Aplicaciones = ({ id }) => {
             >
                 <Titulo2 color={COLORS.gray01}>Obra nueva</Titulo2>
                 <ImageWithCaption
-                    className='distinto'
                     src={img3}
                     alt='Imagen de Aplicaciones 1'
                     caption='DOL -TC14. Do&Quarz Grey / Do&Quarz Black'
+                    columnSpan='4'
                 />
                 <Cita
                     cita='Cuando estoy trabajando en un problema, nunca pienso en su belleza. Solo pienso en cómo resolver el problema. Pero cuando lo termino, si la solución no es bella, se que está equivocada'
@@ -77,10 +78,10 @@ const Aplicaciones = ({ id }) => {
             >
                 <Titulo3 color={COLORS.gray01}>— Fachadas</Titulo3>
                 <ImageWithCaption
-                    className='distinto'
                     src={img4}
                     alt='Imagen de Aplicaciones 4'
                     caption='DOL -TC20. Do&Space Ivory'
+                    columnSpan='4'
                 />
             </StyledAplicaciones>
             <StyledAplicaciones
@@ -96,6 +97,7 @@ const Aplicaciones = ({ id }) => {
                     src={img5}
                     alt='Imagen de Aplicaciones 5'
                     caption='DOL -TC11. Do&Space Ivory'
+                    columnSpan='4'
                 />
             </StyledAplicaciones>
         </>
