@@ -17,10 +17,6 @@ import { column_5_span7 } from '../../styles/grid'
 const StyledDisenos = styled(Seccion)`
     row-gap: ${DISTANCES.medium};
 
-    ${StyledAnotacion}, ${Anotaciones} {
-        grid-column: 3 / span 2;
-    }
-
     .espesores-ejemplos {
         ${column_5_span7}
 

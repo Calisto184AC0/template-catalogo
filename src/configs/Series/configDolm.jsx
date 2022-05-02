@@ -53,7 +53,7 @@ const configDOLM = {
         },
         {
             imagen: acabados[1],
-            titulo: 'Hoden',
+            titulo: 'Honed',
         },
         {
             imagen: acabados[2],

@@ -1,5 +1,6 @@
-import styled from 'styled-components'
-import { GRID } from '../../global/GlobalStyles'
+import styled, { css } from 'styled-components'
+import { DISTANCES, GRID } from '../../global/GlobalStyles'
+import { mediaQueryTablet } from '../../styles/sizes'
 
 const BtnIndice = styled.img`
     position: fixed;
@@ -14,6 +15,10 @@ const BtnIndice = styled.img`
     transform: translateY(-10vh);
     transition: all 0.5s ease-out;
     mix-blend-mode: difference;
+
+    ${mediaQueryTablet(css`
+        top: ${DISTANCES.small};
+    `)}
 `
 
 export default BtnIndice

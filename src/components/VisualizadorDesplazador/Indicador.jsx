@@ -3,6 +3,7 @@ import StyledIndicador from '../Indicador/styles'
 const Indicador = ({
     top,
     left,
+    bottom,
     desplazador,
     setActualDesplazadorImgs,
     setActualDesplazadorTitulo,
@@ -12,6 +13,7 @@ const Indicador = ({
     const position = {
         Y: top,
         X: left,
+        Bottom: bottom,
     }
 
     const handleClickNormal = () => {

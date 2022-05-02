@@ -224,7 +224,7 @@ const getIndicadores = ({
     setActualTitulo,
     ...dispatch
 }) => {
-    const { top, left, menu } = config
+    const { top, left, bottom, menu } = config
 
     const idMenu = getMenu({
         indexRotador,
@@ -239,6 +239,7 @@ const getIndicadores = ({
     const indicadorProps = {
         top,
         left,
+        bottom,
         idMenu,
         changeMenu,
         openMenu,

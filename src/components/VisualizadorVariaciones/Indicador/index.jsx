@@ -3,7 +3,15 @@ import openIndicador from '../../../assets/icons/open-indicator.svg'
 import { useContext } from 'react'
 import IsOpenContext from '../../../contexts/IsOpenMenuContext'
 
-const Indicador = ({ top, left, idMenu, changeMenu, openMenu, closeMenu }) => {
+const Indicador = ({
+    top,
+    left,
+    bottom,
+    idMenu,
+    changeMenu,
+    openMenu,
+    closeMenu,
+}) => {
     const isOpen = useContext(IsOpenContext)
 
     const handleClick = () => {
@@ -18,6 +26,7 @@ const Indicador = ({ top, left, idMenu, changeMenu, openMenu, closeMenu }) => {
     const position = {
         Y: top,
         X: left,
+        Bottom: bottom,
     }
 
     if (!isOpen) {

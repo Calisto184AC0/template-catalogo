@@ -6,11 +6,10 @@ import {
     TABLET_SIZE,
     TextSmall,
 } from '../../global/GlobalStyles'
+import { column_3_span2 } from '../../styles/grid'
 
 const Anotaciones = styled.div`
-    grid-column: 3 / span 2;
     @media (max-width: ${TABLET_SIZE}) {
-        grid-column: 2 / -1 !important;
         gap: 2rem;
     }
 

@@ -1,5 +1,6 @@
-import styled from 'styled-components'
-import { GRID, TextMedium } from '../../global/GlobalStyles'
+import styled, { css } from 'styled-components'
+import { DISTANCES, GRID, TextMedium } from '../../global/GlobalStyles'
+import { mediaQueryTablet } from '../../styles/sizes'
 
 const StyledFullScreen = styled.div`
     position: fixed;
@@ -47,6 +48,21 @@ const StyledFullScreen = styled.div`
         cursor: pointer;
         filter: brightness(0);
     }
+
+    ${mediaQueryTablet(css`
+        .closeFullScreen,
+        > span {
+            top: ${DISTANCES.small};
+        }
+
+        .closeFullScreen {
+            right: clamp(${DISTANCES.small}, 2.604vw, ${DISTANCES.medium});
+        }
+
+        > span {
+            left: clamp(${DISTANCES.small}, 2.604vw, ${DISTANCES.medium});
+        }
+    `)}
 `
 
 export default StyledFullScreen

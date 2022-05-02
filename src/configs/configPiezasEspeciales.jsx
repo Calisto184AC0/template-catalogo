@@ -38,7 +38,7 @@ const albardillaImports = getDataFromModules(albardilla),
     vierteaguasImports = getDataFromModules(vierteaguas)
 
 const config = {
-    top: '90%',
+    bottom: '10%',
     left: '4%',
     menu: {
         seleccionado: 0,

@@ -104,7 +104,7 @@ const VisualizadorDesplazador = ({ config }) => {
                     onTouchEnd={() => setIsMouseDown(false)}
                 >
                     <Indicador
-                        top='90%'
+                        bottom='5%'
                         left='5%'
                         onClick={cleanDesplazador}
                         close
