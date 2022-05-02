@@ -1,10 +1,10 @@
 import StyledIntroduccion from './styles'
 import { COLORS } from '../../global/GlobalStyles'
-import logo from '../../assets/images/Introduccion/logo.svg'
 import Cita from '../../components/Cita'
 import { useEffect } from 'react'
 import { totalDuration } from './animationsConfig'
 import scrollTo from '../../helpers/scrollTo'
+import Logo from '../../components/Logo'
 
 const Introduccion = () => {
     useEffect(() => {
@@ -21,7 +21,7 @@ const Introduccion = () => {
 
     return (
         <StyledIntroduccion backgroundColor={COLORS.gray01}>
-            <img src={logo} alt='logo' />
+            <Logo />
             <Cita
                 cita='La arquitectura es el encuentro de la luz con la forma'
                 author='Le Corbusier'

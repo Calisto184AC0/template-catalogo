@@ -10,20 +10,20 @@ import {
     showLogoDuration,
 } from './animationsConfig'
 import { Column5 } from '../../global/GlobalStyles'
+import Logo from '../../components/Logo'
 
 const StyledIntroduccion = styled(Seccion)`
     min-height: 100vh;
     align-items: center;
 
-    img,
+    ${Logo},
     ${StyledCita} {
         opacity: 0;
         ${Column5}
         grid-row: 1;
     }
 
-    img {
-        width: clamp(109px, 11.40625vw, 219px);
+    ${Logo} {
         animation: showLogo ${showLogoDuration}s ease-out ${showLogoDelay}s 1
                 normal forwards,
             fadeLogo ${fadeLogoDuration}s linear ${fadeLogoDelay}s 1 normal

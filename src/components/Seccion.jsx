@@ -15,6 +15,8 @@ import { Titulo, Titulo2, Titulo3 } from './Titulos'
 const Seccion = styled.section`
     ${seccionLayout}
 
+    ${props => (props.fullScreen ? 'min-height: 100vh;' : null)}
+
     background-color: ${props => props.backgroundColor || COLORS.gray01};
 
     > ${Titulo}, > ${Titulo2}, > ${Titulo3} {

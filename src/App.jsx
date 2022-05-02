@@ -6,6 +6,7 @@ import Aplicaciones from './modules/05_Aplicaciones'
 import Disenos from './modules/06_Diseno'
 import Caracteristicas from './modules/07_Caracteristicas'
 import Sistemas from './modules/08_Sistemas'
+import Final from './modules/09_Final'
 
 const App = () => {
     return (
@@ -46,6 +47,7 @@ const App = () => {
                     'dol-hc20',
                 ]}
             />
+            <Final />
         </>
     )
 }
