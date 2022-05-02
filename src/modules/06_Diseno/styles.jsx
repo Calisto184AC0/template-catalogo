@@ -23,10 +23,6 @@ const StyledDisenos = styled(Seccion)`
         ${GridLayout}
         grid-template-columns: repeat(7, 1fr);
 
-        img {
-            height: min-content;
-        }
-
         img:nth-of-type(1) {
             grid-column: 1 / span 3;
         }
