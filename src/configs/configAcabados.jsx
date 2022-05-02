@@ -22,16 +22,16 @@ const config = {
     ],
     desplazadores: [
         {
+            titulo: 'Mate',
+            imgs: mateImports,
+        },
+        {
             titulo: 'Flamed',
             imgs: flamedImports,
         },
         {
-            titulo: 'Lapado',
+            titulo: 'Honed',
             imgs: lapadoImports,
-        },
-        {
-            titulo: 'Mate',
-            imgs: mateImports,
         },
     ],
 }

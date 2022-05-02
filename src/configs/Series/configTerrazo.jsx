@@ -20,11 +20,11 @@ const configTERRAZO = {
     ejemplos: [
         {
             imagen: ejemplos[0],
-            titulo: 'DOLCKER &CLIP Do&TERRAZO Mango - Azul - Grafíto - White',
+            titulo: 'DOLCKER &CLIP. Do&Terrazo Beige - Silver',
         },
         {
             imagen: ejemplos[1],
-            titulo: 'YDRAY-Dolcker-TERRAZO_OK2',
+            titulo: '',
         },
     ],
     muestras: [

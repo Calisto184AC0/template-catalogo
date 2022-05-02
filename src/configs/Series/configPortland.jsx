@@ -21,11 +21,11 @@ const configPORTLAND = {
     ejemplos: [
         {
             imagen: ejemplos[0],
-            titulo: 'DOLCKER &CLIP Do&PORTLAND Mango - Azul - Grafíto - White',
+            titulo: 'DOL TC14. Do&Portland Blanco- Gris - Nacar - Taupe',
         },
         {
             imagen: ejemplos[1],
-            titulo: 'YDRAY-Dolcker-PORTLAND_OK2',
+            titulo: '',
         },
     ],
     muestras: [

@@ -17,7 +17,7 @@ const configVOLUMEN = {
     ejemplos: [
         {
             imagen: ejemplos[0],
-            titulo: 'DOLCKER &CLIP Do&VOLUMEN Mango - Azul - Grafíto - White',
+            titulo: 'DOLCKER &CLIP.. Do&Volumen',
         },
     ],
     muestras: [

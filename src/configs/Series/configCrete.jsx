@@ -21,11 +21,11 @@ const configCRETE = {
     ejemplos: [
         {
             imagen: ejemplos[0],
-            titulo: 'DOLCKER &CLIP Do&CRETE Mango - Azul - Grafíto - White',
+            titulo: 'DOLCKER &CLIP. Do&Crete Blanco',
         },
         {
             imagen: ejemplos[1],
-            titulo: 'YDRAY-Dolcker-CRETE_OK2',
+            titulo: '',
         },
     ],
     muestras: [

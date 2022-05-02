@@ -21,7 +21,7 @@ const configMARBLE = {
     ejemplos: [
         {
             imagen: ejemplos[0],
-            titulo: 'DOLCKER &CLIP Do&MARBLE Mango - Azul - Grafíto - White',
+            titulo: 'DOL TC14. Do&Marble + DoPortland Negro',
         },
     ],
     muestras: [

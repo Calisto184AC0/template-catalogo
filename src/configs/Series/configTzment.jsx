@@ -20,11 +20,11 @@ const configTZMENT = {
     ejemplos: [
         {
             imagen: ejemplos[0],
-            titulo: 'DOLCKER &CLIP Do&TZMENT Mango - Azul - Grafíto - White',
+            titulo: 'DOLCKER &CLIP Do&Tzment White',
         },
         {
             imagen: ejemplos[1],
-            titulo: 'YDRAY-Dolcker-TZMENT_OK2',
+            titulo: '',
         },
     ],
     muestras: [

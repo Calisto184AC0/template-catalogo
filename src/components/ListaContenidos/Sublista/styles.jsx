@@ -49,7 +49,7 @@ const StyledSublista = styled.li`
 
         max-height: 0px;
 
-        overflow-y: hidden;
+        overflow: hidden;
 
         transition: max-height 0.3s linear;
     }

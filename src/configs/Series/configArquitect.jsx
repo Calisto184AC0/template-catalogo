@@ -25,7 +25,7 @@ const configArquitect = {
         },
         {
             imagen: ejemplos[1],
-            titulo: 'YDRAY-Dolcker-ARQUITECT_OK2',
+            titulo: '',
         },
     ],
     muestras: [

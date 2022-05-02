@@ -21,11 +21,11 @@ const configSPACE = {
     ejemplos: [
         {
             imagen: ejemplos[0],
-            titulo: 'DOLCKER &CLIP Do&SPACE Mango - Azul - Grafíto - White',
+            titulo: 'DOLCKER &CLIP y DOL TC14. Do&Space White - Ivory',
         },
         {
             imagen: ejemplos[1],
-            titulo: 'YDRAY-Dolcker-SPACE_OK2',
+            titulo: '',
         },
     ],
     muestras: [

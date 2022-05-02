@@ -21,11 +21,11 @@ const configQUARCITY = {
     ejemplos: [
         {
             imagen: ejemplos[0],
-            titulo: 'DOLCKER &CLIP Do&QUARCITY Mango - Azul - Grafíto - White',
+            titulo: 'DOLCKER &CLIP. Do&Quarcity Gris',
         },
         {
             imagen: ejemplos[1],
-            titulo: 'YDRAY-Dolcker-QUARCITY_OK2',
+            titulo: '',
         },
     ],
     muestras: [

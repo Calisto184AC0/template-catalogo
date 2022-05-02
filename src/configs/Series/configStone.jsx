@@ -21,11 +21,11 @@ const configSTONE = {
     ejemplos: [
         {
             imagen: ejemplos[0],
-            titulo: 'DOLCKER &CLIP Do&STONE Mango - Azul - Grafíto - White',
+            titulo: 'DOLCKER &CLIP. Do&Stone Natural Granit',
         },
         {
             imagen: ejemplos[1],
-            titulo: 'YDRAY-Dolcker-STONE_OK2',
+            titulo: '',
         },
     ],
     muestras: [

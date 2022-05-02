@@ -21,11 +21,11 @@ const configDOLM = {
     ejemplos: [
         {
             imagen: ejemplos[0],
-            titulo: 'DOLCKER &CLIP Do&DOLM Mango - Azul - Grafíto - White',
+            titulo: 'DOLCKER &CLIP. Do&Dolm Gris',
         },
         {
             imagen: ejemplos[1],
-            titulo: 'YDRAY-Dolcker-DOLM_OK2',
+            titulo: '',
         },
     ],
     muestras: [

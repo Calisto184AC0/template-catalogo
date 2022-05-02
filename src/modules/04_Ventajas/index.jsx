@@ -13,7 +13,7 @@ const Ventajas = ({ id }) => {
             <ImageWithCaption
                 src={img1}
                 alt='Imagen de Ventajas 1'
-                caption='DOLCKER &CLIP. Do&Wood Manzano / Do&Crete Gris'
+                caption='DOLCKER &CLIP. Do &Conce Gris+Do&Arquitect'
                 columnSpan='6'
             />
             <Text>

@@ -21,11 +21,11 @@ const configBASALT = {
     ejemplos: [
         {
             imagen: ejemplos[0],
-            titulo: 'DOLCKER &CLIP Do&BASALT Mango - Azul - Grafíto - White',
+            titulo: 'DOLCKER &CLIP. Do&Basalt Beige',
         },
         {
             imagen: ejemplos[1],
-            titulo: 'YDRAY-Dolcker-BASALT_OK2',
+            titulo: '',
         },
     ],
     muestras: [

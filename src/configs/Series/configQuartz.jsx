@@ -21,11 +21,11 @@ const configQUARTZ = {
     ejemplos: [
         {
             imagen: ejemplos[0],
-            titulo: 'DOLCKER &CLIP Do&QUARTZ Mango - Azul - Grafíto - White',
+            titulo: 'DOLCKER &CLIP. Do&Dquarz Grey - Black',
         },
         {
             imagen: ejemplos[1],
-            titulo: 'YDRAY-Dolcker-QUARTZ_OK2',
+            titulo: '',
         },
     ],
     muestras: [
