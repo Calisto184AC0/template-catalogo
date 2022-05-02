@@ -1,4 +1,3 @@
-import { selects } from '../assets/images/Diseno/Formato'
 import getDataFromModules from '../helpers/getDataFromModules'
 
 const flamed = import.meta.globEager(
@@ -16,28 +15,25 @@ const flamedImports = getDataFromModules(flamed),
     mateImports = getDataFromModules(mate)
 
 const config = {
-    top: '90%',
-    left: '4%',
-    menu: {
-        seleccionado: 0,
-        selectores: [
-            {
-                selectorImg: selects[1],
-                titulo: 'Flamed',
-                rotador: flamedImports,
-            },
-            {
-                selectorImg: selects[1],
-                titulo: 'Lapado',
-                rotador: lapadoImports,
-            },
-            {
-                selectorImg: selects[1],
-                titulo: 'Mate',
-                rotador: mateImports,
-            },
-        ],
-    },
+    indicadores: [
+        { top: '35%', left: '40%' },
+        { top: '48%', left: '54%' },
+        { top: '62%', left: '65%' },
+    ],
+    desplazadores: [
+        {
+            titulo: 'Flamed',
+            imgs: flamedImports,
+        },
+        {
+            titulo: 'Lapado',
+            imgs: lapadoImports,
+        },
+        {
+            titulo: 'Mate',
+            imgs: mateImports,
+        },
+    ],
 }
 
 export default config

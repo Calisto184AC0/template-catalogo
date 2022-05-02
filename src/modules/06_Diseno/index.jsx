@@ -19,6 +19,7 @@ import ranurado11 from '../../assets/images/Diseno/Espesores/ranurado11mm.jpg'
 import ranurado14 from '../../assets/images/Diseno/Espesores/ranurado14.jpg'
 import ranurado20 from '../../assets/images/Diseno/Espesores/ranurado20.jpg'
 import useImagesSeries from '../../hooks/useImagesSeries'
+import VisualizadorDesplazador from '../../components/VisualizadorDesplazador'
 
 const Disenos = ({ id }) => {
     const propsFormato = {
@@ -69,10 +70,11 @@ const Disenos = ({ id }) => {
                         text='Desliza con el ratón o el dedo para apreciar la textura'
                     />
                 </Anotaciones>
-                <VisualizadorRotador
+                <VisualizadorDesplazador config={configAcabados} />
+                {/* <VisualizadorRotador
                     config={configAcabados}
                     isDesplazador='true'
-                />
+                /> */}
             </StyledDisenos>
             <StyledDisenos id={id[4]} backgroundColor={COLORS.gray02}>
                 <Titulo2>Espesores</Titulo2>
