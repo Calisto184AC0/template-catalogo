@@ -43,7 +43,7 @@ const Aplicaciones = ({ id }) => {
                     src={img2}
                     alt='Imagen de Aplicaciones 1'
                     caption='DOL -TC11. Do&Dolm Nacar'
-                    columnSpan='6'
+                    columnSpan='4'
                 />
                 <Cita
                     cita='Vivimos en un mundo maravilloso que está lleno de belleza, encanto y aventura. No hay un límite para las aventuras que podemos tener siempre y cuando las busquemos con los ojos bien abiertos.'
