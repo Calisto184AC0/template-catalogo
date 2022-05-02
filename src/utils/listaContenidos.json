@@ -49,10 +49,6 @@
                 "link": "#formato"
             },
             {
-                "title": "Despieces",
-                "link": "#despieces"
-            },
-            {
                 "title": "Acabados",
                 "link": "#acabados"
             },
@@ -164,10 +160,6 @@
     {
         "title": "Características",
         "subList": [
-            {
-                "title": "Características",
-                "link": "#caracteristicas"
-            },
             {
                 "title": "Características especiales",
                 "link": "#caracteristicas-especiales"

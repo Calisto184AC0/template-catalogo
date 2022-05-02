@@ -12,14 +12,14 @@ import Anotaciones from '../../components/Anotacion/Anotaciones'
 import VisualizadorRotador from '../../components/VisualizadorRotador'
 import config from '../../configs/configPiezasEspeciales'
 import configAcabados from '../../configs/configAcabados'
-import Series from './06_1_Series'
+import Series from './06_2_Series'
 import img2 from '../../assets/images/Diseno/Espesores/img1.jpg'
 import img3 from '../../assets/images/Diseno/Espesores/img2.jpg'
 import ranurado11 from '../../assets/images/Diseno/Espesores/ranurado11mm.jpg'
 import ranurado14 from '../../assets/images/Diseno/Espesores/ranurado14.jpg'
 import ranurado20 from '../../assets/images/Diseno/Espesores/ranurado20.jpg'
-import useImagesSeries from '../../hooks/useImagesSeries'
 import VisualizadorDesplazador from '../../components/VisualizadorDesplazador'
+import IndiceSeries from './06_1_IndiceSeries'
 
 const Disenos = ({ id }) => {
     const propsFormato = {
@@ -33,8 +33,6 @@ const Disenos = ({ id }) => {
             altFondo: 'Imagen de fondo con indicadores',
         },
     }
-
-    const enlacesSeries = useImagesSeries()
 
     return (
         <>
@@ -71,10 +69,6 @@ const Disenos = ({ id }) => {
                     />
                 </Anotaciones>
                 <VisualizadorDesplazador config={configAcabados} />
-                {/* <VisualizadorRotador
-                    config={configAcabados}
-                    isDesplazador='true'
-                /> */}
             </StyledDisenos>
             <StyledDisenos id={id[4]} backgroundColor={COLORS.gray02}>
                 <Titulo2>Espesores</Titulo2>
@@ -129,10 +123,7 @@ const Disenos = ({ id }) => {
                 </Anotaciones>
                 <VisualizadorRotador config={config} />
             </StyledDisenos>
-            <StyledDisenos id={id[6]} backgroundColor={COLORS.gray04}>
-                <Titulo2>Series</Titulo2>
-                {enlacesSeries}
-            </StyledDisenos>
+            <IndiceSeries id={id[6]} />
             <Series
                 ids={[
                     'basalt',

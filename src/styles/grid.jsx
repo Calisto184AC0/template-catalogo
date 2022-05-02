@@ -7,6 +7,7 @@ export const column_start_end = (start = 'auto', end = 'auto') => css`
         grid-column: 1 / -1;
     `)}
 `
+export const column_total = column_start_end(1, -1)
 
 export const column_1_span2 = column_start_end(1, 'span 2')
 

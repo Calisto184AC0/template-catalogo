@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import Anotaciones from '../../components/Anotacion/Anotaciones'
 import StyledAnotacion from '../../components/Anotacion/styles'
-import StyledImageWithCaption from '../../components/ImageWithCaption/styles'
 import Seccion from '../../components/Seccion'
 import StyledVisualizadorRotador from '../../components/VisualizadorRotador/styles'
 import StyledVisualizadorVariaciones from '../../components/VisualizadorVariaciones/styles'
