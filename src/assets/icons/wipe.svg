@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35.458" height="20.478" viewBox="0 0 35.458 20.478">
+  <g id="Grupo_238" data-name="Grupo 238" transform="translate(-3964.178 3871.165)">
+    <g id="Grupo_237" data-name="Grupo 237" transform="translate(3964.178 -3871.165)">
+      <g id="Grupo_235" data-name="Grupo 235" transform="translate(16.685 0)">
+        <path id="Trazado_3666" data-name="Trazado 3666" d="M11.7.251a.853.853,0,0,1,0,1.208L6.578,6.579a.853.853,0,0,1-1.208,0L.25,1.46A.854.854,0,0,1,1.458.251L5.974,4.768,10.49.251a.853.853,0,0,1,1.208,0Z" transform="translate(11.943 16.213) rotate(-90)" fill="#1e1e1e" fill-rule="evenodd"/>
+        <path id="Trazado_3667" data-name="Trazado 3667" d="M10.239,5.119a.853.853,0,0,1,.853.853V17.065a.853.853,0,1,1-1.706,0V5.973A.853.853,0,0,1,10.239,5.119ZM0,.853A.853.853,0,0,1,.853,0H19.624a.853.853,0,1,1,0,1.706H.853A.853.853,0,0,1,0,.853Z" transform="translate(0 20.478) rotate(-90)" fill="#1e1e1e" fill-rule="evenodd"/>
+      </g>
+      <g id="Grupo_236" data-name="Grupo 236" transform="translate(0 4.265)">
+        <path id="Trazado_3666-2" data-name="Trazado 3666" d="M11.7,6.578a.853.853,0,0,0,0-1.208L6.578.251a.853.853,0,0,0-1.208,0L.25,5.37A.854.854,0,0,0,1.458,6.578L5.974,2.062,10.49,6.579a.853.853,0,0,0,1.208,0Z" transform="translate(0 11.948) rotate(-90)" fill="#1e1e1e" fill-rule="evenodd"/>
+        <path id="Trazado_3667-2" data-name="Trazado 3667" d="M.853,12.8a.853.853,0,0,0,.853-.853V.853A.853.853,0,0,0,0,.853V11.945A.853.853,0,0,0,.853,12.8Z" transform="translate(0.855 6.827) rotate(-90)" fill="#1e1e1e" fill-rule="evenodd"/>
+      </g>
+    </g>
+  </g>
+</svg>

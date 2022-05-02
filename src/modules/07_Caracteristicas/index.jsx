@@ -144,7 +144,7 @@ const Caracteristicas = ({ id }) => {
                 <ImageWithCaption
                     src={caracter2}
                     alt='características dimensionales y mecanicas'
-                    columnSpan='8'
+                    columnSpan='6'
                 />
                 <Text>
                     <strong>CARACTERÍSTICAS FÍSICAS Y MECÁNICAS</strong>
@@ -158,7 +158,7 @@ const Caracteristicas = ({ id }) => {
                 <ImageWithCaption
                     src={caracter3}
                     alt='características higiencias y normas complementarias'
-                    columnSpan='8'
+                    columnSpan='6'
                 />
             </StyledCaracteristicas>
         </>

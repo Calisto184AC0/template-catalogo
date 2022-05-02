@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Column8, TextMedium } from '../../global/GlobalStyles'
 import StyledMenu from '../VisualizadorVariaciones/Menu/styles'
-import swipe from '../../assets/icons/handswipe.svg'
+import wipe from '../../assets/icons/wipe.svg'
 
 const StyledVisualizadorRotador = styled.div`
     ${Column8}
@@ -24,7 +24,7 @@ const StyledVisualizadorRotador = styled.div`
     }
 
     .indicadores {
-        cursor: url(${swipe}), col-resize;
+        cursor: url(${wipe}), col-resize;
         position: absolute;
         top: 0;
         right: 0;
