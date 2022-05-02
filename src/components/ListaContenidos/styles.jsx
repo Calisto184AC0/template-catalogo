@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import {
     GRID,
     TextMedium,
@@ -6,14 +6,12 @@ import {
     Column6,
     TABLET_SIZE,
 } from '../../global/GlobalStyles'
+import { column_5_span6 } from '../../styles/grid'
+import { mediaQueryTablet } from '../../styles/sizes'
 import StyledSublista from './Sublista/styles'
 
 const StyledListaContenidos = styled.nav`
-    ${Column6}
-
-    @media (max-width: ${TABLET_SIZE}) {
-        grid-column: 2 / -1;
-    }
+    ${column_5_span6}
 
     counter-reset: counter;
 
@@ -33,6 +31,13 @@ const StyledListaContenidos = styled.nav`
             color: ${COLORS.gray01};
             ${TextMedium}
         }
+
+        ${mediaQueryTablet(css`
+            ::before {
+                content: '';
+                display: none;
+            }
+        `)}
     }
 
     > ul > ${StyledSublista} {

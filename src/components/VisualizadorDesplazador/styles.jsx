@@ -26,7 +26,7 @@ const StyledVisualizadorDesplazador = styled.div`
         position: absolute;
         top: ${DISTANCES.medium};
         left: ${DISTANCES.medium};
-        z-index: 3;
+        z-index: 2;
         //color: white;
         //mix-blend-mode: difference;
     }

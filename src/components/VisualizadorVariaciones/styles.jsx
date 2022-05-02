@@ -12,7 +12,7 @@ const StyledVisualizadorVariaciones = styled.div`
         position: absolute;
         top: 5%;
         left: 4%;
-        z-index: 3;
+        z-index: 2;
         color: white;
         mix-blend-mode: difference;
     }

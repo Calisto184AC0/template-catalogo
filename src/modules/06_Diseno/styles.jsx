@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import styled from 'styled-components'
 import Anotaciones from '../../components/Anotacion/Anotaciones'
 import StyledAnotacion from '../../components/Anotacion/styles'
@@ -11,6 +12,7 @@ import {
     GridLayout,
     TABLET_SIZE,
 } from '../../global/GlobalStyles'
+import { column_5_span7 } from '../../styles/grid'
 
 const StyledDisenos = styled(Seccion)`
     row-gap: ${DISTANCES.medium};
@@ -20,7 +22,7 @@ const StyledDisenos = styled(Seccion)`
     }
 
     .espesores-ejemplos {
-        ${Column7}
+        ${column_5_span7}
 
         ${GridLayout}
         grid-template-columns: repeat(7, 1fr);
@@ -51,6 +53,7 @@ const StyledDisenos = styled(Seccion)`
             li {
                 border-top: 1px solid ${COLORS.gray05};
                 padding: ${DISTANCES.small} 0;
+                word-break: break-word;
             }
         }
     }
@@ -72,16 +75,19 @@ const StyledDisenos = styled(Seccion)`
             grid-row-start: auto !important;
         }
 
+        ${props =>
+            props.isEspesores ? 'grid-template-columns: repeat(3, 1fr);' : null}
+
         .espesor-1 {
-            grid-column: 1 / span 4;
+            grid-column: 1 / span 1;
         }
 
         .espesor-2 {
-            grid-column: 5 / span 4;
+            grid-column: 2 / span 1;
         }
 
         .espesor-3 {
-            grid-column: 9 / span 4;
+            grid-column: 3 / span 1;
         }
     }
 

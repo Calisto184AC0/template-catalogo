@@ -1,11 +1,6 @@
 import styled, { css } from 'styled-components'
 import { COLORS } from '../global/GlobalStyles'
-import {
-    column_1_span2,
-    column_3_span2,
-    column_5_span6,
-    seccionLayout,
-} from '../styles/grid'
+import { column_1_span2, column_3_span2, seccionLayout } from '../styles/grid'
 import { mediaQueryTablet } from '../styles/sizes'
 import Anotaciones from './Anotacion/Anotaciones'
 import StyledAnotacion from './Anotacion/styles'

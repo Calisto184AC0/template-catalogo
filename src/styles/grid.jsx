@@ -46,4 +46,9 @@ const SECCION_GRID = {
     verticalSpace: DISTANCES.long,
 }
 
-export const seccionLayout = gridLayoutTemplate(SECCION_GRID)
+export const seccionLayout = gridLayoutTemplate(
+    SECCION_GRID,
+    mediaQueryTablet(css`
+        grid-template-columns: repeat(4, 1fr);
+    `)
+)

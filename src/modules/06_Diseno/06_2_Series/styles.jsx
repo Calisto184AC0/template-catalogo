@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import StyledAnotacion from '../../../components/Anotacion/styles'
 import StyledImageWithCaption from '../../../components/ImageWithCaption/styles'
 import Seccion from '../../../components/Seccion'
@@ -12,6 +12,7 @@ import {
     GridLayout,
     TABLET_SIZE,
 } from '../../../global/GlobalStyles'
+import { mediaQueryTablet } from '../../../styles/sizes'
 
 const StyledSerie = styled(Seccion)`
     row-gap: ${DISTANCES.medium};
@@ -85,6 +86,10 @@ const StyledSerie = styled(Seccion)`
         img {
             cursor: pointer;
         }
+
+        ${mediaQueryTablet(css`
+            grid-template-columns: repeat(3, 1fr);
+        `)}
     }
 
     .acabado-container {
@@ -93,6 +98,10 @@ const StyledSerie = styled(Seccion)`
 
         ${GridLayout}
         grid-template-columns: repeat(8, 1fr);
+
+        ${mediaQueryTablet(css`
+            grid-template-columns: repeat(3, 1fr);
+        `)}
     }
 
     ${StyledAnotacion} {

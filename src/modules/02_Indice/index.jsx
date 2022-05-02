@@ -3,27 +3,31 @@ import ListaContenidos from '../../components/ListaContenidos'
 import { Titulo } from '../../components/Titulos'
 import { COLORS } from '../../global/GlobalStyles'
 import BtnIndice from './BtnIndice'
-import { StyledIndice, Container } from './styles'
+import { StyledIndice } from './styles'
 import openMenu from '../../assets/icons/indice/open-menu.svg'
 import closeMenu from '../../assets/icons/indice/close-menu.svg'
 import flecha from '../../assets/icons/flechita.svg'
 import { slideDown, slideUp } from '../../helpers/animations'
 import scrollTo from '../../helpers/scrollTo'
+import MenuDesplegable from './MenuDesplegable'
 
 const Indice = () => {
     const indiceRef = useRef()
+    const menuRef = useRef()
     const openRef = useRef()
     const [isOpen, setIsOpen] = useState(false)
-    const [actualHeight, setActualHeight] = useState(0)
+    const [menuDesplegable, setMenuDesplegable] = useState(null)
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             entries => {
+                if (window.scrollY <= indiceRef.current.offsetTop) return
+
                 if (entries[0].isIntersecting) {
-                    // aquí no debería aparecer el menú
+                    // Debería aparecer cuando está por debajo del índice
                     if (
                         window.scrollY <=
-                        indiceRef.current.parentNode.offsetTop +
+                        indiceRef.current.offsetTop +
                             indiceRef.current.offsetHeight
                     ) {
                         openRef.current.style.transform = 'translateY(-10vh)'
@@ -39,7 +43,7 @@ const Indice = () => {
             },
             {
                 root: null,
-                rootMargin: '0px 0px 0px 0px',
+                rootMargin: '0px 0px 10px 0px',
                 threshold: 0,
             }
         )
@@ -48,49 +52,43 @@ const Indice = () => {
     }, [])
 
     useEffect(() => {
-        if (window.scrollY !== 0) {
-            if (isOpen) {
-                setActualHeight(indiceRef.current.offsetHeight)
-                document.body.style.overflowY = 'hidden'
-
-                indiceRef.current.style.position = 'fixed'
-                indiceRef.current.style.top = '0px'
-                indiceRef.current.style.left = '0px'
-                indiceRef.current.style.zIndex = 3
-                indiceRef.current.style.maxHeight = '100vh'
-                indiceRef.current.style.overflowY = 'scroll'
-                slideDown(indiceRef.current, 1)
-            } else {
-                document.body.style.overflowY = 'auto'
-                indiceRef.current.style.overflowY = 'hidden'
-
-                setActualHeight(indiceRef.current.offsetHeight)
-
-                slideUp(indiceRef.current, 1, () => {
-                    indiceRef.current.style.position = ''
-                    indiceRef.current.style.top = ''
-                    indiceRef.current.style.left = ''
-                    indiceRef.current.style.zIndex = ''
-                    indiceRef.current.style.maxHeight = 'initial'
-                    setActualHeight(0)
+        if (isOpen) {
+            document.body.style.overflowY = 'hidden'
+            document.body.parentElement.style.scrollBehavior = 'auto'
+            setMenuDesplegable(
+                <MenuDesplegable menuRef={menuRef} setIsOpen={setIsOpen}>
+                    <Titulo color={COLORS.gray01}>Índice</Titulo>
+                    <ListaContenidos />
+                </MenuDesplegable>
+            )
+        } else {
+            if (menuDesplegable !== null)
+                slideUp(menuRef.current, 1, () => {
+                    setMenuDesplegable(null)
+                    document.body.style.overflowY = ''
+                    document.body.parentElement.style.scrollBehavior = 'smooth'
                 })
-            }
         }
+        //     if (window.scrollY !== 0) {
+        //         if (isOpen) {
+        //             document.body.style.overflowY = 'hidden'
+        //             indiceRef.current.style.position = 'fixed'
+        //             indiceRef.current.style.top = '0px'
+        //             indiceRef.current.style.left = '0px'
+        //             indiceRef.current.style.zIndex = 3
+        //             indiceRef.current.style.maxHeight = '100vh'
+        //             indiceRef.current.style.overflowY = 'scroll'
+        //             slideDown(indiceRef.current, 1)
+        //         } else {
+        //             document.body.style.overflowY = 'auto'
+        //             indiceRef.current.style.overflowY = 'hidden'
+        //             slideUp(indiceRef.current, 1)
+        //         }
+        //     }
     }, [isOpen])
 
     const handleBtnIndice = () => {
         setIsOpen(isOpen => !isOpen)
-    }
-
-    const handleClickAnchor = e => {
-        if (!isOpen) return
-
-        if (
-            e.target.tagName === 'A' ||
-            (e.target.tagName === 'SPAN' && e.target.parentNode.tagName === 'A')
-        ) {
-            setIsOpen(false)
-        }
     }
 
     const handleClickFlecha = () => {
@@ -101,23 +99,17 @@ const Indice = () => {
 
     return (
         <>
-            <Container actualHeight={actualHeight}>
-                <StyledIndice
-                    backgroundColor={COLORS.gray08}
-                    ref={indiceRef}
-                    isOpen={isOpen}
-                    onClick={handleClickAnchor}
-                >
-                    <Titulo color={COLORS.gray01}>Índice</Titulo>
-                    <ListaContenidos />
-                    <img
-                        src={flecha}
-                        alt=''
-                        className='flecha-indice'
-                        onClick={handleClickFlecha}
-                    />
-                </StyledIndice>
-            </Container>
+            <StyledIndice backgroundColor={COLORS.gray08} ref={indiceRef}>
+                <Titulo color={COLORS.gray01}>Índice</Titulo>
+                <ListaContenidos />
+                <img
+                    src={flecha}
+                    alt=''
+                    className='flecha-indice'
+                    onClick={handleClickFlecha}
+                />
+            </StyledIndice>
+            {menuDesplegable}
             <BtnIndice
                 src={isOpen ? closeMenu : openMenu}
                 ref={openRef}

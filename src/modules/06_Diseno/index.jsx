@@ -70,7 +70,11 @@ const Disenos = ({ id }) => {
                 </Anotaciones>
                 <VisualizadorDesplazador config={configAcabados} />
             </StyledDisenos>
-            <StyledDisenos id={id[4]} backgroundColor={COLORS.gray02}>
+            <StyledDisenos
+                id={id[4]}
+                backgroundColor={COLORS.gray02}
+                isEspesores
+            >
                 <Titulo2>Espesores</Titulo2>
                 <div className='espesores-ejemplos'>
                     <img src={img2} alt='' />

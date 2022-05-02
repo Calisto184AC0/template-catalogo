@@ -10,6 +10,7 @@ const Introduccion = () => {
     useEffect(() => {
         if (window.scrollY === 0) {
             document.body.style.overflow = 'hidden'
+
             setTimeout(() => {
                 scrollTo(window.innerHeight, 2000)
                 document.body.style.overflow = 'auto'
