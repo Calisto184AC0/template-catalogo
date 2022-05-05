@@ -89,48 +89,53 @@ const config = {
                         menu: {
                             selectores: [
                                 {
+                                    selectorImg: selects[22],
+                                    titulo: 'Largos libres',
+                                    primerPlano: backgrounds[22],
+                                },
+                                {
                                     selectorImg: selects[13],
-                                    titulo: 'MODULAR 1',
+                                    titulo: 'Modular 1',
                                     primerPlano: backgrounds[13],
                                 },
                                 {
                                     selectorImg: selects[14],
-                                    titulo: 'MODULAR 2',
+                                    titulo: 'Modular 2',
                                     primerPlano: backgrounds[14],
                                 },
                                 {
                                     selectorImg: selects[15],
-                                    titulo: 'MODULAR 3',
+                                    titulo: 'Modular 3',
                                     primerPlano: backgrounds[15],
                                 },
                                 {
                                     selectorImg: selects[16],
-                                    titulo: 'MODULAR 4',
+                                    titulo: 'Modular 4',
                                     primerPlano: backgrounds[16],
                                 },
                                 {
                                     selectorImg: selects[17],
-                                    titulo: 'MODULAR 5',
+                                    titulo: 'Modular 5',
                                     primerPlano: backgrounds[17],
                                 },
                                 {
                                     selectorImg: selects[18],
-                                    titulo: 'MODULAR 6',
+                                    titulo: 'Modular 6',
                                     primerPlano: backgrounds[18],
                                 },
                                 {
                                     selectorImg: selects[19],
-                                    titulo: 'MODULAR 7',
+                                    titulo: 'Modular 7',
                                     primerPlano: backgrounds[19],
                                 },
                                 {
                                     selectorImg: selects[20],
-                                    titulo: 'MODULAR 8',
+                                    titulo: 'Modular 8',
                                     primerPlano: backgrounds[20],
                                 },
                                 {
                                     selectorImg: selects[21],
-                                    titulo: 'MODULAR 9',
+                                    titulo: 'Modular 9',
                                     primerPlano: backgrounds[21],
                                 },
                             ],

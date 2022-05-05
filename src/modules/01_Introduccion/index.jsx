@@ -6,13 +6,13 @@ import { totalDuration } from './animationsConfig'
 import scrollTo from '../../helpers/scrollTo'
 import Logo from '../../components/Logo'
 
-const Introduccion = () => {
+const Introduccion = ({ indiceRef }) => {
     useEffect(() => {
         if (window.scrollY === 0) {
             document.body.style.overflow = 'hidden'
 
             setTimeout(() => {
-                scrollTo(window.innerHeight, 2000)
+                scrollTo(indiceRef.current.offsetTop, 2000)
                 document.body.style.overflow = 'auto'
             }, (totalDuration + 1.5) * 1000)
         } else {

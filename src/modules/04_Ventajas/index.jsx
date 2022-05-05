@@ -23,9 +23,7 @@ const Ventajas = ({ id }) => {
                 funcionales del proyecto.
             </Text>
             <Listado>
-                <li>
-                    Sistema de fijación mecánica oculata + fijación elástica
-                </li>
+                <li>Sistema de fijación mecánica oculta + fijación elástica</li>
                 <li>Sistema desmontable</li>
                 <li>
                     Clip correderos (seguridad para piezas de ariostamiento
@@ -39,7 +37,7 @@ const Ventajas = ({ id }) => {
                 <li>Sistema de libre colocación</li>
                 <li>Multitud de tamaños de piezas</li>
                 <li>Despiece a medida</li>
-                <li>Diferentes espesores de piezas (11,14 20 mm)</li>
+                <li>Diferentes espesores de piezas (11, 14 y 20 mm)</li>
                 <li>Sistema desarrollado para cámaras de hasta 20 cm</li>
                 <li>Piezas con canto visto &quot;full body&quot;</li>
                 <li>Fabricación de piezas con texturas mate, flamed y honed</li>

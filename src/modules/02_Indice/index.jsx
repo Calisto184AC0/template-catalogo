@@ -11,8 +11,7 @@ import { slideDown, slideUp } from '../../helpers/animations'
 import scrollTo from '../../helpers/scrollTo'
 import MenuDesplegable from './MenuDesplegable'
 
-const Indice = () => {
-    const indiceRef = useRef()
+const Indice = ({ indiceRef }) => {
     const menuRef = useRef()
     const openRef = useRef()
     const [isOpen, setIsOpen] = useState(false)

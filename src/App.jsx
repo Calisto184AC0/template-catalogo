@@ -7,12 +7,15 @@ import Disenos from './modules/06_Diseno'
 import Caracteristicas from './modules/07_Caracteristicas'
 import Sistemas from './modules/08_Sistemas'
 import Final from './modules/09_Final'
+import { useRef } from 'react'
 
 const App = () => {
+    const indiceRef = useRef()
+
     return (
         <>
-            <Introduccion />
-            <Indice id='indice' />
+            <Introduccion indiceRef={indiceRef} />
+            <Indice id='indice' indiceRef={indiceRef} />
             <Dolcker id='dolcker' />
             <Ventajas id='ventajas' />
             <Aplicaciones
