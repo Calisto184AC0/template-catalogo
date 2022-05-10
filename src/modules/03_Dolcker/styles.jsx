@@ -35,11 +35,7 @@ const StyledDolcker = styled(Seccion)`
         row-gap: ${DISTANCES.medium};
 
         ${StyledImageWithCaption}:nth-of-type(1) {
-            grid-column: 1 / span 3;
-        }
-
-        ${StyledImageWithCaption}:nth-of-type(2) {
-            grid-column: 4 / span 3;
+            grid-column: 1 / span 6;
         }
 
         > p {

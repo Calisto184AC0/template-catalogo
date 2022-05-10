@@ -3,7 +3,6 @@ import { Titulo } from '../../components/Titulos'
 import StyledDolcker from './styles'
 import { COLORS } from '../../global/GlobalStyles'
 
-import img1 from '../../assets/images/Dolcker/catalogo3-1-6.jpg'
 import img2 from '../../assets/images/Dolcker/catalogo3-1-5.jpg'
 import img3 from '../../assets/images/Dolcker/catalogo3-1-7.jpg'
 import indicadores from '../../utils/indicadoresDolcker.json'
@@ -23,11 +22,6 @@ const Dolcker = ({ id }) => {
         <StyledDolcker id={id} backgroundColor={COLORS.gray03}>
             <Titulo>Dolcker soluciona</Titulo>
             <div className='dolcker-info'>
-                <ImageWithCaption
-                    src={img1}
-                    alt='Imagen Dolcker 1'
-                    caption='DOLCKER &CLIP. Do&Wood Manzano / Do&Crete Gris'
-                />
                 <ImageWithCaption
                     src={img2}
                     alt='Imagen Dolcker 2'
