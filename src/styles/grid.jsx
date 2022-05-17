@@ -1,5 +1,5 @@
 import { css } from 'styled-components'
-import { DISTANCES, mediaQueryTablet } from './sizes'
+import { DISTANCES, mediaQueryMobile, mediaQueryTablet } from './sizes'
 
 export const column_start_end = (start = 'auto', end = 'auto') => css`
     grid-column: ${start} / ${end};
@@ -27,7 +27,7 @@ export const gridLayoutTemplate = (
         horizontalSpace = 0,
         verticalSpace = 0,
     },
-    moreStyles
+    ...moreStyles
 ) => css`
     display: grid;
     grid-template-columns: repeat(${numColumns}, 1fr);
@@ -50,5 +50,23 @@ export const seccionLayout = gridLayoutTemplate(
     SECCION_GRID,
     mediaQueryTablet(css`
         grid-template-columns: repeat(4, 1fr);
+    `)
+)
+
+const DOWNLOAD_GRID = {
+    numColumns: 4,
+    columnGap: DISTANCES.small,
+    rowGap: DISTANCES.medium,
+}
+
+export const downloadLayout = gridLayoutTemplate(
+    DOWNLOAD_GRID,
+    mediaQueryTablet(
+        css`
+            grid-template-columns: repeat(2, 1fr);
+        `
+    ),
+    mediaQueryMobile(css`
+        grid-template-columns: repeat(1, 1fr);
     `)
 )

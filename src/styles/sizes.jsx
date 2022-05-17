@@ -7,9 +7,16 @@ export const DISTANCES = {
 }
 
 export const TABLET_SIZE = '980px'
+export const MOBILE_SIZE = '480px'
 
 export const mediaQueryTablet = content => css`
     @media (max-width: ${TABLET_SIZE}) {
+        ${content}
+    }
+`
+
+export const mediaQueryMobile = content => css`
+    @media (max-width: ${MOBILE_SIZE}) {
         ${content}
     }
 `

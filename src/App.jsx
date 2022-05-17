@@ -6,7 +6,8 @@ import Aplicaciones from './modules/05_Aplicaciones'
 import Disenos from './modules/06_Diseno'
 import Caracteristicas from './modules/07_Caracteristicas'
 import Sistemas from './modules/08_Sistemas'
-import Final from './modules/09_Final'
+import Descargas from './modules/09_Descargas'
+import Final from './modules/10_Final'
 import { useRef } from 'react'
 
 const App = () => {
@@ -50,6 +51,7 @@ const App = () => {
                     'dol-hc20',
                 ]}
             />
+            <Descargas id='descargas' />
             <Final />
         </>
     )

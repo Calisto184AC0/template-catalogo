@@ -18,12 +18,26 @@ const config = {
             top: '50%',
             left: '45%',
             menu: {
-                seleccionado: 1,
+                seleccionado: 0,
                 selectores: [
                     {
                         selectorImg: selects[21],
                         titulo: 'Largos libre',
-                        primerPlano: backgrounds[16],
+                        menu: {
+                            seleccionado: 0,
+                            selectores: [
+                                {
+                                    selectorImg: selects[21],
+                                    titulo: 'Largos libre 1',
+                                    primerPlano: backgrounds[16],
+                                },
+                                {
+                                    selectorImg: selects[28],
+                                    titulo: 'Largos libre 2',
+                                    primerPlano: backgrounds[26],
+                                },
+                            ],
+                        },
                     },
                     {
                         selectorImg: selects[25],
@@ -33,7 +47,7 @@ const config = {
                             selectores: [
                                 {
                                     selectorImg: selects[25],
-                                    titulo: 'Line color negro',
+                                    titulo: 'Line color verde',
                                     primerPlano: backgrounds[3],
                                 },
                                 {
@@ -57,7 +71,7 @@ const config = {
                         selectorImg: selects[19],
                         titulo: 'Formatos',
                         menu: {
-                            seleccionado: 0,
+                            seleccionado: -1,
                             selectores: [
                                 {
                                     selectorImg: selects[1],
