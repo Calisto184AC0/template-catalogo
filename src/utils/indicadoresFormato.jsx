@@ -46,7 +46,7 @@ const config = {
                             seleccionado: -1,
                             selectores: [
                                 {
-                                    selectorImg: selects[25],
+                                    selectorImg: selects[29],
                                     titulo: 'Line color verde',
                                     primerPlano: backgrounds[3],
                                 },
