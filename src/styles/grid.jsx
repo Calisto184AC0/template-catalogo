@@ -61,12 +61,7 @@ const DOWNLOAD_GRID = {
 
 export const downloadLayout = gridLayoutTemplate(
     DOWNLOAD_GRID,
-    mediaQueryTablet(
-        css`
-            grid-template-columns: repeat(2, 1fr);
-        `
-    ),
     mediaQueryMobile(css`
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     `)
 )

@@ -12,7 +12,7 @@ import {
     GridLayout,
     TABLET_SIZE,
 } from '../../../global/GlobalStyles'
-import { mediaQueryTablet } from '../../../styles/sizes'
+import { mediaQueryMobile, mediaQueryTablet } from '../../../styles/sizes'
 
 const StyledSerie = styled(Seccion)`
     row-gap: ${DISTANCES.medium};
@@ -88,7 +88,11 @@ const StyledSerie = styled(Seccion)`
         }
 
         ${mediaQueryTablet(css`
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
+        `)}
+
+        ${mediaQueryMobile(css`
+            grid-template-columns: repeat(2, 1fr);
         `)}
     }
 
@@ -100,6 +104,9 @@ const StyledSerie = styled(Seccion)`
         grid-template-columns: repeat(8, 1fr);
 
         ${mediaQueryTablet(css`
+            grid-template-columns: repeat(4, 1fr);
+        `)}
+        ${mediaQueryMobile(css`
             grid-template-columns: repeat(3, 1fr);
         `)}
     }
