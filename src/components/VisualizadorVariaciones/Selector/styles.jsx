@@ -5,7 +5,7 @@ const StyledSelector = styled.div`
     flex-direction: column;
     gap: 0.625rem;
     align-items: flex-start;
-    cursor: pointer;
+    cursor: ${props => (props.noClick ? 'normal' : 'pointer')};
 
     img {
         width: 7rem;

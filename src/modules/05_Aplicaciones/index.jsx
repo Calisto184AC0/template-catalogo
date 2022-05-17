@@ -8,7 +8,6 @@ import img3 from '../../assets/images/Aplicaciones/catalogo3-1-11.jpg'
 import img4 from '../../assets/images/Aplicaciones/catalogo3-1-12.jpg'
 import img5 from '../../assets/images/Aplicaciones/catalogo3-1-13.jpg'
 import Cita from '../../components/Cita'
-import { column_5_span4 } from '../../styles/grid'
 
 const Aplicaciones = ({ id }) => {
     return (

@@ -11,8 +11,11 @@ const Selector = ({
     idMenu,
     changeMenu,
     setActualTitulo,
+    noClick,
 }) => {
     const handleClick = () => {
+        if (noClick) return
+
         if (primerPlano) {
             closeMenu()
 
@@ -30,7 +33,7 @@ const Selector = ({
     }
 
     return (
-        <StyledSelector onClick={handleClick}>
+        <StyledSelector onClick={handleClick} noClick={noClick}>
             <img src={selectorImg} alt={'Selector ' + titulo} />
             <span>{titulo}</span>
         </StyledSelector>

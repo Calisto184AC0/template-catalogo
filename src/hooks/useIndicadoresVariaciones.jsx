@@ -71,15 +71,33 @@ const reducer = (state, { type, payload }) => {
                     Object.entries(newMenu.prevSeleccionados).map(
                         ([idMenu, { seleccionado }]) => {
                             newMenu.menus[idMenu].seleccionado = seleccionado
-                            newMenu.menus[idMenu].hijos.map(idMenuHijo => {
-                                newMenu.menus[idMenuHijo].seleccionado = -1
-                            })
+                            newMenu.menus[idMenu].hijos.map(
+                                ([, idMenuHijo]) => {
+                                    newMenu.menus[idMenuHijo].seleccionado = -1
+                                }
+                            )
                         }
                     )
                 }
 
                 newMenu.menus[payload.idMenu].seleccionado = payload.index
             } else {
+                let find = true
+
+                newMenu.menus[payload.idMenu].hijos.map(([index]) => {
+                    find &= index !== payload.index
+                })
+
+                if (find) {
+                    // significa que el hijo seleccionado no tiene submenú
+                    newMenu.menus[payload.idMenu].seleccionado = payload.index
+                    newMenu.menus[payload.idMenu].hijos.map(
+                        ([, idMenuHijo]) => {
+                            newMenu.menus[idMenuHijo].seleccionado = -1
+                        }
+                    )
+                }
+
                 newMenu.prevSeleccionados[payload.idMenu] = {
                     seleccionado: payload.index,
                 }
@@ -139,9 +157,13 @@ const getSelectores = ({
                     setActualTitulo(titulo)
                 }
 
-                selectorProps.primerPlano = primerPlano
-                selectorProps.closeMenu = closeMenu
-                selectorProps.foregroundImgRef = currentRef
+                if (primerPlano === undefined) {
+                    selectorProps.noClick = true
+                } else {
+                    selectorProps.primerPlano = primerPlano
+                    selectorProps.closeMenu = closeMenu
+                    selectorProps.foregroundImgRef = currentRef
+                }
             } else {
                 const idMenuHijo = getMenu({
                     padre,
@@ -155,7 +177,7 @@ const getSelectores = ({
                 selectorProps.changeMenu = dispatch.changeMenu
                 selectorProps.idMenu = idMenuHijo
 
-                hijos.push(idMenuHijo)
+                hijos.push([index, idMenuHijo])
             }
 
             return <Selector {...selectorProps} />
