@@ -41,7 +41,7 @@ const config = {
                     },
                     {
                         selectorImg: selects[25],
-                        titulo: 'Line color',
+                        titulo: 'Line colors',
                         menu: {
                             seleccionado: -1,
                             selectores: [
