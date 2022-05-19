@@ -45,6 +45,14 @@ const configVOLUMEN = {
             imagen: muestras[5],
             titulo: 'Pieza 6',
         },
+        {
+            imagen: muestras[6],
+            titulo: 'Pieza 7',
+        },
+        {
+            imagen: muestras[7],
+            titulo: 'Pieza 8',
+        },
     ],
 }
 

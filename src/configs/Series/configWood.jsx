@@ -47,7 +47,7 @@ const configWOOD = {
         },
         {
             imagen: muestras[4],
-            titulo: 'Saulce',
+            titulo: 'Sauce',
         },
     ],
     acabados: [
