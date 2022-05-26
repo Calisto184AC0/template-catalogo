@@ -5,15 +5,16 @@ import { COLORS } from '../../global/GlobalStyles'
 
 import img2 from '../../assets/images/Dolcker/catalogo3-1-5.jpg'
 import img3 from '../../assets/images/Dolcker/catalogo3-1-7.jpg'
-import indicadores from '../../utils/indicadoresDolcker.json'
 import VisualizadorNota from '../../components/VisualizadorNota'
 import Text from '../../components/Text'
+
+import config from '../../configs/configDolcker'
 
 const Dolcker = ({ id }) => {
     const propsVisualizador = {
         text: 'Pasa el ratón por los puntos para ver la información',
         type: 'normal',
-        indicadores,
+        indicadores: config,
         imgBackground: img3,
         alt: 'Imagen de fondo con indicadores',
     }

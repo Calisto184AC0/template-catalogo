@@ -1,16 +1,22 @@
 /* eslint-disable react/jsx-key */
+import { useState } from 'react'
 import { Children, useRef } from 'react'
 import Indicador from '../components/Indicador'
 
 const useIndicadoresNota = indicadores => {
+    const [title, setTitle] = useState('')
+    const [piezaImgSrc, setPiezaImgSrc] = useState('')
+
     const containerRef = useRef()
     const textRef = useRef()
 
-    const showContainer = text => {
+    const showContainer = (title, imgSrc) => {
         containerRef.current.style.visibility = 'visible'
-        containerRef.current.style.opacity = 0.7
-        textRef.current.innerHTML = text
-        textRef.current.getAnimations()[0].play()
+        containerRef.current.style.opacity = 1
+        setPiezaImgSrc(imgSrc)
+        setTitle(title)
+        containerRef.current.children[0].getAnimations()[0]?.play()
+        containerRef.current.children[1].getAnimations()[0]?.play()
     }
 
     const hideContainer = () => {
@@ -24,7 +30,12 @@ const useIndicadoresNota = indicadores => {
                 <Indicador
                     top={indicador.top}
                     left={indicador.left}
-                    onMouseEnter={() => showContainer(indicador.text)}
+                    onMouseEnter={() =>
+                        showContainer(
+                            indicador.content.title,
+                            indicador.content.imgSrc
+                        )
+                    }
                     onMouseLeave={hideContainer}
                 />
             )
@@ -32,9 +43,11 @@ const useIndicadoresNota = indicadores => {
     )
 
     return {
+        title,
         listaIndicadores,
         containerRef,
         textRef,
+        piezaImgSrc,
     }
 }
 

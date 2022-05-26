@@ -10,8 +10,6 @@ const selectImports = import.meta.globEager(
 const backgrounds = getDataFromModules(backgroundImports)
 const selects = getDataFromModules(selectImports)
 
-console.log({ backgrounds, selects })
-
 const config = {
     fachada: [
         {

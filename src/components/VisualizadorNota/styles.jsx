@@ -23,6 +23,10 @@ const StyledVisualizadorNota = styled.div`
         bottom: 0;
         z-index: 2;
 
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
         padding: ${DISTANCES.small} ${DISTANCES.medium};
 
         background-color: ${COLORS.gray01};
@@ -31,7 +35,12 @@ const StyledVisualizadorNota = styled.div`
 
         transition: visibility 0.3s, opacity 0.3s;
 
-        .visualizador-nota {
+        img {
+            width: 6rem;
+        }
+
+        .visualizador-nota,
+        img {
             animation: slide-right-fade-in 0.3s;
             animation-fill-mode: forwards;
         }

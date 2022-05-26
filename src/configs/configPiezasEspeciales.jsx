@@ -49,22 +49,22 @@ const config = {
                 rotador: albardillaImports,
             },
             {
-                selectorImg: selectores[1],
+                selectorImg: selectores[3],
                 titulo: 'Peldaños',
                 menu: {
                     selectores: [
                         {
-                            selectorImg: selectores[1],
+                            selectorImg: selectores[3],
                             titulo: 'Tipo 1',
                             rotador: peldano1Imports,
                         },
                         {
-                            selectorImg: selectores[2],
+                            selectorImg: selectores[4],
                             titulo: 'Tipo 2',
                             rotador: peldano2Imports,
                         },
                         {
-                            selectorImg: selectores[3],
+                            selectorImg: selectores[5],
                             titulo: 'Tipo 3',
                             rotador: peldano3Imports,
                         },
@@ -72,22 +72,22 @@ const config = {
                 },
             },
             {
-                selectorImg: selectores[4],
+                selectorImg: selectores[7],
                 titulo: 'Rejilla',
                 rotador: rejillaImports,
             },
             {
-                selectorImg: selectores[5],
+                selectorImg: selectores[8],
                 titulo: 'Suelo elevado',
                 rotador: sueloElevadoImports,
             },
             {
-                selectorImg: selectores[6],
+                selectorImg: selectores[9],
                 titulo: 'Techo',
                 rotador: techoImports,
             },
             {
-                selectorImg: selectores[7],
+                selectorImg: selectores[10],
                 titulo: 'Vierteaguas',
                 rotador: vierteaguasImports,
             },

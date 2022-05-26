@@ -18,8 +18,6 @@ import hc202 from '../../assets/images/Sistemas/dol-hc20.svg'
 import ImageWithCaption from '../../components/ImageWithCaption'
 
 const Sistemas = ({ id }) => {
-    console.log(id)
-
     return (
         <>
             <StyledSistemas id={id[0]}>
