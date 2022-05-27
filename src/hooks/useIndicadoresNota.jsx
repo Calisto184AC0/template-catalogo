@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-key */
-import { useState } from 'react'
-import { Children, useRef } from 'react'
+import { useCallback, useState, Children, useRef } from 'react'
 import Indicador from '../components/Indicador'
 
 const useIndicadoresNota = indicadores => {
