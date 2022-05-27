@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import logo from '../assets/images/Introduccion/logo.svg'
+import logo from '../assets/icons/Introduccion/logo.svg'
 
 const Logo = styled.img.attrs({
     src: logo,

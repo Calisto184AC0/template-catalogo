@@ -5,16 +5,16 @@ import StyledSistemas, { Enlaces } from './styles'
 import sistemas from '../../assets/images/Sistemas/sistemas.jpg'
 
 import dolckerClip1 from '../../assets/images/Sistemas/sistema-dolcker-clip.jpg'
-import dolckerClip2 from '../../assets/images/Sistemas/dolcker-clip.svg'
+import dolckerClip2 from '../../assets/icons/Sistemas/dolcker-clip.svg'
 
 import tc111 from '../../assets/images/Sistemas/sistema-dolcker-tc11.jpg'
-import tc112 from '../../assets/images/Sistemas/dol-hc20.svg'
+import tc112 from '../../assets/icons/Sistemas/dol-hc20.svg'
 
 import tc141 from '../../assets/images/Sistemas/sistema-dolcker-tc14.jpg'
-import tc142 from '../../assets/images/Sistemas/dol-hc20.svg'
+import tc142 from '../../assets/icons/Sistemas/dol-hc20.svg'
 
 import hc201 from '../../assets/images/Sistemas/sistema-dolcker-hc20.jpg'
-import hc202 from '../../assets/images/Sistemas/dol-hc20.svg'
+import hc202 from '../../assets/icons/Sistemas/dol-hc20.svg'
 import ImageWithCaption from '../../components/ImageWithCaption'
 
 const Sistemas = ({ id }) => {
