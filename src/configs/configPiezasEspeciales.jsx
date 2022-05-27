@@ -4,28 +4,28 @@ const selectoresImports = import.meta.globEager('../assets/icons/piezas/**')
 const selectores = getDataFromModules(selectoresImports)
 
 const albardilla = import.meta.globEager(
-        '../assets/images/Diseno/Piezas especiales/ALBARDILLA/*.jpg'
+        '../assets/images/Diseno/Piezas especiales/ALBARDILLA/*.webp'
     ),
     peldano1 = import.meta.globEager(
-        '../assets/images/Diseno/Piezas especiales/PELDANO 1/*.jpg'
+        '../assets/images/Diseno/Piezas especiales/PELDANO 1/*.webp'
     ),
     peldano2 = import.meta.globEager(
-        '../assets/images/Diseno/Piezas especiales/PELDANO 2/*.jpg'
+        '../assets/images/Diseno/Piezas especiales/PELDANO 2/*.webp'
     ),
     peldano3 = import.meta.globEager(
-        '../assets/images/Diseno/Piezas especiales/PELDANO 3/*.jpg'
+        '../assets/images/Diseno/Piezas especiales/PELDANO 3/*.webp'
     ),
     rejilla = import.meta.globEager(
-        '../assets/images/Diseno/Piezas especiales/REJILLA/*.jpg'
+        '../assets/images/Diseno/Piezas especiales/REJILLA/*.webp'
     ),
     sueloElevado = import.meta.globEager(
-        '../assets/images/Diseno/Piezas especiales/SUELO ELEVADO/*.jpg'
+        '../assets/images/Diseno/Piezas especiales/SUELO ELEVADO/*.webp'
     ),
     techo = import.meta.globEager(
-        '../assets/images/Diseno/Piezas especiales/TECHO/*.jpg'
+        '../assets/images/Diseno/Piezas especiales/TECHO/*.webp'
     ),
     vierteaguas = import.meta.globEager(
-        '../assets/images/Diseno/Piezas especiales/VIERTEAGUAS/*.jpg'
+        '../assets/images/Diseno/Piezas especiales/VIERTEAGUAS/*.webp'
     )
 
 const albardillaImports = getDataFromModules(albardilla),

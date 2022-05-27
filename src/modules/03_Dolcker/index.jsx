@@ -3,8 +3,8 @@ import { Titulo } from '../../components/Titulos'
 import StyledDolcker from './styles'
 import { COLORS } from '../../global/GlobalStyles'
 
-import img2 from '../../assets/images/Dolcker/catalogo3-1-5.jpg'
-import img3 from '../../assets/images/Dolcker/catalogo3-1-7.jpg'
+import img2 from '../../assets/images/Dolcker/catalogo3-1-5.webp'
+import img3 from '../../assets/images/Dolcker/catalogo3-1-7.webp'
 import VisualizadorNota from '../../components/VisualizadorNota'
 import Text from '../../components/Text'
 
