@@ -1,6 +1,7 @@
 import getDataFromModules from '../../helpers/getDataFromModules'
+import imgSeleccionar from '../../assets/images/Series/PORTLAND/Dolcker PORTLAND_seleccionar.webp'
 
-const ejemplosImports = import.meta.globEager(
+const ambientesImports = import.meta.globEager(
     '../../assets/images/Series/PORTLAND/AMBIENTES/**'
 )
 
@@ -10,7 +11,7 @@ const muestrasImports = import.meta.globEager(
 
 const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
 
-const ejemplos = getDataFromModules(ejemplosImports)
+const ambientes = getDataFromModules(ambientesImports)
 const muestras = getDataFromModules(muestrasImports)
 const acabados = getDataFromModules(acabadosImports)
 
@@ -18,14 +19,47 @@ const configPORTLAND = {
     titulo: 'DO&PORTLAND',
     descripcion:
         'El cemento constituyen, para la arquitectura y el diseño, un recurso estético y de proyecto, un material que permite crear efectos espectaculares pero también espacios minimalistas, con una gran versatilidad de materiales y composición.',
-    ejemplos: [
+    imgSeleccionar,
+    indicadores: [
         {
-            imagen: ejemplos[0],
-            titulo: 'DOL TC14. Do&Portland Blanco- Gris - Nacar - Taupe',
+            top: '60%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[0],
+                titulo: 'DOL TC14. Do&Portland Blanco- Gris - Nacar - Taupe',
+            },
         },
         {
-            imagen: ejemplos[1],
-            titulo: '',
+            top: '7%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[1],
+                titulo: '',
+            },
+        },
+        {
+            top: '23%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[2],
+                titulo: '',
+            },
+        },
+        {
+            top: '43%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[3],
+                titulo: '',
+            },
+        },
+        {
+            top: '80%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[4],
+                titulo: '',
+            },
         },
     ],
     muestras: [

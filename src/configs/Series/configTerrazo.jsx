@@ -1,6 +1,7 @@
 import getDataFromModules from '../../helpers/getDataFromModules'
+import imgSeleccionar from '../../assets/images/Series/TERRAZO/Dolcker TERRAZO_seleccionar.webp'
 
-const ejemplosImports = import.meta.globEager(
+const ambientesImports = import.meta.globEager(
     '../../assets/images/Series/TERRAZO/AMBIENTES/**'
 )
 
@@ -10,21 +11,54 @@ const muestrasImports = import.meta.globEager(
 
 const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
 
-const ejemplos = getDataFromModules(ejemplosImports)
+const ambientes = getDataFromModules(ambientesImports)
 const muestras = getDataFromModules(muestrasImports)
 const acabados = getDataFromModules(acabadosImports)
 
 const configTERRAZO = {
     titulo: 'DO&TERRAZO',
     descripcion: 'Detalles gráficos que se inspiran en el Modernismo.',
-    ejemplos: [
+    imgSeleccionar,
+    indicadores: [
         {
-            imagen: ejemplos[0],
-            titulo: 'DOLCKER &CLIP. Do&Terrazo Beige - Silver',
+            top: '23%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[0],
+                titulo: 'DOLCKER &CLIP. Do&Terrazo Beige - Silver',
+            },
         },
         {
-            imagen: ejemplos[1],
-            titulo: '',
+            top: '60%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[1],
+                titulo: '',
+            },
+        },
+        {
+            top: '7%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[2],
+                titulo: '',
+            },
+        },
+        {
+            top: '80%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[3],
+                titulo: '',
+            },
+        },
+        {
+            top: '43%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[4],
+                titulo: '',
+            },
         },
     ],
     muestras: [

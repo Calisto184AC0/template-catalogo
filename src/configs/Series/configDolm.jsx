@@ -1,6 +1,7 @@
 import getDataFromModules from '../../helpers/getDataFromModules'
+import imgSeleccionar from '../../assets/images/Series/DOLM/YDRAY-Dolcker-DOLMEN_OK_seleccionar.webp'
 
-const ejemplosImports = import.meta.globEager(
+const ambientesImports = import.meta.globEager(
     '../../assets/images/Series/DOLM/AMBIENTES/**'
 )
 
@@ -10,7 +11,7 @@ const muestrasImports = import.meta.globEager(
 
 const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
 
-const ejemplos = getDataFromModules(ejemplosImports)
+const ambientes = getDataFromModules(ambientesImports)
 const muestras = getDataFromModules(muestrasImports)
 const acabados = getDataFromModules(acabadosImports)
 
@@ -18,14 +19,39 @@ const configDOLM = {
     titulo: 'DO&DOLM',
     descripcion:
         'Del deseo de redescubrir la esencia de los materiales originales y sus detalles, nace esta colección efecto piedra que interpreta y vuelve a proponer el aspecto mineral y masivo de una materia que resiste a lo largo del tiempo. La naturaleza se convierte en fuente de inspiración para estas cerámicas de efecto piedra y se plasma en los colores y en las combinaciones para crear el perfecto equilibrio.',
-    ejemplos: [
+    imgSeleccionar,
+    indicadores: [
         {
-            imagen: ejemplos[0],
-            titulo: 'DOLCKER &CLIP. Do&Dolm Gris',
+            top: '40%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[0],
+                titulo: 'DOLCKER &CLIP. Do&Dolm Gris',
+            },
         },
         {
-            imagen: ejemplos[1],
-            titulo: '',
+            top: '24%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[1],
+                titulo: '',
+            },
+        },
+        {
+            top: '62%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[2],
+                titulo: '',
+            },
+        },
+        {
+            top: '80%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[3],
+                titulo: '',
+            },
         },
     ],
     muestras: [

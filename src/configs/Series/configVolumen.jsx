@@ -1,6 +1,6 @@
 import getDataFromModules from '../../helpers/getDataFromModules'
 
-const ejemplosImports = import.meta.globEager(
+const ambientesImports = import.meta.globEager(
     '../../assets/images/Series/VOLUMEN/AMBIENTES/**'
 )
 
@@ -8,16 +8,19 @@ const muestrasImports = import.meta.globEager(
     '../../assets/images/Series/VOLUMEN/DESPIECE/**'
 )
 
-const ejemplos = getDataFromModules(ejemplosImports)
+const ambientes = getDataFromModules(ambientesImports)
 const muestras = getDataFromModules(muestrasImports)
 
 const configVOLUMEN = {
     titulo: 'DO&VOLUMEN',
     descripcion: '',
-    ejemplos: [
+    imgSeleccionar: '',
+    indicadores: [
         {
-            imagen: ejemplos[0],
-            titulo: 'DOLCKER &CLIP.. Do&Volumen',
+            ambiente: {
+                imagen: ambientes[0],
+                titulo: 'DOLCKER &CLIP.. Do&Volumen',
+            },
         },
     ],
     muestras: [

@@ -1,6 +1,7 @@
 import getDataFromModules from '../../helpers/getDataFromModules'
+import imgSeleccionar from '../../assets/images/Series/WOOD/Dolcker WOOD_seleccionar.webp'
 
-const ejemplosImports = import.meta.globEager(
+const ambientesImports = import.meta.globEager(
     '../../assets/images/Series/WOOD/AMBIENTES/**'
 )
 
@@ -10,7 +11,7 @@ const muestrasImports = import.meta.globEager(
 
 const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
 
-const ejemplos = getDataFromModules(ejemplosImports)
+const ambientes = getDataFromModules(ambientesImports)
 const muestras = getDataFromModules(muestrasImports)
 const acabados = getDataFromModules(acabadosImports)
 
@@ -18,14 +19,39 @@ const configWOOD = {
     titulo: 'DO&WOOD',
     descripcion:
         'El color natural de la madera devuelve al espacio urbano la vitalidad de una vida intensa y cargada de emoción, en armonía total con el ambiente.',
-    ejemplos: [
+    imgSeleccionar,
+    indicadores: [
         {
-            imagen: ejemplos[0],
-            titulo: 'DOL TC14. Do&Wood Encina - Eucalipto',
+            top: '7%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[0],
+                titulo: 'DOL TC14. Do&Wood Encina - Eucalipto',
+            },
         },
         {
-            imagen: ejemplos[1],
-            titulo: '',
+            top: '43%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[1],
+                titulo: '',
+            },
+        },
+        {
+            top: '23%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[2],
+                titulo: '',
+            },
+        },
+        {
+            top: '80%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[3],
+                titulo: '',
+            },
         },
     ],
     muestras: [

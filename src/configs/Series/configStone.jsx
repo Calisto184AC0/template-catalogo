@@ -1,6 +1,8 @@
 import getDataFromModules from '../../helpers/getDataFromModules'
 
-const ejemplosImports = import.meta.globEager(
+import imgSeleccionar from '../../assets/images/Series/STONE/Dolcker NATURAL STONE_seleccionar.webp'
+
+const ambientesImports = import.meta.globEager(
     '../../assets/images/Series/STONE/AMBIENTES/**'
 )
 
@@ -10,7 +12,7 @@ const muestrasImports = import.meta.globEager(
 
 const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
 
-const ejemplos = getDataFromModules(ejemplosImports)
+const ambientes = getDataFromModules(ambientesImports)
 const muestras = getDataFromModules(muestrasImports)
 const acabados = getDataFromModules(acabadosImports)
 
@@ -18,14 +20,39 @@ const configSTONE = {
     titulo: 'DO&STONE',
     descripcion:
         'La serie ARQUITEC es el resultado de la innovación y la funcionalidad, la unión entre la técnica más avanzada y versatilidad. Los formatos de la colección, sus tonalidades neutras y su aspecto monocromático, le permite protagonizar cualquier espacio.',
-    ejemplos: [
+    imgSeleccionar,
+    indicadores: [
         {
-            imagen: ejemplos[0],
-            titulo: 'DOLCKER &CLIP. Do&Stone Natural Granit',
+            top: '32%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[0],
+                titulo: 'DOLCKER &CLIP. Do&Stone Natural Granit',
+            },
         },
         {
-            imagen: ejemplos[1],
-            titulo: '',
+            top: '75%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[1],
+                titulo: '',
+            },
+        },
+        {
+            top: '10%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[2],
+                titulo: '',
+            },
+        },
+        {
+            top: '55%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[3],
+                titulo: '',
+            },
         },
     ],
     muestras: [

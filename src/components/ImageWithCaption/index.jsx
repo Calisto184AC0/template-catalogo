@@ -8,8 +8,9 @@ const ImageWithCaption = ({
     className,
     columnSpan,
     style,
+    mostrarCaption,
 }) => {
-    if (!caption)
+    if (!caption && !mostrarCaption)
         return (
             <StyledImageWithCaption
                 className={className}
@@ -27,7 +28,7 @@ const ImageWithCaption = ({
             columnSpan={columnSpan}
         >
             <img src={src} alt={alt} onClick={onClickFunc} />
-            <figcaption>{caption}</figcaption>
+            <figcaption>{caption || '-'}</figcaption>
         </StyledImageWithCaption>
     )
 }

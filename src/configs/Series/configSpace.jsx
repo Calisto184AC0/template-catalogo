@@ -1,6 +1,8 @@
 import getDataFromModules from '../../helpers/getDataFromModules'
 
-const ejemplosImports = import.meta.globEager(
+import imgSeleccionar from '../../assets/images/Series/SPACE/Dolcker SPACE_seleccionar.webp'
+
+const ambientesImports = import.meta.globEager(
     '../../assets/images/Series/SPACE/AMBIENTES/**'
 )
 
@@ -10,7 +12,7 @@ const muestrasImports = import.meta.globEager(
 
 const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
 
-const ejemplos = getDataFromModules(ejemplosImports)
+const ambientes = getDataFromModules(ambientesImports)
 const muestras = getDataFromModules(muestrasImports)
 const acabados = getDataFromModules(acabadosImports)
 
@@ -18,14 +20,47 @@ const configSPACE = {
     titulo: 'DO&SPACE',
     descripcion:
         'La elegancia de la simplicidad, un estilo atemporal, el minimalismo que se convierte en lenguaje expresivo.',
-    ejemplos: [
+    imgSeleccionar,
+    indicadores: [
         {
-            imagen: ejemplos[0],
-            titulo: 'DOLCKER &CLIP y DOL TC14. Do&Space White - Ivory',
+            top: '20%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[0],
+                titulo: 'DOLCKER &CLIP y DOL TC14. Do&Space White - Ivory',
+            },
         },
         {
-            imagen: ejemplos[1],
-            titulo: '',
+            top: '68%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[1],
+                titulo: '',
+            },
+        },
+        {
+            top: '5%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[2],
+                titulo: '',
+            },
+        },
+        {
+            top: '35%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[3],
+                titulo: '',
+            },
+        },
+        {
+            top: '51%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[4],
+                titulo: '',
+            },
         },
     ],
     muestras: [
