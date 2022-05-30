@@ -22,7 +22,7 @@ const configBASALT = {
     imgSeleccionar,
     indicadores: [
         {
-            top: '20%',
+            top: '15%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[0],
@@ -30,7 +30,7 @@ const configBASALT = {
             },
         },
         {
-            top: '62%',
+            top: '70%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
@@ -38,7 +38,7 @@ const configBASALT = {
             },
         },
         {
-            top: '40%',
+            top: '45%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[2],
