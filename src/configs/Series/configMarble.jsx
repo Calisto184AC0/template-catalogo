@@ -1,5 +1,6 @@
 import getDataFromModules from '../../helpers/getDataFromModules'
 import imgSeleccionar from '../../assets/images/Series/MARBLE/Dolcker MARBLE STONE_seleccionar.webp'
+import getFoldersFromModules from '../../helpers/getFoldersFromModules'
 
 const ambientesImports = import.meta.globEager(
     '../../assets/images/Series/MARBLE/AMBIENTES/**'
@@ -9,11 +10,16 @@ const muestrasImports = import.meta.globEager(
     '../../assets/images/Series/MARBLE/DESPIECE/**'
 )
 
+const muestrasAcabadosImports = import.meta.globEager(
+    '../../assets/images/Series/MARBLE/MUESTRAS_ACABADOS/**'
+)
+
 const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
 
 const ambientes = getDataFromModules(ambientesImports)
 const muestras = getDataFromModules(muestrasImports)
 const acabados = getDataFromModules(acabadosImports)
+const muestrasAcabados = getFoldersFromModules(muestrasAcabadosImports)
 
 const configMARBLE = {
     titulo: 'DO&MARBLE',
@@ -58,18 +64,22 @@ const configMARBLE = {
         {
             imagen: muestras[0],
             titulo: 'Calacatta',
+            acabados: muestrasAcabados['CALACATTA'],
         },
         {
             imagen: muestras[1],
             titulo: 'Crema',
+            acabados: muestrasAcabados['CREMA'],
         },
         {
             imagen: muestras[2],
             titulo: 'Lava',
+            acabados: muestrasAcabados['LAVA'],
         },
         {
             imagen: muestras[3],
             titulo: 'Grey',
+            acabados: muestrasAcabados['GREY'],
         },
     ],
     acabados: [

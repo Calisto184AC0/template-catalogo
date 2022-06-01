@@ -1,5 +1,6 @@
 import getDataFromModules from '../../helpers/getDataFromModules'
 import imgSeleccionar from '../../assets/images/Series/TZMENT/YDRAY-Dolcker-ZEMENT_OK.webp'
+import getFoldersFromModules from '../../helpers/getFoldersFromModules'
 
 const ambientesImports = import.meta.globEager(
     '../../assets/images/Series/TZMENT/AMBIENTES/**'
@@ -9,11 +10,16 @@ const muestrasImports = import.meta.globEager(
     '../../assets/images/Series/TZMENT/DESPIECE/**'
 )
 
+const muestrasAcabadosImports = import.meta.globEager(
+    '../../assets/images/Series/TZMENT/MUESTRAS_ACABADOS/**'
+)
+
 const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
 
 const ambientes = getDataFromModules(ambientesImports)
 const muestras = getDataFromModules(muestrasImports)
 const acabados = getDataFromModules(acabadosImports)
+const muestrasAcabados = getFoldersFromModules(muestrasAcabadosImports)
 
 const configTZMENT = {
     titulo: 'DO&TZMENT',
@@ -57,18 +63,22 @@ const configTZMENT = {
         {
             imagen: muestras[0],
             titulo: 'Black',
+            acabados: muestrasAcabados['BLACK'],
         },
         {
             imagen: muestras[1],
             titulo: 'Coal',
+            acabados: muestrasAcabados['COAL'],
         },
         {
             imagen: muestras[2],
             titulo: 'Steel',
+            acabados: muestrasAcabados['STEEL'],
         },
         {
             imagen: muestras[3],
             titulo: 'White',
+            acabados: muestrasAcabados['WHITE'],
         },
     ],
     acabados: [

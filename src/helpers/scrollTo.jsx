@@ -12,4 +12,15 @@ const scrollTo = (position, duration, callback) => {
     }, duration)
 }
 
+const simpleHorizontalScroll = (position, duration, containerId) => {
+    animateScroll.scrollTo(position, {
+        containerId,
+        duration,
+        smooth: true,
+        horizontal: true,
+    })
+}
+
+export { simpleHorizontalScroll }
+
 export default scrollTo

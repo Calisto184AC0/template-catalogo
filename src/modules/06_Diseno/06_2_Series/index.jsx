@@ -27,6 +27,7 @@ const Series = ({ ids }) => {
                 imgSrc={fullScreenSrc}
                 setFullScreenSrc={setFullScreenSrc}
                 titulo={fullScreenTitulo}
+                setFullScreenTitulo={setFullScreenTitulo}
                 backgroundColor={COLORS.gray01}
             />
             <Serie

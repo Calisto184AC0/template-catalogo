@@ -1,5 +1,6 @@
 import getDataFromModules from '../../helpers/getDataFromModules'
 import imgSeleccionar from '../../assets/images/Series/ARQUITECT/Dolcker ARQUITECT_seleccionar.webp'
+import getFoldersFromModules from '../../helpers/getFoldersFromModules'
 
 const ambientesImport = import.meta.globEager(
     '../../assets/images/Series/ARQUITECT/AMBIENTES/**'
@@ -9,11 +10,17 @@ const muestrasImports = import.meta.globEager(
     '../../assets/images/Series/ARQUITECT/DESPIECE/**'
 )
 
+const muestrasAcabadosImports = import.meta.globEager(
+    '../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/**'
+)
+
 const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
 
 const ambientes = getDataFromModules(ambientesImport)
 const muestras = getDataFromModules(muestrasImports)
 const acabados = getDataFromModules(acabadosImports)
+
+const muestrasAcabados = getFoldersFromModules(muestrasAcabadosImports)
 
 const configArquitect = {
     titulo: 'DO&ARQUITECT',
@@ -122,50 +129,62 @@ const configArquitect = {
         {
             imagen: muestras[0],
             titulo: 'Amarillo',
+            acabados: muestrasAcabados['AMARILLO'],
         },
         {
             imagen: muestras[1],
             titulo: 'Azul',
+            acabados: muestrasAcabados['AZUL'],
         },
         {
             imagen: muestras[2],
             titulo: 'Blanco',
+            acabados: muestrasAcabados['BLANCO'],
         },
         {
             imagen: muestras[3],
             titulo: 'Ceniza',
+            acabados: muestrasAcabados['CENIZA'],
         },
         {
             imagen: muestras[4],
             titulo: 'Grafito',
+            acabados: muestrasAcabados['GRAFITO'],
         },
         {
             imagen: muestras[5],
             titulo: 'Gris',
+            acabados: muestrasAcabados['GRIS'],
         },
         {
             imagen: muestras[6],
             titulo: 'Malva',
+            acabados: muestrasAcabados['MALVA'],
         },
         {
             imagen: muestras[7],
             titulo: 'Mango',
+            acabados: muestrasAcabados['MANGO'],
         },
         {
             imagen: muestras[8],
             titulo: 'Negro',
+            acabados: muestrasAcabados['NEGRO'],
         },
         {
             imagen: muestras[9],
             titulo: 'Rojo',
+            acabados: muestrasAcabados['ROJO'],
         },
         {
             imagen: muestras[10],
             titulo: 'Turquesa',
+            acabados: muestrasAcabados['TURQUESA'],
         },
         {
             imagen: muestras[11],
             titulo: 'Verde',
+            acabados: muestrasAcabados['VERDE'],
         },
     ],
     acabados: [

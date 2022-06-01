@@ -1,6 +1,6 @@
 import getDataFromModules from '../../helpers/getDataFromModules'
-
 import imgSeleccionar from '../../assets/images/Series/SPACE/Dolcker SPACE_seleccionar.webp'
+import getFoldersFromModules from '../../helpers/getFoldersFromModules'
 
 const ambientesImports = import.meta.globEager(
     '../../assets/images/Series/SPACE/AMBIENTES/**'
@@ -10,11 +10,16 @@ const muestrasImports = import.meta.globEager(
     '../../assets/images/Series/SPACE/DESPIECE/**'
 )
 
+const muestrasAcabadosImports = import.meta.globEager(
+    '../../assets/images/Series/SPACE/MUESTRAS_ACABADOS/**'
+)
+
 const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
 
 const ambientes = getDataFromModules(ambientesImports)
 const muestras = getDataFromModules(muestrasImports)
 const acabados = getDataFromModules(acabadosImports)
+const muestrasAcabados = getFoldersFromModules(muestrasAcabadosImports)
 
 const configSPACE = {
     titulo: 'DO&SPACE',
@@ -67,26 +72,32 @@ const configSPACE = {
         {
             imagen: muestras[0],
             titulo: 'Black',
+            acabados: muestrasAcabados['BLACK'],
         },
         {
             imagen: muestras[1],
             titulo: 'Dark',
+            acabados: muestrasAcabados['DARK'],
         },
         {
             imagen: muestras[2],
             titulo: 'Ivory',
+            acabados: muestrasAcabados['IVORY'],
         },
         {
             imagen: muestras[3],
             titulo: 'Soft',
+            acabados: muestrasAcabados['SOFT'],
         },
         {
             imagen: muestras[4],
             titulo: 'Taupe',
+            acabados: muestrasAcabados['TAUPE'],
         },
         {
             imagen: muestras[5],
             titulo: 'White',
+            acabados: muestrasAcabados['WHITE'],
         },
     ],
     acabados: [

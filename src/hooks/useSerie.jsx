@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import { useRef, Children, useState } from 'react'
+import { Children, useState } from 'react'
 import ImageWithCaption from '../components/ImageWithCaption'
 import Indicador from '../components/Indicador'
 
@@ -41,7 +41,22 @@ const useSerie = (config, setFullScreenSrc, setFullScreenTitulo) => {
     )
 
     const imgsMuestra = Children.toArray(
-        config.muestras.map(({ titulo, imagen }) => {
+        config.muestras.map(({ titulo, imagen, acabados }) => {
+            if (acabados) {
+                const configSlider = () => {
+                    setFullScreenSrc(acabados)
+                    setFullScreenTitulo(config.titulo + ' - ' + titulo)
+                }
+
+                return (
+                    <ImageWithCaption
+                        src={imagen}
+                        caption={titulo}
+                        onClickFunc={configSlider}
+                    />
+                )
+            }
+
             return (
                 <ImageWithCaption
                     src={imagen}

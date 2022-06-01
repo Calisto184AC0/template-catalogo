@@ -1,5 +1,6 @@
 import getDataFromModules from '../../helpers/getDataFromModules'
 import imgSeleccionar from '../../assets/images/Series/PORTLAND/Dolcker PORTLAND_seleccionar.webp'
+import getFoldersFromModules from '../../helpers/getFoldersFromModules'
 
 const ambientesImports = import.meta.globEager(
     '../../assets/images/Series/PORTLAND/AMBIENTES/**'
@@ -9,11 +10,16 @@ const muestrasImports = import.meta.globEager(
     '../../assets/images/Series/PORTLAND/DESPIECE/**'
 )
 
+const muestrasAcabadosImports = import.meta.globEager(
+    '../../assets/images/Series/PORTLAND/MUESTRAS_ACABADOS/**'
+)
+
 const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
 
 const ambientes = getDataFromModules(ambientesImports)
 const muestras = getDataFromModules(muestrasImports)
 const acabados = getDataFromModules(acabadosImports)
+const muestrasAcabados = getFoldersFromModules(muestrasAcabadosImports)
 
 const configPORTLAND = {
     titulo: 'DO&PORTLAND',
@@ -66,22 +72,27 @@ const configPORTLAND = {
         {
             imagen: muestras[0],
             titulo: 'Blanco',
+            acabados: muestrasAcabados['BLANCO'],
         },
         {
             imagen: muestras[1],
             titulo: 'Gris',
+            acabados: muestrasAcabados['GRIS'],
         },
         {
             imagen: muestras[2],
             titulo: 'Nacar',
+            acabados: muestrasAcabados['NACAR'],
         },
         {
             imagen: muestras[3],
             titulo: 'Negro',
+            acabados: muestrasAcabados['NEGRO'],
         },
         {
             imagen: muestras[4],
             titulo: 'Taupe',
+            acabados: muestrasAcabados['TAUPE'],
         },
     ],
     acabados: [

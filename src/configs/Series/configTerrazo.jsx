@@ -1,5 +1,6 @@
 import getDataFromModules from '../../helpers/getDataFromModules'
 import imgSeleccionar from '../../assets/images/Series/TERRAZO/Dolcker TERRAZO_seleccionar.webp'
+import getFoldersFromModules from '../../helpers/getFoldersFromModules'
 
 const ambientesImports = import.meta.globEager(
     '../../assets/images/Series/TERRAZO/AMBIENTES/**'
@@ -9,11 +10,16 @@ const muestrasImports = import.meta.globEager(
     '../../assets/images/Series/TERRAZO/DESPIECE/**'
 )
 
+const muestrasAcabadosImports = import.meta.globEager(
+    '../../assets/images/Series/TERRAZO/MUESTRAS_ACABADOS/**'
+)
+
 const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
 
 const ambientes = getDataFromModules(ambientesImports)
 const muestras = getDataFromModules(muestrasImports)
 const acabados = getDataFromModules(acabadosImports)
+const muestrasAcabados = getFoldersFromModules(muestrasAcabadosImports)
 
 const configTERRAZO = {
     titulo: 'DO&TERRAZO',
@@ -65,22 +71,27 @@ const configTERRAZO = {
         {
             imagen: muestras[0],
             titulo: 'Basic Pro',
+            acabados: muestrasAcabados['BASIC PRO'],
         },
         {
             imagen: muestras[1],
             titulo: 'Basic',
+            acabados: muestrasAcabados['BASIC'],
         },
         {
             imagen: muestras[2],
             titulo: 'Beige',
+            acabados: muestrasAcabados['BEIGE'],
         },
         {
             imagen: muestras[3],
             titulo: 'Pearl',
+            acabados: muestrasAcabados['PEARL'],
         },
         {
             imagen: muestras[4],
             titulo: 'Silver',
+            acabados: muestrasAcabados['SILVER'],
         },
     ],
     acabados: [

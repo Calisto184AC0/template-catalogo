@@ -1,5 +1,6 @@
 import getDataFromModules from '../../helpers/getDataFromModules'
 import imgSeleccionar from '../../assets/images/Series/CRETE/YDRAY-Dolcker-CRETE_OK_seleccionar.webp'
+import getFoldersFromModules from '../../helpers/getFoldersFromModules'
 
 const ambientesImports = import.meta.globEager(
     '../../assets/images/Series/CRETE/AMBIENTES/**'
@@ -9,11 +10,16 @@ const muestrasImports = import.meta.globEager(
     '../../assets/images/Series/CRETE/DESPIECE/**'
 )
 
+const muestrasAcabadosImports = import.meta.globEager(
+    '../../assets/images/Series/CRETE/MUESTRAS_ACABADOS/**'
+)
+
 const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
 
 const ambientes = getDataFromModules(ambientesImports)
 const muestras = getDataFromModules(muestrasImports)
 const acabados = getDataFromModules(acabadosImports)
+const muestrasAcabados = getFoldersFromModules(muestrasAcabadosImports)
 
 const configCRETE = {
     titulo: 'DO&CRETE',
@@ -58,18 +64,22 @@ const configCRETE = {
         {
             imagen: muestras[0],
             titulo: 'Blanco',
+            acabados: muestrasAcabados['BLANCO'],
         },
         {
             imagen: muestras[1],
             titulo: 'Gris',
+            acabados: muestrasAcabados['GRIS'],
         },
         {
             imagen: muestras[2],
             titulo: 'Negro',
+            acabados: muestrasAcabados['NEGRO'],
         },
         {
             imagen: muestras[3],
             titulo: 'Taupe',
+            acabados: muestrasAcabados['TAUPE'],
         },
     ],
     acabados: [

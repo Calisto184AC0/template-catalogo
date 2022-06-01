@@ -9,6 +9,7 @@ const StyledFullScreen = styled.div`
     right: 0;
     bottom: 0;
     z-index: 5;
+
     display: ${props => props.display};
     justify-content: center;
     align-items: center;
@@ -24,6 +25,25 @@ const StyledFullScreen = styled.div`
         }
     }
 
+    .slider {
+        display: grid;
+        grid-template-columns: auto auto auto;
+
+        width: 100%;
+        height: 100%;
+
+        overflow-x: hidden;
+        overflow-y: hidden;
+        user-select: none;
+
+        img {
+            width: 100vw;
+            height: 100vh;
+            user-select: none;
+            pointer-events: none;
+        }
+    }
+
     > span {
         ${TextMedium}
         position: absolute;
@@ -32,6 +52,24 @@ const StyledFullScreen = styled.div`
         z-index: 2;
         //color: white;
         //mix-blend-mode: difference;
+    }
+
+    .controles {
+        ${TextMedium}
+        position: absolute;
+        top: ${GRID.verticalSpace};
+        left: 50%;
+        z-index: 2;
+
+        display: flex;
+        align-items: flex-end;
+        gap: 1rem;
+
+        img {
+            width: auto;
+            height: 2rem;
+            cursor: pointer;
+        }
     }
 
     .muestraFondo {

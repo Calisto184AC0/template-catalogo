@@ -1,12 +1,15 @@
 import getDataFromModules from '../../helpers/getDataFromModules'
 import imgSeleccionar from '../../assets/images/Series/DOLM/YDRAY-Dolcker-DOLMEN_OK_seleccionar.webp'
+import getFoldersFromModules from '../../helpers/getFoldersFromModules'
 
 const ambientesImports = import.meta.globEager(
     '../../assets/images/Series/DOLM/AMBIENTES/**'
 )
-
 const muestrasImports = import.meta.globEager(
     '../../assets/images/Series/DOLM/DESPIECE/**'
+)
+const muestrasAcabadosImports = import.meta.globEager(
+    '../../assets/images/Series/DOLM/MUESTRAS_ACABADOS/**'
 )
 
 const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
@@ -14,6 +17,7 @@ const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
 const ambientes = getDataFromModules(ambientesImports)
 const muestras = getDataFromModules(muestrasImports)
 const acabados = getDataFromModules(acabadosImports)
+const muestrasAcabados = getFoldersFromModules(muestrasAcabadosImports)
 
 const configDOLM = {
     titulo: 'DO&DOLM',
@@ -54,22 +58,27 @@ const configDOLM = {
             },
         },
     ],
+    // esta mal
     muestras: [
         {
             imagen: muestras[0],
             titulo: 'Beige',
+            acabados: muestrasAcabados['BEIGE'],
         },
         {
             imagen: muestras[1],
             titulo: 'Grafito',
+            acabados: muestrasAcabados['BLACK'],
         },
         {
             imagen: muestras[2],
             titulo: 'Gris',
+            acabados: muestrasAcabados['GRIS'],
         },
         {
             imagen: muestras[3],
             titulo: 'Nacar',
+            acabados: muestrasAcabados['GRAFITO'],
         },
     ],
     acabados: [
