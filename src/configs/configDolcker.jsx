@@ -53,7 +53,7 @@ const config = [
         },
     },
     {
-        top: '62%',
+        top: '60%',
         left: '34%',
         content: {
             imgSrc: piezas[7],

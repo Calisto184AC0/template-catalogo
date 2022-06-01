@@ -23,7 +23,7 @@ const configSTONE = {
     imgSeleccionar,
     indicadores: [
         {
-            top: '32%',
+            top: '36%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[0],
@@ -31,7 +31,7 @@ const configSTONE = {
             },
         },
         {
-            top: '75%',
+            top: '81%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
@@ -47,7 +47,7 @@ const configSTONE = {
             },
         },
         {
-            top: '55%',
+            top: '59%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],

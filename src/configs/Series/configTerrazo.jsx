@@ -35,7 +35,7 @@ const configTERRAZO = {
             },
         },
         {
-            top: '60%',
+            top: '63%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
@@ -51,7 +51,7 @@ const configTERRAZO = {
             },
         },
         {
-            top: '80%',
+            top: '82%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],
@@ -59,7 +59,7 @@ const configTERRAZO = {
             },
         },
         {
-            top: '43%',
+            top: '45%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[4],

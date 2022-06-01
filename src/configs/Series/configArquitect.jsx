@@ -29,7 +29,7 @@ const configArquitect = {
     imgSeleccionar,
     indicadores: [
         {
-            top: '20%',
+            top: '21%',
             left: '75%',
             ambiente: {
                 imagen: ambientes[0],
@@ -37,7 +37,7 @@ const configArquitect = {
             },
         },
         {
-            top: '68%',
+            top: '71%',
             left: '75%',
             ambiente: {
                 imagen: ambientes[1],
@@ -53,7 +53,7 @@ const configArquitect = {
             },
         },
         {
-            top: '35%',
+            top: '37%',
             left: '75%',
             ambiente: {
                 imagen: ambientes[3],
@@ -61,7 +61,7 @@ const configArquitect = {
             },
         },
         {
-            top: '80%',
+            top: '86%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[4],
@@ -69,7 +69,7 @@ const configArquitect = {
             },
         },
         {
-            top: '51%',
+            top: '54%',
             left: '75%',
             ambiente: {
                 imagen: ambientes[5],
@@ -77,7 +77,7 @@ const configArquitect = {
             },
         },
         {
-            top: '51%',
+            top: '54%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[6],
@@ -85,7 +85,7 @@ const configArquitect = {
             },
         },
         {
-            top: '80%',
+            top: '86%',
             left: '75%',
             ambiente: {
                 imagen: ambientes[7],
@@ -93,7 +93,7 @@ const configArquitect = {
             },
         },
         {
-            top: '20%',
+            top: '21%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[8],
@@ -101,7 +101,7 @@ const configArquitect = {
             },
         },
         {
-            top: '68%',
+            top: '71%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[9],
@@ -109,7 +109,7 @@ const configArquitect = {
             },
         },
         {
-            top: '35%',
+            top: '37%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[10],

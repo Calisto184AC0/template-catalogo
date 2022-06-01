@@ -36,7 +36,7 @@ const configWOOD = {
             },
         },
         {
-            top: '43%',
+            top: '45%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
@@ -52,7 +52,7 @@ const configWOOD = {
             },
         },
         {
-            top: '80%',
+            top: '82%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],

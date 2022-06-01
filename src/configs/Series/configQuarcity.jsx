@@ -36,7 +36,7 @@ const configQUARCITY = {
             },
         },
         {
-            top: '75%',
+            top: '81%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
@@ -44,7 +44,7 @@ const configQUARCITY = {
             },
         },
         {
-            top: '55%',
+            top: '59%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[2],
@@ -52,7 +52,7 @@ const configQUARCITY = {
             },
         },
         {
-            top: '32%',
+            top: '36%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],

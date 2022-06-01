@@ -107,7 +107,7 @@ const FullScreen = ({
             setIsMouseDown(true)
         }
 
-        const pointerUp = e => {
+        const pointerUp = () => {
             setIsMouseDown(false)
 
             if (desplazamiento > window.innerWidth / 4) desplDer()

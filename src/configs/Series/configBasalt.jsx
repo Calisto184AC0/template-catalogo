@@ -30,7 +30,7 @@ const configBASALT = {
             },
         },
         {
-            top: '70%',
+            top: '75%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],

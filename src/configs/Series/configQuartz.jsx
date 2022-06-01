@@ -30,7 +30,7 @@ const configQUARTZ = {
             },
         },
         {
-            top: '75%',
+            top: '81%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
@@ -38,7 +38,7 @@ const configQUARTZ = {
             },
         },
         {
-            top: '55%',
+            top: '59%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[2],
@@ -46,7 +46,7 @@ const configQUARTZ = {
             },
         },
         {
-            top: '32%',
+            top: '36%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],

@@ -28,7 +28,7 @@ const configCRETE = {
     imgSeleccionar,
     indicadores: [
         {
-            top: '24%',
+            top: '12%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[0],
@@ -44,7 +44,7 @@ const configCRETE = {
             },
         },
         {
-            top: '62%',
+            top: '60%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[2],
@@ -52,7 +52,7 @@ const configCRETE = {
             },
         },
         {
-            top: '40%',
+            top: '35%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],

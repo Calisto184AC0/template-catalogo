@@ -26,7 +26,7 @@ const configDOLM = {
     imgSeleccionar,
     indicadores: [
         {
-            top: '32%',
+            top: '36%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[0],
@@ -42,7 +42,7 @@ const configDOLM = {
             },
         },
         {
-            top: '55%',
+            top: '59%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[2],
@@ -50,7 +50,7 @@ const configDOLM = {
             },
         },
         {
-            top: '75%',
+            top: '81%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],

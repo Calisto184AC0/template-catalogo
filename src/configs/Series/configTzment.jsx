@@ -27,7 +27,7 @@ const configTZMENT = {
     imgSeleccionar,
     indicadores: [
         {
-            top: '75%',
+            top: '81%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[0],
@@ -35,7 +35,7 @@ const configTZMENT = {
             },
         },
         {
-            top: '55%',
+            top: '59%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
@@ -43,7 +43,7 @@ const configTZMENT = {
             },
         },
         {
-            top: '32%',
+            top: '36%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[2],

@@ -28,7 +28,7 @@ const configPORTLAND = {
     imgSeleccionar,
     indicadores: [
         {
-            top: '60%',
+            top: '63%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[0],
@@ -60,7 +60,7 @@ const configPORTLAND = {
             },
         },
         {
-            top: '80%',
+            top: '82%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[4],

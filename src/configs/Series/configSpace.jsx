@@ -28,7 +28,7 @@ const configSPACE = {
     imgSeleccionar,
     indicadores: [
         {
-            top: '20%',
+            top: '21%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[0],
@@ -36,7 +36,7 @@ const configSPACE = {
             },
         },
         {
-            top: '68%',
+            top: '71%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
@@ -52,7 +52,7 @@ const configSPACE = {
             },
         },
         {
-            top: '35%',
+            top: '37%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],
@@ -60,7 +60,7 @@ const configSPACE = {
             },
         },
         {
-            top: '51%',
+            top: '54%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[4],
