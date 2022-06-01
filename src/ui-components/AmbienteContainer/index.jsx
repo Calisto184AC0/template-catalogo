@@ -9,15 +9,13 @@ const AmbienteContainer = styled.div`
     ${column_5_span8}
 
     display: flex;
-    flex-basis: min-content;
+    align-items: flex-start;
     gap: ${DISTANCES.small};
 
     margin-right: clamp(-${DISTANCES.medium}, -2.604vw, -${DISTANCES.small});
     overflow-x: auto;
 
     ${StyledImageWithCaption} {
-        flex-basis: min-content;
-
         img {
             width: auto;
             height: clamp(500px, 46.875vw, 900px);
