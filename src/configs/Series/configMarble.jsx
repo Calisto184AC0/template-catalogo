@@ -1,6 +1,5 @@
 import getDataFromModules from '../../helpers/getDataFromModules'
 import imgSeleccionar from '../../assets/images/Series/MARBLE/Dolcker MARBLE STONE_seleccionar.webp'
-import getFoldersFromModules from '../../helpers/getFoldersFromModules'
 
 const ambientesImports = import.meta.globEager(
     '../../assets/images/Series/MARBLE/AMBIENTES/**'
@@ -10,8 +9,17 @@ const muestrasImports = import.meta.globEager(
     '../../assets/images/Series/MARBLE/DESPIECE/**'
 )
 
-const muestrasAcabadosImports = import.meta.globEager(
-    '../../assets/images/Series/MARBLE/MUESTRAS_ACABADOS/**'
+const muestrasCALACATTAImports = import.meta.globEager(
+    '../../assets/images/Series/MARBLE/MUESTRAS_ACABADOS/CALACATTA/**'
+)
+const muestrasCREMAImports = import.meta.globEager(
+    '../../assets/images/Series/MARBLE/MUESTRAS_ACABADOS/CREMA/**'
+)
+const muestrasLAVAImports = import.meta.globEager(
+    '../../assets/images/Series/MARBLE/MUESTRAS_ACABADOS/LAVA/**'
+)
+const muestrasGREYImports = import.meta.globEager(
+    '../../assets/images/Series/MARBLE/MUESTRAS_ACABADOS/GREY/**'
 )
 
 const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
@@ -19,7 +27,12 @@ const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
 const ambientes = getDataFromModules(ambientesImports)
 const muestras = getDataFromModules(muestrasImports)
 const acabados = getDataFromModules(acabadosImports)
-const muestrasAcabados = getFoldersFromModules(muestrasAcabadosImports)
+const muestrasAcabados = {
+    CALACATTA: getDataFromModules(muestrasCALACATTAImports),
+    CREMA: getDataFromModules(muestrasCREMAImports),
+    LAVA: getDataFromModules(muestrasLAVAImports),
+    GREY: getDataFromModules(muestrasGREYImports),
+}
 
 const configMARBLE = {
     titulo: 'DO&MARBLE',

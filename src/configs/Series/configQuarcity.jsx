@@ -1,6 +1,5 @@
 import getDataFromModules from '../../helpers/getDataFromModules'
 import imgSeleccionar from '../../assets/images/Series/QUARCITY/YDRAY-Dolcker-QUARCITY_OK_seleccionar.webp'
-import getFoldersFromModules from '../../helpers/getFoldersFromModules'
 
 const ambientesImports = import.meta.globEager(
     '../../assets/images/Series/QUARCITY/AMBIENTES/**'
@@ -10,8 +9,17 @@ const muestrasImports = import.meta.globEager(
     '../../assets/images/Series/QUARCITY/DESPIECE/**'
 )
 
-const muestrasAcabadosImports = import.meta.globEager(
-    '../../assets/images/Series/QUARCITY/MUESTRAS_ACABADOS/**'
+const muestrasBEIGEImports = import.meta.globEager(
+    '../../assets/images/Series/QUARCITY/MUESTRAS_ACABADOS/BEIGE/**'
+)
+const muestrasBLACKImports = import.meta.globEager(
+    '../../assets/images/Series/QUARCITY/MUESTRAS_ACABADOS/BLACK/**'
+)
+const muestrasGRAPHITEImports = import.meta.globEager(
+    '../../assets/images/Series/QUARCITY/MUESTRAS_ACABADOS/GRAPHITE/**'
+)
+const muestrasGREYImports = import.meta.globEager(
+    '../../assets/images/Series/QUARCITY/MUESTRAS_ACABADOS/GREY/**'
 )
 
 const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
@@ -19,7 +27,12 @@ const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
 const ambientes = getDataFromModules(ambientesImports)
 const muestras = getDataFromModules(muestrasImports)
 const acabados = getDataFromModules(acabadosImports)
-const muestrasAcabados = getFoldersFromModules(muestrasAcabadosImports)
+const muestrasAcabados = {
+    BEIGE: getDataFromModules(muestrasBEIGEImports),
+    BLACK: getDataFromModules(muestrasBLACKImports),
+    GRAPHITE: getDataFromModules(muestrasGRAPHITEImports),
+    GREY: getDataFromModules(muestrasGREYImports),
+}
 
 const configQUARCITY = {
     titulo: 'DO&QUARCITY',

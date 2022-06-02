@@ -1,6 +1,5 @@
 import getDataFromModules from '../../helpers/getDataFromModules'
 import imgSeleccionar from '../../assets/images/Series/SPACE/Dolcker SPACE_seleccionar.webp'
-import getFoldersFromModules from '../../helpers/getFoldersFromModules'
 
 const ambientesImports = import.meta.globEager(
     '../../assets/images/Series/SPACE/AMBIENTES/**'
@@ -10,8 +9,23 @@ const muestrasImports = import.meta.globEager(
     '../../assets/images/Series/SPACE/DESPIECE/**'
 )
 
-const muestrasAcabadosImports = import.meta.globEager(
-    '../../assets/images/Series/SPACE/MUESTRAS_ACABADOS/**'
+const muestrasBLACKmports = import.meta.globEager(
+    '../../assets/images/Series/SPACE/MUESTRAS_ACABADOS/BLACK/**'
+)
+const muestrasDARKmports = import.meta.globEager(
+    '../../assets/images/Series/SPACE/MUESTRAS_ACABADOS/DARK/**'
+)
+const muestrasIVORYmports = import.meta.globEager(
+    '../../assets/images/Series/SPACE/MUESTRAS_ACABADOS/IVORY/**'
+)
+const muestrasSOFTmports = import.meta.globEager(
+    '../../assets/images/Series/SPACE/MUESTRAS_ACABADOS/SOFT/**'
+)
+const muestrasTAUPEmports = import.meta.globEager(
+    '../../assets/images/Series/SPACE/MUESTRAS_ACABADOS/TAUPE/**'
+)
+const muestrasWHITEmports = import.meta.globEager(
+    '../../assets/images/Series/SPACE/MUESTRAS_ACABADOS/WHITE/**'
 )
 
 const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
@@ -19,7 +33,14 @@ const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
 const ambientes = getDataFromModules(ambientesImports)
 const muestras = getDataFromModules(muestrasImports)
 const acabados = getDataFromModules(acabadosImports)
-const muestrasAcabados = getFoldersFromModules(muestrasAcabadosImports)
+const muestrasAcabados = {
+    BLACK: getDataFromModules(muestrasBLACKmports),
+    DARK: getDataFromModules(muestrasDARKmports),
+    IVORY: getDataFromModules(muestrasIVORYmports),
+    SOFT: getDataFromModules(muestrasSOFTmports),
+    TAUPE: getDataFromModules(muestrasTAUPEmports),
+    WHITE: getDataFromModules(muestrasWHITEmports),
+}
 
 const configSPACE = {
     titulo: 'DO&SPACE',

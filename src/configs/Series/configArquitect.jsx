@@ -1,6 +1,5 @@
 import getDataFromModules from '../../helpers/getDataFromModules'
 import imgSeleccionar from '../../assets/images/Series/ARQUITECT/Dolcker ARQUITECT_seleccionar.webp'
-import getFoldersFromModules from '../../helpers/getFoldersFromModules'
 
 const ambientesImport = import.meta.globEager(
     '../../assets/images/Series/ARQUITECT/AMBIENTES/**'
@@ -10,8 +9,41 @@ const muestrasImports = import.meta.globEager(
     '../../assets/images/Series/ARQUITECT/DESPIECE/**'
 )
 
-const muestrasAcabadosImports = import.meta.globEager(
-    '../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/**'
+const muestrasAMARILLOImports = import.meta.globEager(
+    '../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/AMARILLO/**'
+)
+const muestrasAZULImports = import.meta.globEager(
+    '../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/AZUL/**'
+)
+const muestrasBLANCOImports = import.meta.globEager(
+    '../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/BLANCO/**'
+)
+const muestrasCENIZAImports = import.meta.globEager(
+    '../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/CENIZA/**'
+)
+const muestrasGRAFITOImports = import.meta.globEager(
+    '../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/GRAFITO/**'
+)
+const muestrasGRISImports = import.meta.globEager(
+    '../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/GRIS/**'
+)
+const muestrasMALVAImports = import.meta.globEager(
+    '../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/MALVA/**'
+)
+const muestrasMANGOImports = import.meta.globEager(
+    '../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/MANGO/**'
+)
+const muestrasNEGROImports = import.meta.globEager(
+    '../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/NEGRO/**'
+)
+const muestrasROJOImports = import.meta.globEager(
+    '../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/ROJO/**'
+)
+const muestrasTURQUESAImports = import.meta.globEager(
+    '../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/TURQUESA/**'
+)
+const muestrasVERDEImports = import.meta.globEager(
+    '../../assets/images/Series/ARQUITECT/MUESTRAS_ACABADOS/VERDE/**'
 )
 
 const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
@@ -20,7 +52,20 @@ const ambientes = getDataFromModules(ambientesImport)
 const muestras = getDataFromModules(muestrasImports)
 const acabados = getDataFromModules(acabadosImports)
 
-const muestrasAcabados = getFoldersFromModules(muestrasAcabadosImports)
+const muestrasAcabados = {
+    AMARILLO: getDataFromModules(muestrasAMARILLOImports),
+    AZUL: getDataFromModules(muestrasAZULImports),
+    BLANCO: getDataFromModules(muestrasBLANCOImports),
+    CENIZA: getDataFromModules(muestrasCENIZAImports),
+    GRAFITO: getDataFromModules(muestrasGRAFITOImports),
+    GRIS: getDataFromModules(muestrasGRISImports),
+    MALVA: getDataFromModules(muestrasMALVAImports),
+    MANGO: getDataFromModules(muestrasMANGOImports),
+    NEGRO: getDataFromModules(muestrasNEGROImports),
+    ROJO: getDataFromModules(muestrasROJOImports),
+    TURQUESA: getDataFromModules(muestrasTURQUESAImports),
+    VERDE: getDataFromModules(muestrasVERDEImports),
+}
 
 const configArquitect = {
     titulo: 'DO&ARQUITECT',

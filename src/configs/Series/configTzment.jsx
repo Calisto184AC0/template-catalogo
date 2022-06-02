@@ -1,6 +1,5 @@
 import getDataFromModules from '../../helpers/getDataFromModules'
 import imgSeleccionar from '../../assets/images/Series/TZMENT/YDRAY-Dolcker-ZEMENT_OK.webp'
-import getFoldersFromModules from '../../helpers/getFoldersFromModules'
 
 const ambientesImports = import.meta.globEager(
     '../../assets/images/Series/TZMENT/AMBIENTES/**'
@@ -10,8 +9,17 @@ const muestrasImports = import.meta.globEager(
     '../../assets/images/Series/TZMENT/DESPIECE/**'
 )
 
-const muestrasAcabadosImports = import.meta.globEager(
-    '../../assets/images/Series/TZMENT/MUESTRAS_ACABADOS/**'
+const muestrasBLACKImports = import.meta.globEager(
+    '../../assets/images/Series/TZMENT/MUESTRAS_ACABADOS/BLACK/**'
+)
+const muestrasCOALImports = import.meta.globEager(
+    '../../assets/images/Series/TZMENT/MUESTRAS_ACABADOS/COAL/**'
+)
+const muestrasSTEELImports = import.meta.globEager(
+    '../../assets/images/Series/TZMENT/MUESTRAS_ACABADOS/STEEL/**'
+)
+const muestrasWHITEImports = import.meta.globEager(
+    '../../assets/images/Series/TZMENT/MUESTRAS_ACABADOS/WHITE/**'
 )
 
 const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
@@ -19,7 +27,12 @@ const acabadosImports = import.meta.globEager('../../assets/icons/acabados/**')
 const ambientes = getDataFromModules(ambientesImports)
 const muestras = getDataFromModules(muestrasImports)
 const acabados = getDataFromModules(acabadosImports)
-const muestrasAcabados = getFoldersFromModules(muestrasAcabadosImports)
+const muestrasAcabados = {
+    BLACK: getDataFromModules(muestrasBLACKImports),
+    COAL: getDataFromModules(muestrasCOALImports),
+    STEEL: getDataFromModules(muestrasSTEELImports),
+    WHITE: getDataFromModules(muestrasWHITEImports),
+}
 
 const configTZMENT = {
     titulo: 'DO&TZMENT',
