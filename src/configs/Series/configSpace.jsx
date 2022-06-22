@@ -53,7 +53,7 @@ const configSPACE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[0],
-                titulo: 'DOLCKER &CLIP y DOL TC14. Do&Space White - Ivory',
+                titulo: 'Do&Space Ivory',
             },
         },
         {
@@ -61,7 +61,7 @@ const configSPACE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
-                titulo: '',
+                titulo: 'Do&Space White',
             },
         },
         {
@@ -69,7 +69,7 @@ const configSPACE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[2],
-                titulo: '',
+                titulo: 'Do&Space Dark',
             },
         },
         {
@@ -77,7 +77,7 @@ const configSPACE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],
-                titulo: '',
+                titulo: 'Do&Space Soft',
             },
         },
         {
@@ -85,7 +85,7 @@ const configSPACE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[4],
-                titulo: '',
+                titulo: 'Do&Space Black',
             },
         },
     ],

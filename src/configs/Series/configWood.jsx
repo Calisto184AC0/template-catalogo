@@ -49,7 +49,7 @@ const configWOOD = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[0],
-                titulo: 'DOL TC14. Do&Wood Encina - Eucalipto',
+                titulo: 'Do&Wood Abedul',
             },
         },
         {
@@ -57,7 +57,7 @@ const configWOOD = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
-                titulo: '',
+                titulo: 'Do&Wood Encina',
             },
         },
         {
@@ -65,7 +65,7 @@ const configWOOD = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[2],
-                titulo: '',
+                titulo: 'Do&Wood Manzano',
             },
         },
         {
@@ -73,7 +73,7 @@ const configWOOD = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],
-                titulo: '',
+                titulo: 'Do&Wood Sauce',
             },
         },
     ],

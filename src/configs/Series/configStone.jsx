@@ -27,7 +27,7 @@ const configSTONE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[0],
-                titulo: 'DOLCKER &CLIP. Do&Stone Natural Granit',
+                titulo: 'Do&Stone Black',
             },
         },
         {
@@ -35,7 +35,7 @@ const configSTONE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
-                titulo: '',
+                titulo: 'Do&Stone Granit',
             },
         },
         {
@@ -43,7 +43,7 @@ const configSTONE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[2],
-                titulo: '',
+                titulo: 'Do&Stone Light',
             },
         },
         {
@@ -51,7 +51,7 @@ const configSTONE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],
-                titulo: '',
+                titulo: 'Do&Stone White',
             },
         },
     ],

@@ -44,7 +44,7 @@ const configTZMENT = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[0],
-                titulo: 'DOLCKER &CLIP Do&Tzment White',
+                titulo: 'Do&Tzment Black',
             },
         },
         {
@@ -52,7 +52,7 @@ const configTZMENT = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
-                titulo: '',
+                titulo: 'Do&Tzment Coal',
             },
         },
         {
@@ -60,7 +60,7 @@ const configTZMENT = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[2],
-                titulo: '',
+                titulo: 'Do&Tzment Steel',
             },
         },
         {
@@ -68,7 +68,7 @@ const configTZMENT = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],
-                titulo: '',
+                titulo: 'Do&Tzment White',
             },
         },
     ],

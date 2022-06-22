@@ -45,7 +45,7 @@ const configMARBLE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[0],
-                titulo: 'DOL TC14. Do&Marble + DoPortland Negro',
+                titulo: 'Do&Marble Calacatta',
             },
         },
         {
@@ -53,7 +53,7 @@ const configMARBLE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
-                titulo: '',
+                titulo: 'Do&Marble Crema',
             },
         },
         {
@@ -61,7 +61,7 @@ const configMARBLE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[2],
-                titulo: '',
+                titulo: 'Do&Marble Lava',
             },
         },
         {
@@ -69,7 +69,7 @@ const configMARBLE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],
-                titulo: '',
+                titulo: 'Do&Marble Grey',
             },
         },
     ],

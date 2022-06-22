@@ -26,7 +26,7 @@ const configQUARTZ = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[0],
-                titulo: 'DOLCKER &CLIP. Do&Dquarz Grey - Black',
+                titulo: 'Do&Quartz Beige',
             },
         },
         {
@@ -34,7 +34,7 @@ const configQUARTZ = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
-                titulo: '',
+                titulo: 'Do&Quartz Black',
             },
         },
         {
@@ -42,7 +42,7 @@ const configQUARTZ = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[2],
-                titulo: '',
+                titulo: 'Do&Quartz Graphite',
             },
         },
         {
@@ -50,7 +50,7 @@ const configQUARTZ = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],
-                titulo: '',
+                titulo: 'Do&Quartz Grey',
             },
         },
     ],

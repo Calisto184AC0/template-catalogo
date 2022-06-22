@@ -45,7 +45,7 @@ const configCRETE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[0],
-                titulo: 'DOLCKER &CLIP. Do&Crete Blanco',
+                titulo: 'Do&Crete Blanco',
             },
         },
         {
@@ -53,7 +53,7 @@ const configCRETE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
-                titulo: '',
+                titulo: 'Do&Crete Gris',
             },
         },
         {
@@ -61,7 +61,7 @@ const configCRETE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[2],
-                titulo: '',
+                titulo: 'Do&Crete Negro',
             },
         },
         {
@@ -69,7 +69,7 @@ const configCRETE = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],
-                titulo: '',
+                titulo: 'Do&Crete Taupe',
             },
         },
     ],

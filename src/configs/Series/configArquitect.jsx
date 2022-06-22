@@ -78,7 +78,7 @@ const configArquitect = {
             left: '75%',
             ambiente: {
                 imagen: ambientes[0],
-                titulo: 'DOLCKER &CLIP Do&Arquitect Mango - Azul - Grafíto - White',
+                titulo: 'Do&Arquitect Amarillo',
             },
         },
         {
@@ -86,7 +86,7 @@ const configArquitect = {
             left: '75%',
             ambiente: {
                 imagen: ambientes[1],
-                titulo: '',
+                titulo: 'Do&Arquitect Azul',
             },
         },
         {
@@ -94,7 +94,7 @@ const configArquitect = {
             left: '75%',
             ambiente: {
                 imagen: ambientes[2],
-                titulo: '',
+                titulo: 'Do&Arquitect Ceniza',
             },
         },
         {
@@ -102,7 +102,7 @@ const configArquitect = {
             left: '75%',
             ambiente: {
                 imagen: ambientes[3],
-                titulo: '',
+                titulo: 'Do&Arquitect Grafito',
             },
         },
         {
@@ -110,7 +110,7 @@ const configArquitect = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[4],
-                titulo: '',
+                titulo: 'Do&Arquitect Gris',
             },
         },
         {
@@ -118,7 +118,7 @@ const configArquitect = {
             left: '75%',
             ambiente: {
                 imagen: ambientes[5],
-                titulo: '',
+                titulo: 'Do&Arquitect Malva',
             },
         },
         {
@@ -126,7 +126,7 @@ const configArquitect = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[6],
-                titulo: '',
+                titulo: 'Do&Arquitect Mango',
             },
         },
         {
@@ -134,7 +134,7 @@ const configArquitect = {
             left: '75%',
             ambiente: {
                 imagen: ambientes[7],
-                titulo: '',
+                titulo: 'Do&Arquitect Negro',
             },
         },
         {
@@ -142,7 +142,7 @@ const configArquitect = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[8],
-                titulo: '',
+                titulo: 'Do&Arquitect Rojo',
             },
         },
         {
@@ -150,7 +150,7 @@ const configArquitect = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[9],
-                titulo: '',
+                titulo: 'Do&Arquitect Turquesa',
             },
         },
         {
@@ -158,7 +158,7 @@ const configArquitect = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[10],
-                titulo: '',
+                titulo: 'Do&Arquitect Verde',
             },
         },
         {
@@ -166,7 +166,7 @@ const configArquitect = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[11],
-                titulo: '',
+                titulo: 'Do&Arquitect Blanco',
             },
         },
     ],

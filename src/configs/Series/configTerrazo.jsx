@@ -48,7 +48,7 @@ const configTERRAZO = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[0],
-                titulo: 'DOLCKER &CLIP. Do&Terrazo Beige - Silver',
+                titulo: 'Do&Terrazo Basic Pro + Silver ',
             },
         },
         {
@@ -56,7 +56,7 @@ const configTERRAZO = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
-                titulo: '',
+                titulo: 'Do&Terrazo Basic + Silver ',
             },
         },
         {
@@ -64,7 +64,7 @@ const configTERRAZO = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[2],
-                titulo: '',
+                titulo: 'Do&Terrazo Beige + Silver ',
             },
         },
         {
@@ -72,7 +72,7 @@ const configTERRAZO = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],
-                titulo: '',
+                titulo: 'Do&Terrazo Pearl + Silver ',
             },
         },
         {
@@ -80,7 +80,7 @@ const configTERRAZO = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[4],
-                titulo: '',
+                titulo: 'Do&Terrazo Silver',
             },
         },
     ],

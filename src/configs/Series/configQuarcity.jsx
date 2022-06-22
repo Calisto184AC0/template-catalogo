@@ -45,7 +45,7 @@ const configQUARCITY = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[0],
-                titulo: 'DOLCKER &CLIP. Do&Quarcity Gris',
+                titulo: 'Do&Quarcity Beige',
             },
         },
         {
@@ -53,7 +53,7 @@ const configQUARCITY = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
-                titulo: '',
+                titulo: 'Do&Quarcity Black',
             },
         },
         {
@@ -61,7 +61,7 @@ const configQUARCITY = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[2],
-                titulo: '',
+                titulo: 'Do&Quarcity Graphite',
             },
         },
         {
@@ -69,7 +69,7 @@ const configQUARCITY = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],
-                titulo: '',
+                titulo: 'Do&Quarcity Grey',
             },
         },
     ],

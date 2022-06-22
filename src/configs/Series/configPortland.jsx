@@ -49,7 +49,7 @@ const configPORTLAND = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[0],
-                titulo: 'DOL TC14. Do&Portland Blanco- Gris - Nacar - Taupe',
+                titulo: 'Do&Portland Blanco',
             },
         },
         {
@@ -57,7 +57,7 @@ const configPORTLAND = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
-                titulo: '',
+                titulo: 'Do&Portland Gris',
             },
         },
         {
@@ -65,7 +65,7 @@ const configPORTLAND = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[2],
-                titulo: '',
+                titulo: 'Do&Portland Nacar',
             },
         },
         {
@@ -73,7 +73,7 @@ const configPORTLAND = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],
-                titulo: '',
+                titulo: 'Do&Portland Negro',
             },
         },
         {
@@ -81,7 +81,7 @@ const configPORTLAND = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[4],
-                titulo: '',
+                titulo: 'Do&Portland Taupe',
             },
         },
     ],

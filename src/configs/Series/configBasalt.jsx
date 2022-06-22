@@ -26,7 +26,7 @@ const configBASALT = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[0],
-                titulo: 'DOLCKER &CLIP. Do&Basalt Beige',
+                titulo: 'Do&Basalt Beige',
             },
         },
         {
@@ -34,7 +34,7 @@ const configBASALT = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
-                titulo: '',
+                titulo: 'Do&Basalt Graphite',
             },
         },
         {
@@ -42,7 +42,7 @@ const configBASALT = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[2],
-                titulo: '',
+                titulo: 'Do&Basalt Grey',
             },
         },
     ],

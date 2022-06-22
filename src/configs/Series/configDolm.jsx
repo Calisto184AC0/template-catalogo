@@ -43,7 +43,7 @@ const configDOLM = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[0],
-                titulo: 'DOLCKER &CLIP. Do&Dolm Gris',
+                titulo: 'Do&Dolm Beige',
             },
         },
         {
@@ -51,7 +51,7 @@ const configDOLM = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
-                titulo: '',
+                titulo: 'Do&Dolm Grafito',
             },
         },
         {
@@ -59,7 +59,7 @@ const configDOLM = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[2],
-                titulo: '',
+                titulo: 'Do&Dolm Gris',
             },
         },
         {
@@ -67,7 +67,7 @@ const configDOLM = {
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],
-                titulo: '',
+                titulo: 'Do&Dolm Nacar',
             },
         },
     ],
