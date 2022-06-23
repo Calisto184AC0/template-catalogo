@@ -107,6 +107,12 @@ const Indice = ({ indiceRef }) => {
                     className='flecha-indice'
                     onClick={handleClickFlecha}
                 />
+                <div className='idiomas'>
+                    <a href='#' className='seleccionado'>
+                        ES
+                    </a>
+                    <a href='/en'>EN</a>
+                </div>
             </StyledIndice>
             {menuDesplegable}
             <BtnIndice
