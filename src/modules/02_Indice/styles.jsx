@@ -33,6 +33,10 @@ const StyledIndice = styled(Seccion)`
         .seleccionado {
             font-weight: bold;
         }
+
+        ${mediaQueryTablet(css`
+            grid-column: 1 / -1;
+        `)}
     }
 `
 
