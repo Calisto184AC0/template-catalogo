@@ -10,6 +10,9 @@ import Main from './pages/Main'
 import QuienesSomos from './pages/QuienesSomos'
 import AvisoLegal from './pages/AvisoLegal'
 import PoliticaPrivacidad from './pages/PoliticaPrivacidad'
+import MainEn from './pages/en/MainEn'
+import QuienesSomosEn from './pages/en/QuienesSomoEn'
+import FachadaVentiladaEn from './pages/en/catalogos/FachadaVentiladaEn'
 
 ReactDOM.render(
     <React.StrictMode>
@@ -27,6 +30,18 @@ ReactDOM.render(
                 <Route path='/aviso-legal' element={<AvisoLegal />} />
                 <Route
                     path='/politica-privacidad'
+                    element={<PoliticaPrivacidad />}
+                />
+
+                <Route
+                    path='/en/catalogos/fachadas-ventiladas'
+                    element={<FachadaVentiladaEn />}
+                />
+                <Route path='/en/' element={<MainEn />} />
+                <Route path='/en/quienes-somos' element={<QuienesSomosEn />} />
+                <Route path='/en/aviso-legal' element={<AvisoLegal />} />
+                <Route
+                    path='/en/politica-privacidad'
                     element={<PoliticaPrivacidad />}
                 />
             </Routes>

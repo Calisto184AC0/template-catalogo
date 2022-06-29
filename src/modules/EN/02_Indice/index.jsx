@@ -1,15 +1,14 @@
-import { useEffect } from 'react'
-import ListaContenidos from '../../components/ListaContenidos'
-import { Titulo } from '../../components/Titulos'
-import { COLORS } from '../../global/GlobalStyles'
+import ListaContenidos from '../../../components/ListaContenidos'
+import { Titulo } from '../../../components/Titulos'
+import { COLORS } from '../../../global/GlobalStyles'
 import { StyledIndice } from './styles'
-import flecha from '../../assets/icons/flechita.svg'
-import scrollTo from '../../helpers/scrollTo'
-import useMenuDesplegable from '../../hooks/useMenuDesplegable'
+import flecha from '../../../assets/icons/flechita.svg'
+import scrollTo from '../../../helpers/scrollTo'
+import useMenuDesplegableEn from '../../../hooks/useMenuDesplegableEn'
 import { Link } from 'react-router-dom'
 
 const Indice = ({ indiceRef }) => {
-    const { menuDesplegable, btnIndice } = useMenuDesplegable(
+    const { menuDesplegable, btnIndice } = useMenuDesplegableEn(
         ListaContenidos,
         'Índice',
         indiceRef
@@ -24,8 +23,8 @@ const Indice = ({ indiceRef }) => {
     return (
         <>
             <StyledIndice backgroundColor={COLORS.gray08} ref={indiceRef}>
-                <Titulo color={COLORS.gray01}>Índice</Titulo>
-                <ListaContenidos />
+                <Titulo color={COLORS.gray01}>Index</Titulo>
+                <ListaContenidos en />
                 <img
                     src={flecha}
                     alt=''
@@ -33,10 +32,10 @@ const Indice = ({ indiceRef }) => {
                     onClick={handleClickFlecha}
                 />
                 <div className='idiomas'>
+                    <Link to='/catalogos/fachadas-ventiladas'>ES</Link>
                     <Link to='#' className='seleccionado'>
-                        ES
+                        EN
                     </Link>
-                    <Link to='/en/catalogos/fachadas-ventiladas'>EN</Link>
                 </div>
             </StyledIndice>
             {menuDesplegable}
