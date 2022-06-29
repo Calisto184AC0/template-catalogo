@@ -11,6 +11,7 @@ const useListaContenidos = (
 
     elementosJSON.map(elemento => {
         if (elemento.subList === undefined) {
+            console.log(elemento.title, elemento.target)
             elementos.push(
                 <ElementoLista
                     link={elemento.link}
@@ -22,10 +23,11 @@ const useListaContenidos = (
             )
         } else {
             const sublistaRef = useRef()
-            const sublistaContenidos = useListaContenidos(elemento.subList, [
-                ...parentRefs,
-                sublistaRef,
-            ])
+            const sublistaContenidos = useListaContenidos(
+                elemento.subList,
+                [...parentRefs, sublistaRef],
+                isReactRouter
+            )
             elementos.push(
                 <Sublista
                     title={elemento.title}
