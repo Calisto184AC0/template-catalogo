@@ -1,16 +1,16 @@
-import Dolcker from './modules/03_Dolcker'
-import Indice from './modules/02_Indice'
-import Introduccion from './modules/01_Introduccion'
-import Ventajas from './modules/04_Ventajas'
-import Aplicaciones from './modules/05_Aplicaciones'
-import Disenos from './modules/06_Diseno'
-import Caracteristicas from './modules/07_Caracteristicas'
-import Sistemas from './modules/08_Sistemas'
-import Descargas from './modules/09_Descargas'
-import Final from './modules/10_Final'
+import Dolcker from '../../modules/03_Dolcker'
+import Indice from '../../modules/02_Indice'
+import Introduccion from '../../modules/01_Introduccion'
+import Ventajas from '../../modules/04_Ventajas'
+import Aplicaciones from '../../modules/05_Aplicaciones'
+import Disenos from '../../modules/06_Diseno'
+import Caracteristicas from '../../modules/07_Caracteristicas'
+import Sistemas from '../../modules/08_Sistemas'
+import Descargas from '../../modules/09_Descargas'
+import Final from '../../modules/10_Final'
 import { useRef } from 'react'
 
-const App = () => {
+const FachadaVentilada = () => {
     const indiceRef = useRef()
 
     return (
@@ -57,4 +57,4 @@ const App = () => {
     )
 }
 
-export default App
+export default FachadaVentilada

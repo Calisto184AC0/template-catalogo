@@ -2,7 +2,11 @@ import { useRef } from 'react'
 import ElementoLista from '../components/ListaContenidos/ElementoLista'
 import Sublista from '../components/ListaContenidos/Sublista'
 
-const useListaContenidos = (elementosJSON, parentRefs = []) => {
+const useListaContenidos = (
+    elementosJSON,
+    parentRefs = [],
+    isReactRouter = false
+) => {
     let elementos = []
 
     elementosJSON.map(elemento => {
@@ -12,6 +16,8 @@ const useListaContenidos = (elementosJSON, parentRefs = []) => {
                     link={elemento.link}
                     title={elemento.title}
                     key={elemento.title}
+                    isReactRouter={isReactRouter}
+                    target={elemento.target}
                 />
             )
         } else {
