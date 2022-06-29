@@ -52,6 +52,7 @@ const useMenuDesplegable = (Lista, titulo, indiceRef) => {
             openRef.current.style.opacity = 1
             openRef.current.style.visibility = 'visible'
 
+            document.cookie = ''
             window.scrollTo(0, 0)
 
             document.body.style.overflowY = ''
