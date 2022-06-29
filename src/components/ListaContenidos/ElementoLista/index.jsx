@@ -2,7 +2,6 @@ import StyledElementoLista from './styles'
 import { Link } from 'react-router-dom'
 
 const ElementoLista = ({ link, title, isReactRouter, target }) => {
-    console.log(target)
     if (isReactRouter) {
         if (target === '_blank')
             return (

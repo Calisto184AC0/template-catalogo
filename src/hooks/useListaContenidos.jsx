@@ -11,7 +11,6 @@ const useListaContenidos = (
 
     elementosJSON.map(elemento => {
         if (elemento.subList === undefined) {
-            console.log(elemento.title, elemento.target)
             elementos.push(
                 <ElementoLista
                     link={elemento.link}

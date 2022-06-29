@@ -2,7 +2,6 @@ const menuLanzadera = [
     {
         title: 'Quíenes somos',
         link: '/quienes-somos',
-        target: '_blank',
     },
     {
         title: 'Catálogos',
@@ -23,12 +22,10 @@ const menuLanzadera = [
             {
                 title: 'Aviso legal',
                 link: '/aviso-legal',
-                target: '_blank',
             },
             {
                 title: 'Política de privacidad',
                 link: '/politica-privacidad',
-                target: '_blank',
             },
         ],
     },
