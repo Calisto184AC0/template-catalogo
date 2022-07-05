@@ -88,6 +88,9 @@ const StyledSerie = styled(Seccion)`
     ${StyledAnotacion}.anotacion-muestra {
         grid-row: 3;
     }
+    ${StyledAnotacion}.anotacion-variaciones {
+        grid-row: 4;
+    }
 `
 
 export default StyledSerie

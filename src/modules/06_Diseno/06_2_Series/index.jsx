@@ -1,5 +1,7 @@
 import { useState } from 'react'
+import Anotacion from '../../../components/Anotacion'
 import FullScreen from '../../../components/FullScreen'
+import VisualizadorVariaciones from '../../../components/VisualizadorVariaciones'
 import configArquitect from '../../../configs/Series/configArquitect'
 import configBASALT from '../../../configs/Series/configBasalt'
 import configCRETE from '../../../configs/Series/configCrete'
@@ -17,9 +19,25 @@ import configWOOD from '../../../configs/Series/configWood'
 import { COLORS } from '../../../global/GlobalStyles'
 import Serie from './Serie'
 
+import fondo from '../../../assets/images/VolumenVariacion/fondo.jpg'
+import indicadoresFormato from '../../../utils/indicadoresFormato'
+
 const Series = ({ ids }) => {
     const [fullScreenSrc, setFullScreenSrc] = useState('')
     const [fullScreenTitulo, setFullScreenTitulo] = useState('')
+
+    const propsFormato = {
+        anotacion: {
+            text: 'Pulsa en la área para ver todas las piezas disponibles',
+            type: 'click',
+            className: 'anotacion-variaciones',
+        },
+        visualizador: {
+            config: indicadoresFormato,
+            srcfondo: fondo,
+            altFondo: 'Imagen de fondo con indicadores',
+        },
+    }
 
     return (
         <>
@@ -127,7 +145,10 @@ const Series = ({ ids }) => {
                 setFullScreenSrc={setFullScreenSrc}
                 setFullScreenTitulo={setFullScreenTitulo}
                 backgroundColor={COLORS.gray01}
-            />
+            >
+                <Anotacion {...propsFormato.anotacion} />
+                <VisualizadorVariaciones {...propsFormato.visualizador} />
+            </Serie>
         </>
     )
 }

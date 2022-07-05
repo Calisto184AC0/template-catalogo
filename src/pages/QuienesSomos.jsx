@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import MenuLanzadera from '../components/ListaContenidos/MenuLanzadera'
 import Seccion from '../components/Seccion'
 import Text from '../components/Text'
@@ -8,7 +9,7 @@ import Final from '../modules/10_Final'
 const QuienesSomos = () => {
     const { menuDesplegable, btnIndice } = useMenuDesplegable(
         MenuLanzadera,
-        'Dolcker'
+        <Link to='/'>Dolcker</Link>
     )
 
     return (

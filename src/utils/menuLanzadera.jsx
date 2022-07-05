@@ -1,6 +1,6 @@
 const menuLanzadera = [
     {
-        title: 'Quíenes somos',
+        title: 'Quiénes somos',
         link: '/quienes-somos',
     },
     {
@@ -14,7 +14,7 @@ const menuLanzadera = [
     },
     {
         title: 'Contacto',
-        link: '#',
+        link: '/contacto',
     },
     {
         title: 'Legal',

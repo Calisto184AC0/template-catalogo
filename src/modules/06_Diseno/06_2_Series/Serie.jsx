@@ -7,6 +7,7 @@ import AmbienteContainer from '../../../ui-components/AmbienteContainer'
 import StyledSerie from './styles'
 
 const Serie = ({
+    children,
     id,
     config,
     setFullScreenSrc,
@@ -65,6 +66,7 @@ const Serie = ({
                     <div className='acabado-container'>{imgsAcabados}</div>
                 </>
             ) : undefined}
+            {children}
         </StyledSerie>
     )
 }
