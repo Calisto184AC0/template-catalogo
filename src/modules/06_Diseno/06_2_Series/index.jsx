@@ -20,7 +20,7 @@ import { COLORS } from '../../../global/GlobalStyles'
 import Serie from './Serie'
 
 import fondo from '../../../assets/images/VolumenVariacion/fondo.jpg'
-import indicadoresFormato from '../../../utils/indicadoresFormato'
+import indicadoresFormato from '../../../configs/configVolumenVariacion'
 
 const Series = ({ ids }) => {
     const [fullScreenSrc, setFullScreenSrc] = useState('')

@@ -26,7 +26,8 @@ const VisualizadorVariaciones = ({ config, srcfondo, altFondo }) => {
         <StyledVisualizadorVariaciones>
             <img src={srcfondo} alt={altFondo} />
             {capas}
-            <span>{actualTitulo}</span>
+            {capas.length === 1 ? <span>{actualTitulo}</span> : null}
+
             <div className='indicadores' onClick={handleClick}>
                 <IsOpenContext.Provider value={isOpen}>
                     {indicadores}
