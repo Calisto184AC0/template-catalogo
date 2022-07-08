@@ -143,45 +143,51 @@ const getSelectores = ({
     let hijos = []
 
     selectoresElem = Children.toArray(
-        selectores.map(({ selectorImg, titulo, primerPlano, menu }, index) => {
-            let selectorProps = {
-                selectorImg,
-                titulo,
-                setActualTitulo,
-            }
-
-            if (menu === undefined) {
-                if (seleccionado === index) {
-                    // Esto sirve para que las capas ya tengan un preseleccionado
-                    currentRef.current.src = primerPlano
-                    setActualTitulo(titulo)
-                }
-
-                if (primerPlano === undefined) {
-                    selectorProps.noClick = true
-                } else {
-                    selectorProps.primerPlano = primerPlano
-                    selectorProps.closeMenu = closeMenu
-                    selectorProps.foregroundImgRef = currentRef
-                }
-            } else {
-                const idMenuHijo = getMenu({
-                    padre,
-                    menu,
-                    closeMenu,
-                    currentRef,
+        selectores.map(
+            (
+                { selectorImg, titulo, primerPlano, menu, quitarFondo = false },
+                index
+            ) => {
+                let selectorProps = {
+                    selectorImg,
+                    titulo,
                     setActualTitulo,
-                    ...dispatch,
-                })
+                    quitarFondo,
+                }
 
-                selectorProps.changeMenu = dispatch.changeMenu
-                selectorProps.idMenu = idMenuHijo
+                if (menu === undefined) {
+                    if (seleccionado === index) {
+                        // Esto sirve para que las capas ya tengan un preseleccionado
+                        currentRef.current.src = primerPlano
+                        setActualTitulo(titulo)
+                    }
 
-                hijos.push([index, idMenuHijo])
+                    if (primerPlano === undefined) {
+                        selectorProps.noClick = true
+                    } else {
+                        selectorProps.primerPlano = primerPlano
+                        selectorProps.closeMenu = closeMenu
+                        selectorProps.foregroundImgRef = currentRef
+                    }
+                } else {
+                    const idMenuHijo = getMenu({
+                        padre,
+                        menu,
+                        closeMenu,
+                        currentRef,
+                        setActualTitulo,
+                        ...dispatch,
+                    })
+
+                    selectorProps.changeMenu = dispatch.changeMenu
+                    selectorProps.idMenu = idMenuHijo
+
+                    hijos.push([index, idMenuHijo])
+                }
+
+                return <Selector {...selectorProps} />
             }
-
-            return <Selector {...selectorProps} />
-        })
+        )
     )
 
     return { selectoresElem, hijos }
@@ -245,27 +251,30 @@ const getIndicadores = ({
         Object.entries(config).map(([grupo, indicadores], index) => {
             const currentRef = capasRef[index]
 
-            const indicadoresGrupo = indicadores.map(({ top, left, menu }) => {
-                const idMenu = getMenu({
-                    menu,
-                    closeMenu,
-                    currentRef,
-                    setActualTitulo,
-                    ...dispatch,
-                })
-                const { changeMenu } = dispatch
+            const indicadoresGrupo = indicadores.map(
+                ({ top, left, coord, menu }) => {
+                    const idMenu = getMenu({
+                        menu,
+                        closeMenu,
+                        currentRef,
+                        setActualTitulo,
+                        ...dispatch,
+                    })
+                    const { changeMenu } = dispatch
 
-                const indicadorProps = {
-                    top,
-                    left,
-                    idMenu,
-                    changeMenu,
-                    openMenu,
-                    closeMenu,
+                    const indicadorProps = {
+                        coord,
+                        top,
+                        left,
+                        idMenu,
+                        changeMenu,
+                        openMenu,
+                        closeMenu,
+                    }
+
+                    return <Indicador {...indicadorProps} />
                 }
-
-                return <Indicador {...indicadorProps} />
-            })
+            )
 
             return indicadoresGrupo
         })

@@ -11,11 +11,21 @@ const fondos = getDataFromModules(fondosImport)
 const selectores = getDataFromModules(selectoresImport)
 
 const configH = {
-    top: '80%',
-    left: '10%',
+    coord: {
+        x1: '90%',
+        y1: '16.615%',
+        x2: '100%',
+        y2: '33.308%',
+    },
     menu: {
         seleccionado: 0,
         selectores: [
+            {
+                selectorImg: selectores[0],
+                titulo: 'Sin pieza',
+                primerPlano: '',
+                quitarFondo: true,
+            },
             {
                 selectorImg: selectores[0],
                 titulo: 'Pieza 1',

@@ -12,6 +12,7 @@ const Serie = ({
     setFullScreenSrc,
     setFullScreenTitulo,
     backgroundColor,
+    children,
 }) => {
     const {
         titulo,
@@ -65,6 +66,7 @@ const Serie = ({
                     <div className='acabado-container'>{imgsAcabados}</div>
                 </>
             ) : undefined}
+            {children}
         </StyledSerie>
     )
 }

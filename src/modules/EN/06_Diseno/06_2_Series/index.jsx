@@ -1,5 +1,7 @@
 import { useState } from 'react'
+import Anotacion from '../../../../components/Anotacion'
 import FullScreen from '../../../../components/FullScreen'
+import VisualizadorVariaciones from '../../../../components/VisualizadorVariaciones'
 import configArquitect from '../../../../configs/EN/Series/configArquitect'
 import configBASALT from '../../../../configs/EN/Series/configBasalt'
 import configCRETE from '../../../../configs/EN/Series/configCrete'
@@ -17,9 +19,25 @@ import configWOOD from '../../../../configs/EN/Series/configWood'
 import { COLORS } from '../../../../global/GlobalStyles'
 import Serie from './Serie'
 
+import fondo from '../../../../assets/images/VolumenVariacion/fondo.jpg'
+import configVolumenSelectores from '../../../../configs/EN/configVolumenVariacion'
+
 const Series = ({ ids }) => {
     const [fullScreenSrc, setFullScreenSrc] = useState('')
     const [fullScreenTitulo, setFullScreenTitulo] = useState('')
+
+    const propsFormato = {
+        anotacion: {
+            text: 'Click on the area to see all the available parts',
+            type: 'click',
+            className: 'anotacion-variaciones',
+        },
+        visualizador: {
+            config: configVolumenSelectores,
+            srcfondo: fondo,
+            altFondo: 'Background image with indicators',
+        },
+    }
 
     return (
         <>
@@ -127,7 +145,10 @@ const Series = ({ ids }) => {
                 setFullScreenSrc={setFullScreenSrc}
                 setFullScreenTitulo={setFullScreenTitulo}
                 backgroundColor={COLORS.gray01}
-            />
+            >
+                <Anotacion {...propsFormato.anotacion} />
+                <VisualizadorVariaciones {...propsFormato.visualizador} />
+            </Serie>
         </>
     )
 }

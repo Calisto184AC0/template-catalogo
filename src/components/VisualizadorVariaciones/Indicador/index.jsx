@@ -2,8 +2,10 @@ import StyledIndicador from './styles'
 import openIndicador from '../../../assets/icons/open-indicator.svg'
 import { useContext } from 'react'
 import IsOpenContext from '../../../contexts/IsOpenMenuContext'
+import IndicadorPlano from './IndicadorPlano'
 
 const Indicador = ({
+    coord,
     top,
     left,
     bottom,
@@ -27,6 +29,10 @@ const Indicador = ({
         Y: top,
         X: left,
         Bottom: bottom,
+    }
+
+    if (coord) {
+        return <IndicadorPlano onClick={handleClick} {...coord} />
     }
 
     if (!isOpen) {

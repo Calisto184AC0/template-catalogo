@@ -1,6 +1,7 @@
 import StyledSelector from './styles'
 
 const Selector = ({
+    quitarFondo,
     indexRotador,
     selectorImg,
     titulo,
@@ -16,7 +17,7 @@ const Selector = ({
     const handleClick = () => {
         if (noClick) return
 
-        if (primerPlano) {
+        if (primerPlano !== undefined) {
             closeMenu()
 
             setActualTitulo(titulo)
@@ -33,7 +34,11 @@ const Selector = ({
     }
 
     return (
-        <StyledSelector onClick={handleClick} noClick={noClick}>
+        <StyledSelector
+            onClick={handleClick}
+            noClick={noClick}
+            quitarFondo={quitarFondo}
+        >
             <img src={selectorImg} alt={'Selector ' + titulo} />
             <span>{titulo}</span>
         </StyledSelector>

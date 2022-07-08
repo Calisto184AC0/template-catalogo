@@ -8,6 +8,7 @@ const StyledSelector = styled.div`
     cursor: ${props => (props.noClick ? 'normal' : 'pointer')};
 
     img {
+        opacity: ${props => (props.quitarFondo ? 0.2 : 1)};
         width: 7rem;
     }
 `
