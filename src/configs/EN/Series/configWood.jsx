@@ -58,6 +58,14 @@ const configWOOD = {
             top: '45%',
             left: '20%',
             ambiente: {
+                imagen: ambientes[2],
+                titulo: 'Do&Wood Eucalipto',
+            },
+        },
+        {
+            top: '63%',
+            left: '20%',
+            ambiente: {
                 imagen: ambientes[1],
                 titulo: 'Do&Wood Encina',
             },
@@ -66,7 +74,7 @@ const configWOOD = {
             top: '23%',
             left: '20%',
             ambiente: {
-                imagen: ambientes[2],
+                imagen: ambientes[3],
                 titulo: 'Do&Wood Manzano',
             },
         },
@@ -74,7 +82,7 @@ const configWOOD = {
             top: '82%',
             left: '20%',
             ambiente: {
-                imagen: ambientes[3],
+                imagen: ambientes[4],
                 titulo: 'Do&Wood Sauce',
             },
         },

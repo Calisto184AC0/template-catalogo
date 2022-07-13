@@ -51,26 +51,18 @@ const configSPACE = {
     imgSeleccionar,
     indicadores: [
         {
-            top: '21%',
-            left: '20%',
-            ambiente: {
-                imagen: ambientes[0],
-                titulo: 'Do&Space Ivory',
-            },
-        },
-        {
-            top: '71%',
-            left: '20%',
-            ambiente: {
-                imagen: ambientes[1],
-                titulo: 'Do&Space White',
-            },
-        },
-        {
             top: '5%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[2],
+                titulo: 'Do&Space Ivory',
+            },
+        },
+        {
+            top: '21%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[0],
                 titulo: 'Do&Space Dark',
             },
         },
@@ -78,16 +70,32 @@ const configSPACE = {
             top: '37%',
             left: '20%',
             ambiente: {
-                imagen: ambientes[3],
-                titulo: 'Do&Space Soft',
+                imagen: ambientes[1],
+                titulo: 'Do&Space Black',
             },
         },
         {
             top: '54%',
             left: '20%',
             ambiente: {
+                imagen: ambientes[5],
+                titulo: 'Do&Space White',
+            },
+        },
+        {
+            top: '71%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[3],
+                titulo: 'Do&Space Soft',
+            },
+        },
+        {
+            top: '86%',
+            left: '20%',
+            ambiente: {
                 imagen: ambientes[4],
-                titulo: 'Do&Space Black',
+                titulo: 'Do&Space Taupe',
             },
         },
     ],

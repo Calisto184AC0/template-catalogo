@@ -44,11 +44,27 @@ const configTERRAZO = {
     imgSeleccionar,
     indicadores: [
         {
+            top: '7%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[2],
+                titulo: 'Do&Terrazo Beige + Silver ',
+            },
+        },
+        {
             top: '23%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[0],
                 titulo: 'Do&Terrazo Basic Pro + Silver ',
+            },
+        },
+        {
+            top: '45%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[4],
+                titulo: 'Do&Terrazo Silver',
             },
         },
         {
@@ -60,27 +76,11 @@ const configTERRAZO = {
             },
         },
         {
-            top: '7%',
-            left: '20%',
-            ambiente: {
-                imagen: ambientes[2],
-                titulo: 'Do&Terrazo Beige + Silver ',
-            },
-        },
-        {
             top: '82%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[3],
                 titulo: 'Do&Terrazo Pearl + Silver ',
-            },
-        },
-        {
-            top: '45%',
-            left: '20%',
-            ambiente: {
-                imagen: ambientes[4],
-                titulo: 'Do&Terrazo Silver',
             },
         },
     ],

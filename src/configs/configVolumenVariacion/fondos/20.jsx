@@ -24,7 +24,6 @@ const configS = {
                 selectorImg: selectores[0],
                 titulo: 'Sin pieza',
                 primerPlano: '',
-                quitarFondo: true,
             },
             {
                 selectorImg: selectores[1],

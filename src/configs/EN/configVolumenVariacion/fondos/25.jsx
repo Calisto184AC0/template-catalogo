@@ -24,7 +24,6 @@ const configX = {
                 selectorImg: selectores[1],
                 titulo: 'Without part',
                 primerPlano: '',
-                quitarFondo: true,
             },
             {
                 selectorImg: selectores[1],
