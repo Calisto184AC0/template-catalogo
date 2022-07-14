@@ -43,15 +43,7 @@ const configMARBLE = {
     imgSeleccionar,
     indicadores: [
         {
-            top: '36%',
-            left: '20%',
-            ambiente: {
-                imagen: ambientes[0],
-                titulo: 'Do&Marble Calacatta',
-            },
-        },
-        {
-            top: '59%',
+            top: '10%',
             left: '20%',
             ambiente: {
                 imagen: ambientes[1],
@@ -59,18 +51,26 @@ const configMARBLE = {
             },
         },
         {
-            top: '81%',
+            top: '36%',
             left: '20%',
             ambiente: {
-                imagen: ambientes[2],
+                imagen: ambientes[3],
                 titulo: 'Do&Marble Lava',
             },
         },
         {
-            top: '10%',
+            top: '59%',
             left: '20%',
             ambiente: {
-                imagen: ambientes[3],
+                imagen: ambientes[0],
+                titulo: 'Do&Marble Calacatta',
+            },
+        },
+        {
+            top: '81%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[2],
                 titulo: 'Do&Marble Grey',
             },
         },

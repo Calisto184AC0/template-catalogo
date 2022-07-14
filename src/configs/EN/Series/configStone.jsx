@@ -21,7 +21,7 @@ const acabados = getDataFromModules(acabadosImports)
 const configSTONE = {
     titulo: 'DO&STONE',
     descripcion:
-        'The ARQUITECT series is the result of innovation and functionality, the union between the most advanced technique and versatility. The formats of the collection, its neutral tones and its monochrome appearance, allow it to be the star of any space.',
+        'The STONE series is the result of innovation and functionality, the union between the most advanced technique and versatility. The formats of the collection, its neutral tones and its monochrome appearance, allow it to be the star of any space.',
     imgSeleccionar,
     indicadores: [
         {

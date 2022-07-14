@@ -45,14 +45,6 @@ const configPORTLAND = {
     imgSeleccionar,
     indicadores: [
         {
-            top: '63%',
-            left: '20%',
-            ambiente: {
-                imagen: ambientes[0],
-                titulo: 'Do&Portland Blanco',
-            },
-        },
-        {
             top: '7%',
             left: '20%',
             ambiente: {
@@ -64,8 +56,8 @@ const configPORTLAND = {
             top: '23%',
             left: '20%',
             ambiente: {
-                imagen: ambientes[2],
-                titulo: 'Do&Portland Nacar',
+                imagen: ambientes[4],
+                titulo: 'Do&Portland Taupe',
             },
         },
         {
@@ -77,11 +69,19 @@ const configPORTLAND = {
             },
         },
         {
+            top: '63%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[0],
+                titulo: 'Do&Portland Blanco',
+            },
+        },
+        {
             top: '82%',
             left: '20%',
             ambiente: {
-                imagen: ambientes[4],
-                titulo: 'Do&Portland Taupe',
+                imagen: ambientes[2],
+                titulo: 'Do&Portland Nacar',
             },
         },
     ],

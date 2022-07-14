@@ -54,7 +54,7 @@ const configSPACE = {
             top: '5%',
             left: '20%',
             ambiente: {
-                imagen: ambientes[2],
+                imagen: ambientes[3],
                 titulo: 'Do&Space Ivory',
             },
         },
@@ -62,7 +62,7 @@ const configSPACE = {
             top: '21%',
             left: '20%',
             ambiente: {
-                imagen: ambientes[0],
+                imagen: ambientes[2],
                 titulo: 'Do&Space Dark',
             },
         },
@@ -78,7 +78,7 @@ const configSPACE = {
             top: '54%',
             left: '20%',
             ambiente: {
-                imagen: ambientes[5],
+                imagen: ambientes[0],
                 titulo: 'Do&Space White',
             },
         },
@@ -86,7 +86,7 @@ const configSPACE = {
             top: '71%',
             left: '20%',
             ambiente: {
-                imagen: ambientes[3],
+                imagen: ambientes[4],
                 titulo: 'Do&Space Soft',
             },
         },
@@ -94,7 +94,7 @@ const configSPACE = {
             top: '86%',
             left: '20%',
             ambiente: {
-                imagen: ambientes[4],
+                imagen: ambientes[5],
                 titulo: 'Do&Space Taupe',
             },
         },

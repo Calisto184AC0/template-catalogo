@@ -74,11 +74,75 @@ const configArquitect = {
     imgSeleccionar,
     indicadores: [
         {
+            top: '5%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[13],
+                titulo: 'Do&Arquitect Blanco',
+            },
+        },
+        {
+            top: '5%',
+            left: '75%',
+            ambiente: {
+                imagen: ambientes[3],
+                titulo: 'Do&Arquitect Ceniza',
+            },
+        },
+        {
+            top: '21%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[10],
+                titulo: 'Do&Arquitect Rojo',
+            },
+        },
+        {
             top: '21%',
             left: '75%',
             ambiente: {
                 imagen: ambientes[0],
                 titulo: 'Do&Arquitect Amarillo',
+            },
+        },
+        {
+            top: '37%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[12],
+                titulo: 'Do&Arquitect Verde',
+            },
+        },
+        {
+            top: '37%',
+            left: '75%',
+            ambiente: {
+                imagen: ambientes[4],
+                titulo: 'Do&Arquitect Grafito',
+            },
+        },
+        {
+            top: '54%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[8],
+                titulo: 'Do&Arquitect Mango',
+            },
+        },
+        {
+            top: '54%',
+            left: '75%',
+            ambiente: {
+                imagen: ambientes[7],
+                titulo: 'Do&Arquitect Malva',
+            },
+        },
+        {
+            top: '71%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[11],
+                titulo: 'Do&Arquitect Turquesa',
             },
         },
         {
@@ -90,83 +154,19 @@ const configArquitect = {
             },
         },
         {
-            top: '5%',
-            left: '75%',
-            ambiente: {
-                imagen: ambientes[2],
-                titulo: 'Do&Arquitect Ceniza',
-            },
-        },
-        {
-            top: '37%',
-            left: '75%',
-            ambiente: {
-                imagen: ambientes[3],
-                titulo: 'Do&Arquitect Grafito',
-            },
-        },
-        {
             top: '86%',
             left: '20%',
             ambiente: {
-                imagen: ambientes[4],
+                imagen: ambientes[6],
                 titulo: 'Do&Arquitect Gris',
             },
         },
         {
-            top: '54%',
-            left: '75%',
-            ambiente: {
-                imagen: ambientes[5],
-                titulo: 'Do&Arquitect Malva',
-            },
-        },
-        {
-            top: '54%',
-            left: '20%',
-            ambiente: {
-                imagen: ambientes[6],
-                titulo: 'Do&Arquitect Mango',
-            },
-        },
-        {
             top: '86%',
             left: '75%',
             ambiente: {
-                imagen: ambientes[7],
-                titulo: 'Do&Arquitect Negro',
-            },
-        },
-        {
-            top: '21%',
-            left: '20%',
-            ambiente: {
-                imagen: ambientes[8],
-                titulo: 'Do&Arquitect Rojo',
-            },
-        },
-        {
-            top: '71%',
-            left: '20%',
-            ambiente: {
                 imagen: ambientes[9],
-                titulo: 'Do&Arquitect Turquesa',
-            },
-        },
-        {
-            top: '37%',
-            left: '20%',
-            ambiente: {
-                imagen: ambientes[10],
-                titulo: 'Do&Arquitect Verde',
-            },
-        },
-        {
-            top: '5%',
-            left: '20%',
-            ambiente: {
-                imagen: ambientes[11],
-                titulo: 'Do&Arquitect Blanco',
+                titulo: 'Do&Arquitect Negro',
             },
         },
     ],

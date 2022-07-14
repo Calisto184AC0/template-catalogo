@@ -19,7 +19,7 @@ const acabados = getDataFromModules(acabadosImports)
 const configSTONE = {
     titulo: 'DO&STONE',
     descripcion:
-        'La serie ARQUITEC es el resultado de la innovación y la funcionalidad, la unión entre la técnica más avanzada y versatilidad. Los formatos de la colección, sus tonalidades neutras y su aspecto monocromático, le permite protagonizar cualquier espacio.',
+        'La serie STONE es el resultado de la innovación y la funcionalidad, la unión entre la técnica más avanzada y versatilidad. Los formatos de la colección, sus tonalidades neutras y su aspecto monocromático, le permite protagonizar cualquier espacio.',
     imgSeleccionar,
     indicadores: [
         {

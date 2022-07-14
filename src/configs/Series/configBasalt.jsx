@@ -30,19 +30,19 @@ const configBASALT = {
             },
         },
         {
-            top: '75%',
-            left: '20%',
-            ambiente: {
-                imagen: ambientes[1],
-                titulo: 'Do&Basalt Graphite',
-            },
-        },
-        {
             top: '45%',
             left: '20%',
             ambiente: {
-                imagen: ambientes[2],
+                imagen: ambientes[1],
                 titulo: 'Do&Basalt Grey',
+            },
+        },
+        {
+            top: '75%',
+            left: '20%',
+            ambiente: {
+                imagen: ambientes[2],
+                titulo: 'Do&Basalt Graphite',
             },
         },
     ],
