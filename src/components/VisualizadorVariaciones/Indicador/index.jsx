@@ -1,8 +1,9 @@
 import StyledIndicador from './styles'
 import openIndicador from '../../../assets/icons/open-indicator.svg'
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import IsOpenContext from '../../../contexts/IsOpenMenuContext'
 import IndicadorPlano from './IndicadorPlano'
+import { useListaCambios } from '../../../contexts/MultipleOptionsContext'
 
 const Indicador = ({
     coord,
@@ -14,9 +15,27 @@ const Indicador = ({
     openMenu,
     closeMenu,
 }) => {
+    const { listaCambios, pushCambio, removeCambio } = useListaCambios()
+
     const isOpen = useContext(IsOpenContext)
 
     const handleClick = () => {
+        if (coord) {
+            if (listaCambios.includes(idMenu)) {
+                if (isOpen) {
+                    if (listaCambios.length !== 1) {
+                        removeCambio(idMenu)
+                    }
+                } else {
+                    removeCambio(idMenu)
+                }
+                return
+            } else {
+                pushCambio(idMenu)
+                return
+            }
+        }
+
         if (isOpen) {
             closeMenu()
         } else {
@@ -32,7 +51,13 @@ const Indicador = ({
     }
 
     if (coord) {
-        return <IndicadorPlano onClick={handleClick} {...coord} />
+        return (
+            <IndicadorPlano
+                onClick={handleClick}
+                isSelected={listaCambios.includes(idMenu)}
+                {...coord}
+            />
+        )
     }
 
     if (!isOpen) {

@@ -11,6 +11,9 @@ const IndicadorPlano = styled.div`
 
     transition: all 0.2s linear;
 
+    background-color: ${({ isSelected }) =>
+        isSelected ? 'rgba(0, 0, 0, 0.2)' : 'transparent'};
+
     :hover {
         background-color: rgba(0, 0, 0, 0.2);
     }

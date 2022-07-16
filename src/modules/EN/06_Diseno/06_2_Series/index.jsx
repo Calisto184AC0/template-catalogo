@@ -21,11 +21,14 @@ import Serie from './Serie'
 
 import fondo from '../../../../assets/images/VolumenVariacion/fondo.jpg'
 import configVolumenSelectores from '../../../../configs/EN/configVolumenVariacion'
+import { useListaCambios } from '../../../../contexts/MultipleOptionsContext'
 
 const Series = ({ ids }) => {
     const [fullScreenSrc, setFullScreenSrc] = useState('')
     const [fullScreenTitulo, setFullScreenTitulo] = useState('')
 
+    const { listaCambios, cleanListaCambios, addIdsMenu, idsMenu } =
+        useListaCambios()
     const propsFormato = {
         anotacion: {
             text: 'Click on the area to see all the available parts',
@@ -36,6 +39,7 @@ const Series = ({ ids }) => {
             config: configVolumenSelectores,
             srcfondo: fondo,
             altFondo: 'Background image with indicators',
+            volumen: { listaCambios, cleanListaCambios, addIdsMenu, idsMenu },
         },
     }
 

@@ -9,12 +9,13 @@ import Sistemas from '../../../modules/EN/08_Sistemas'
 import Descargas from '../../../modules/EN/09_Descargas'
 import Final from '../../../modules/EN/10_Final'
 import { useRef } from 'react'
+import MultipleOptionsProvider from '../../../contexts/MultipleOptionsContext'
 
 const FachadaVentiladaEn = () => {
     const indiceRef = useRef()
 
     return (
-        <>
+        <MultipleOptionsProvider>
             <Introduccion indiceRef={indiceRef} />
             <Indice id='indice' indiceRef={indiceRef} />
             <Dolcker id='dolcker' />
@@ -53,7 +54,7 @@ const FachadaVentiladaEn = () => {
             />
             <Descargas id='descargas' />
             <Final />
-        </>
+        </MultipleOptionsProvider>
     )
 }
 

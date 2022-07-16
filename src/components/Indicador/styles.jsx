@@ -13,6 +13,14 @@ const StyledIndicador = styled.img.attrs({
 
     transition: all 0.2s linear;
 
+    ${({ isHidden }) =>
+        isHidden &&
+        css`
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(50px);
+        `}
+
     ${props =>
         props.close
             ? css`

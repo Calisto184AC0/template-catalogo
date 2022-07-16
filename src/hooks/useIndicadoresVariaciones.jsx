@@ -131,6 +131,7 @@ const reducer = (state, { type, payload }) => {
 }
 
 const getSelectores = ({
+    volumen,
     padre,
     seleccionado,
     selectores,
@@ -165,6 +166,10 @@ const getSelectores = ({
                     if (primerPlano === undefined) {
                         selectorProps.noClick = true
                     } else {
+                        if (volumen) {
+                            volumen.addIdsMenu(padre, primerPlano, currentRef)
+                        }
+
                         selectorProps.primerPlano = primerPlano
                         selectorProps.closeMenu = closeMenu
                         selectorProps.foregroundImgRef = currentRef
@@ -194,6 +199,7 @@ const getSelectores = ({
 }
 
 const getMenu = ({
+    volumen,
     padre,
     menu,
     closeMenu,
@@ -210,6 +216,7 @@ const getMenu = ({
     const seleccionadoAux = seleccionado !== undefined ? seleccionado : -1
 
     const { selectoresElem, hijos } = getSelectores({
+        volumen,
         padre: idMenu,
         seleccionado,
         selectores,
@@ -239,6 +246,7 @@ const getMenu = ({
 }
 
 const getIndicadores = ({
+    volumen,
     config,
     capasRef,
     openMenu,
@@ -254,6 +262,7 @@ const getIndicadores = ({
             const indicadoresGrupo = indicadores.map(
                 ({ top, left, coord, menu }) => {
                     const idMenu = getMenu({
+                        volumen,
                         menu,
                         closeMenu,
                         currentRef,
@@ -281,7 +290,7 @@ const getIndicadores = ({
     )
 }
 
-const useIndicadoresVariaciones = config => {
+const useIndicadoresVariaciones = (config, volumen) => {
     const { capas, capasRef } = getCapas(config)
 
     const [state, dispatch] = useReducer(reducer, {
@@ -300,11 +309,12 @@ const useIndicadoresVariaciones = config => {
             type: ACTIONS.ADD_MENU,
             payload: menu,
         })
-    const changeMenu = idMenu =>
+    const changeMenu = idMenu => {
         dispatch({
             type: ACTIONS.CHANGE_MENU,
             payload: idMenu,
         })
+    }
     const changeSeleccionado = (index, idMenu) =>
         dispatch({
             type: ACTIONS.CHANGE_SELECCIONADO,
@@ -331,6 +341,7 @@ const useIndicadoresVariaciones = config => {
     useEffect(() => {
         addIndicadores(
             getIndicadores({
+                volumen,
                 config,
                 capasRef,
                 setActualTitulo,
@@ -358,6 +369,8 @@ const useIndicadoresVariaciones = config => {
         closeMenu,
         changeSeleccionado,
         idMenu: state.actualIdMenu,
+        changeMenu,
+        openMenu,
     }
 }
 
