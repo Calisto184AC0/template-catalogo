@@ -22,6 +22,7 @@ import Serie from './Serie'
 import fondo from '../../../assets/images/VolumenVariacion/fondo.jpg'
 import indicadoresFormato from '../../../configs/configVolumenVariacion'
 import { useListaCambios } from '../../../contexts/MultipleOptionsContext'
+import Anotaciones from '../../../components/Anotacion/Anotaciones'
 
 const Series = ({ ids }) => {
     const [fullScreenSrc, setFullScreenSrc] = useState('')
@@ -31,10 +32,13 @@ const Series = ({ ids }) => {
         useListaCambios()
 
     const propsFormato = {
+        anotacion2: {
+            text: 'Selecciona las áreas donde quieras aplicar la pieza',
+            type: 'normal',
+        },
         anotacion: {
-            text: 'Pulsa en la área para ver todas las piezas disponibles',
+            text: 'Haz click en el punto para seleccionar la pieza a aplicar',
             type: 'click',
-            className: 'anotacion-variaciones',
         },
         visualizador: {
             config: indicadoresFormato,
@@ -151,7 +155,10 @@ const Series = ({ ids }) => {
                 setFullScreenTitulo={setFullScreenTitulo}
                 backgroundColor={COLORS.gray01}
             >
-                <Anotacion {...propsFormato.anotacion} />
+                <Anotaciones className='anotacion-variaciones'>
+                    <Anotacion {...propsFormato.anotacion2} />
+                    <Anotacion {...propsFormato.anotacion} />
+                </Anotaciones>
                 <VisualizadorVariaciones {...propsFormato.visualizador} />
             </Serie>
         </>

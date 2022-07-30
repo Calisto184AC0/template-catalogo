@@ -20,11 +20,24 @@ const Contacto = ({ lang = '' }) => {
                 <Text>
                     DOLCKER SISTEMAS, S.L.
                     <br />
-                    Calle Talamanca del Jarama, 19 portal A 5A
+                    Calle Talamanca del Jarama, 19
                     <br />
                     28051 Madrid (España)
                     <br />
                     (+34) 902 363 725
+                    <br />
+                    <br />
+                    <a href='mailto:administracion@dolcker.es'>
+                        administracion@dolcker.es
+                    </a>
+                    <br />
+                    <a href='mailto:comercial@dolcker.es'>
+                        comercial@dolcker.es
+                    </a>
+                    <br />
+                    <a href='mailto:dolcker@dolcker.es'>dolcker@dolcker.es</a>
+                    <br />
+                    <a href='mailto:sistemas@dolcker.es'>sistemas@dolcker.es</a>
                     <br />
                 </Text>
             </Seccion>

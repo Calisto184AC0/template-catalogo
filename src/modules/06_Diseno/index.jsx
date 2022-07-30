@@ -76,10 +76,6 @@ const Disenos = ({ id }) => {
                 isEspesores
             >
                 <Titulo2>Espesores</Titulo2>
-                <div className='espesores-ejemplos'>
-                    <img src={img2} alt='' />
-                    <img src={img3} alt='' />
-                </div>
                 <div className='espesor espesor-1'>
                     <img src={ranurado11} alt='' />
                     <ul>

@@ -29,7 +29,6 @@ const MultipleOptionsProvider = ({ children }) => {
                 },
             }
 
-            console.log(prev)
             return newObj
         })
     }

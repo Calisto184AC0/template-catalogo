@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 const Indice = ({ indiceRef }) => {
     const { menuDesplegable, btnIndice } = useMenuDesplegableEn(
         ListaContenidos,
-        'Índice',
+        'Index',
         indiceRef
     )
 
@@ -22,9 +22,13 @@ const Indice = ({ indiceRef }) => {
 
     return (
         <>
-            <StyledIndice backgroundColor={COLORS.gray08} ref={indiceRef}>
+            <StyledIndice
+                backgroundColor={COLORS.gray08}
+                ref={indiceRef}
+                id='indice'
+            >
                 <Titulo color={COLORS.gray01}>Index</Titulo>
-                <ListaContenidos en />
+                <ListaContenidos en={true} />
                 <img
                     src={flecha}
                     alt=''

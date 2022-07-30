@@ -24,6 +24,10 @@ const StyledImageWithCaption = styled.figure`
         text-align: left;
         color: ${COLORS.gray05};
     }
+
+    .gray {
+        filter: grayscale(1);
+    }
 `
 
 export default StyledImageWithCaption

@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import Anotaciones from '../../../components/Anotacion/Anotaciones'
 import StyledAnotacion from '../../../components/Anotacion/styles'
 import Seccion from '../../../components/Seccion'
 import Text from '../../../components/Text'
@@ -78,17 +79,18 @@ const StyledSerie = styled(Seccion)`
         `)}
     }
 
-    ${StyledAnotacion} {
+    > ${StyledAnotacion} {
         padding-bottom: calc(1.563rem + 25px);
     }
 
-    ${StyledAnotacion}.anotacion-ejemplo {
+    > ${StyledAnotacion}.anotacion-ejemplo {
         grid-row: 1;
     }
-    ${StyledAnotacion}.anotacion-muestra {
+    > ${StyledAnotacion}.anotacion-muestra {
         grid-row: 3;
     }
-    ${StyledAnotacion}.anotacion-variaciones {
+    > ${StyledAnotacion}.anotacion-variaciones,
+        ${Anotaciones}.anotacion-variaciones {
         grid-row: 4;
     }
 `

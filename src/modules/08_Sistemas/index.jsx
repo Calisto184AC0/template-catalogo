@@ -109,11 +109,13 @@ const Sistemas = ({ id }) => {
                     src={dolckerClip1}
                     alt='Dolcker-clip demostración'
                     columnSpan='5'
+                    isGray
                 />
                 <ImageWithCaption
                     src={dolckerClip2}
                     alt='Dolcker-clip tabla'
                     columnSpan='8'
+                    isGray
                 />
             </StyledSistemas>
 
@@ -137,11 +139,13 @@ const Sistemas = ({ id }) => {
                     src={tc111}
                     alt='DOL-TC11 demostración'
                     columnSpan='5'
+                    isGray
                 />
                 <ImageWithCaption
                     src={tc112}
                     alt='DOL-TC11 tabla'
                     columnSpan='8'
+                    isGray
                 />
             </StyledSistemas>
 
@@ -165,11 +169,13 @@ const Sistemas = ({ id }) => {
                     src={tc141}
                     alt='DOL-TC14 demostración'
                     columnSpan='5'
+                    isGray
                 />
                 <ImageWithCaption
                     src={tc142}
                     alt='DOL-TC14 tabla'
                     columnSpan='8'
+                    isGray
                 />
             </StyledSistemas>
 
@@ -194,11 +200,13 @@ const Sistemas = ({ id }) => {
                     src={hc201}
                     alt='DOL-HC20 demostración'
                     columnSpan='5'
+                    isGray
                 />
                 <ImageWithCaption
                     src={hc202}
                     alt='DOL-HC20 tabla'
                     columnSpan='8'
+                    isGray
                 />
             </StyledSistemas>
         </>

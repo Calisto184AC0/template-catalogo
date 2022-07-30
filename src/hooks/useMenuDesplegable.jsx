@@ -18,7 +18,7 @@ const useMenuDesplegable = (Lista, titulo, indiceRef) => {
         if (indiceRef) {
             const observer = new IntersectionObserver(
                 entries => {
-                    if (window.scrollY <= indiceRef.current.offsetTop) return
+                    if (window.scrollY < indiceRef.current.offsetTop) return
 
                     if (entries[0].isIntersecting) {
                         // Debería aparecer cuando está por debajo del índice
@@ -67,7 +67,7 @@ const useMenuDesplegable = (Lista, titulo, indiceRef) => {
             setMenuDesplegable(
                 <MenuDesplegable menuRef={menuRef} setIsOpen={setIsOpen}>
                     <Titulo color={COLORS.gray01}>{titulo}</Titulo>
-                    <Lista />
+                    <Lista isMenuDesplegable={true} />
                 </MenuDesplegable>
             )
         } else {

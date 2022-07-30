@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import ListaContenidos from '../../components/ListaContenidos'
 import { Titulo } from '../../components/Titulos'
 import { COLORS } from '../../global/GlobalStyles'
@@ -23,7 +22,11 @@ const Indice = ({ indiceRef }) => {
 
     return (
         <>
-            <StyledIndice backgroundColor={COLORS.gray08} ref={indiceRef}>
+            <StyledIndice
+                backgroundColor={COLORS.gray08}
+                ref={indiceRef}
+                id='indice'
+            >
                 <Titulo color={COLORS.gray01}>Índice</Titulo>
                 <ListaContenidos />
                 <img

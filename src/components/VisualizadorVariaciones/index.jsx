@@ -26,7 +26,6 @@ const VisualizadorVariaciones = ({ config, srcfondo, altFondo, volumen }) => {
     }
 
     if (volumen) {
-        console.log(volumen.listaCambios[0])
         return (
             <StyledVisualizadorVariaciones>
                 <img src={srcfondo} alt={altFondo} />
@@ -47,8 +46,8 @@ const VisualizadorVariaciones = ({ config, srcfondo, altFondo, volumen }) => {
                                 changeMenu(volumen.listaCambios[0])
                             }
                         }}
-                        top='75%'
-                        left='85%'
+                        top='6%'
+                        left='10%'
                         isHidden={volumen.listaCambios.length === 0}
                     />
                 </div>

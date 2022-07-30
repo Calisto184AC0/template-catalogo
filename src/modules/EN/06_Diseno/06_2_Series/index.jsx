@@ -22,6 +22,7 @@ import Serie from './Serie'
 import fondo from '../../../../assets/images/VolumenVariacion/fondo.jpg'
 import configVolumenSelectores from '../../../../configs/EN/configVolumenVariacion'
 import { useListaCambios } from '../../../../contexts/MultipleOptionsContext'
+import Anotaciones from '../../../../components/Anotacion/Anotaciones'
 
 const Series = ({ ids }) => {
     const [fullScreenSrc, setFullScreenSrc] = useState('')
@@ -30,10 +31,13 @@ const Series = ({ ids }) => {
     const { listaCambios, cleanListaCambios, addIdsMenu, idsMenu } =
         useListaCambios()
     const propsFormato = {
+        anotacion2: {
+            text: 'Select the areas where you want to apply the part',
+            type: 'normal',
+        },
         anotacion: {
-            text: 'Click on the area to see all the available parts',
+            text: 'Click on the point to select the part to be applied.',
             type: 'click',
-            className: 'anotacion-variaciones',
         },
         visualizador: {
             config: configVolumenSelectores,
@@ -150,7 +154,10 @@ const Series = ({ ids }) => {
                 setFullScreenTitulo={setFullScreenTitulo}
                 backgroundColor={COLORS.gray01}
             >
-                <Anotacion {...propsFormato.anotacion} />
+                <Anotaciones className='anotacion-variaciones'>
+                    <Anotacion {...propsFormato.anotacion2} />
+                    <Anotacion {...propsFormato.anotacion} />
+                </Anotaciones>
                 <VisualizadorVariaciones {...propsFormato.visualizador} />
             </Serie>
         </>
