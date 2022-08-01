@@ -13,8 +13,7 @@ import StyledSublista from './Sublista/styles'
 const StyledListaContenidos = styled.nav`
     ${column_5_span6}
 
-    counter-reset: counter ${({ isMenuDesplegable }) =>
-        isMenuDesplegable ? '-1' : '0'};
+    counter-reset: counter -1;
 
     > ul > * {
         position: relative;
