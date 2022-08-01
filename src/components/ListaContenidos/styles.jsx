@@ -1,11 +1,5 @@
 import styled, { css } from 'styled-components'
-import {
-    GRID,
-    TextMedium,
-    COLORS,
-    Column6,
-    TABLET_SIZE,
-} from '../../global/GlobalStyles'
+import { GRID, TextMedium, COLORS } from '../../global/GlobalStyles'
 import { column_5_span6 } from '../../styles/grid'
 import { mediaQueryTablet } from '../../styles/sizes'
 import StyledSublista from './Sublista/styles'
