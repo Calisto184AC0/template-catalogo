@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { COLORS, DISTANCES, TextSmall } from '../../global/GlobalStyles'
 import {
+    column_5_span3,
     column_5_span4,
     column_5_span5,
     column_5_span6,
@@ -17,6 +18,7 @@ const StyledImageWithCaption = styled.figure`
         else if (props.columnSpan === '6') return column_5_span6
         else if (props.columnSpan === '5') return column_5_span5
         else if (props.columnSpan === '4') return column_5_span4
+        else if (props.columnSpan === '3') return column_5_span3
     }}
 
     figcaption {
