@@ -24,14 +24,63 @@ import indicadoresFormato from '../../../configs/configVolumenVariacion'
 import { useListaCambios } from '../../../contexts/MultipleOptionsContext'
 import Anotaciones from '../../../components/Anotacion/Anotaciones'
 
+import jsPDF from 'jspdf'
+import { useRef } from 'react'
+import font from '../../../utils/font'
+
 const Series = ({ ids }) => {
     const [fullScreenSrc, setFullScreenSrc] = useState('')
     const [fullScreenTitulo, setFullScreenTitulo] = useState('')
+    const visRef = useRef(null)
 
     const { listaCambios, cleanListaCambios, addIdsMenu, idsMenu } =
         useListaCambios()
 
     const propsFormato = {
+        anotacionPDF: {
+            text: 'Pulsa aquí para descargar un documento PDF de la pieza',
+            type: 'click',
+            onClick: () => {
+                const doc = new jsPDF('l', 'px', [1920, 1080])
+                doc.setFillColor(242, 242, 242)
+                doc.rect(0, 0, 1920, 1080, 'F')
+
+                const logo = new Image()
+                logo.src = '/logo.png'
+
+                doc.addImage(logo, 'png', 52, 50, 128, 40.63)
+
+                doc.setFontSize(24)
+                doc.addFileToVFS('Poppins-Regular.ttf', font)
+                doc.addFont('Poppins-Regular.ttf', 'Poppins-Regular', 'normal')
+                doc.setFont('Poppins-Regular')
+
+                doc.text(
+                    `DOLCKER SISTEMAS, S.L.
+Calle Talamanca del Jarama, 19
+28051 Madrid (España)
+(+34) 902 363 725
+
+administracion@dolcker.es
+comercial@dolcker.es
+dolcker@dolcker.es
+sistemas@dolcker.es`,
+                    52,
+                    770
+                )
+
+                console.log(doc.existsFileInVFS('Poppins-Regular.ttf'))
+
+                doc.html(visRef.current, {
+                    callback: doc => {
+                        doc.save('pieza.pdf')
+                    },
+                    width: 1200,
+                    x: 664,
+                    y: 163,
+                })
+            },
+        },
         anotacion2: {
             text: 'Selecciona las áreas donde quieras aplicar la pieza',
             type: 'normal',
@@ -45,6 +94,7 @@ const Series = ({ ids }) => {
             srcfondo: fondo,
             altFondo: 'Imagen de fondo con indicadores',
             volumen: { listaCambios, cleanListaCambios, addIdsMenu, idsMenu },
+            visRef,
         },
     }
 
@@ -156,6 +206,7 @@ const Series = ({ ids }) => {
                 backgroundColor={COLORS.gray01}
             >
                 <Anotaciones className='anotacion-variaciones'>
+                    <Anotacion {...propsFormato.anotacionPDF} />
                     <Anotacion {...propsFormato.anotacion2} />
                     <Anotacion {...propsFormato.anotacion} />
                 </Anotaciones>

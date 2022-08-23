@@ -19,6 +19,8 @@ const StyledAnotacion = styled.div`
 
     ${TextSmall}
 
+    cursor: ${({ onClick }) => (onClick !== undefined ? 'pointer' : 'default')};
+
     img {
         position: absolute;
         right: calc(100% + ${GRID.columnGap});

@@ -4,7 +4,13 @@ import StyledVisualizadorVariaciones from './styles'
 import IsOpenContext from '../../contexts/IsOpenMenuContext'
 import Indicador from '../Indicador'
 
-const VisualizadorVariaciones = ({ config, srcfondo, altFondo, volumen }) => {
+const VisualizadorVariaciones = ({
+    config,
+    srcfondo,
+    altFondo,
+    volumen,
+    visRef,
+}) => {
     const {
         actualTitulo,
         capas,
@@ -27,7 +33,7 @@ const VisualizadorVariaciones = ({ config, srcfondo, altFondo, volumen }) => {
 
     if (volumen) {
         return (
-            <StyledVisualizadorVariaciones>
+            <StyledVisualizadorVariaciones ref={visRef}>
                 <img src={srcfondo} alt={altFondo} />
                 {capas}
                 {capas.length === 1 ? <span>{actualTitulo}</span> : null}

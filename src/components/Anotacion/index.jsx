@@ -3,7 +3,7 @@ import normal from '../../assets/icons/handup.svg'
 import swipe from '../../assets/icons/handswipe.svg'
 import StyledAnotacion from './styles'
 
-const Anotacion = ({ type, text, className }) => {
+const Anotacion = ({ type, text, className, onClick }) => {
     const types = {
         click,
         normal,
@@ -11,7 +11,7 @@ const Anotacion = ({ type, text, className }) => {
     }
 
     return (
-        <StyledAnotacion className={className}>
+        <StyledAnotacion className={className} onClick={onClick}>
             <img src={types[type]} alt={'Icono de ' + type} />
             {text}
         </StyledAnotacion>
