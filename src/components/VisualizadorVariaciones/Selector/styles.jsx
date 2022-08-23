@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-const StyledSelector = styled.div`
+const StylesSlector = css`
     display: flex;
     flex-direction: column;
     gap: 0.625rem;
@@ -13,4 +13,17 @@ const StyledSelector = styled.div`
     }
 `
 
+const StyledSelectorLabel = styled.label`
+    ${StylesSlector}
+
+    input {
+        display: none;
+    }
+`
+
+const StyledSelector = styled.div`
+    ${StylesSlector}
+`
+
 export default StyledSelector
+export { StyledSelectorLabel }

@@ -40,30 +40,31 @@ const config = {
                     {
                         selectorImg: selects[25],
                         titulo: 'Line colors',
-                        menu: {
-                            seleccionado: -1,
-                            selectores: [
-                                {
-                                    selectorImg: selects[29],
-                                    titulo: 'Line color verde',
-                                    primerPlano: backgrounds[3],
-                                },
-                                {
-                                    selectorImg: selects[24],
-                                    titulo: 'Line color blanco',
-                                    primerPlano: backgrounds[1],
-                                },
-                                {
-                                    selectorImg: selects[27],
-                                    titulo: 'Line color rojo',
-                                    primerPlano: backgrounds[2],
-                                },
-                                {
-                                    selectorImg: selects[26],
-                                    titulo: 'Colores RAL',
-                                },
-                            ],
-                        },
+                        colorPicker: true,
+                        // menu: {
+                        //     seleccionado: -1,
+                        //     selectores: [
+                        //         {
+                        //             selectorImg: selects[29],
+                        //             titulo: 'Line color verde',
+                        //             primerPlano: backgrounds[3],
+                        //         },
+                        //         {
+                        //             selectorImg: selects[24],
+                        //             titulo: 'Line color blanco',
+                        //             primerPlano: backgrounds[1],
+                        //         },
+                        //         {
+                        //             selectorImg: selects[27],
+                        //             titulo: 'Line color rojo',
+                        //             primerPlano: backgrounds[2],
+                        //         },
+                        //         {
+                        //             selectorImg: selects[26],
+                        //             titulo: 'Colores RAL',
+                        //         },
+                        //     ],
+                        // },
                     },
                     {
                         selectorImg: selects[19],

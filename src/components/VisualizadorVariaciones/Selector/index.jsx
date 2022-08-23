@@ -1,4 +1,5 @@
-import StyledSelector from './styles'
+import { useState } from 'react'
+import StyledSelector, { StyledSelectorLabel } from './styles'
 
 const Selector = ({
     quitarFondo,
@@ -13,7 +14,10 @@ const Selector = ({
     changeMenu,
     setActualTitulo,
     noClick,
+    colorPicker,
 }) => {
+    const [selectedColor, setSelectedColor] = useState('#000000')
+
     const handleClick = () => {
         if (noClick) return
 
@@ -31,6 +35,25 @@ const Selector = ({
         } else {
             changeMenu(idMenu)
         }
+    }
+
+    const handleColorChange = color => {
+        setSelectedColor(color)
+        console.log('solo un cambio', color)
+    }
+
+    if (colorPicker) {
+        return (
+            <StyledSelectorLabel>
+                <img src={selectorImg} alt={'Selector ' + titulo} />
+                <span>{titulo}</span>
+                <input
+                    type='color'
+                    onChange={({ target }) => handleColorChange(target.value)}
+                    value={selectedColor}
+                />
+            </StyledSelectorLabel>
+        )
     }
 
     return (

@@ -146,7 +146,14 @@ const getSelectores = ({
     selectoresElem = Children.toArray(
         selectores.map(
             (
-                { selectorImg, titulo, primerPlano, menu, quitarFondo = false },
+                {
+                    selectorImg,
+                    titulo,
+                    primerPlano,
+                    menu,
+                    quitarFondo = false,
+                    colorPicker,
+                },
                 index
             ) => {
                 let selectorProps = {
@@ -154,6 +161,7 @@ const getSelectores = ({
                     titulo,
                     setActualTitulo,
                     quitarFondo,
+                    colorPicker,
                 }
 
                 if (menu === undefined) {
