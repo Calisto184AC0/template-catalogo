@@ -1,10 +1,5 @@
 import styled, { css } from 'styled-components'
-import {
-    DISTANCES,
-    GRID,
-    TABLET_SIZE,
-    TextSmall,
-} from '../../global/GlobalStyles'
+import { DISTANCES, GRID, TextSmall } from '../../global/GlobalStyles'
 import { column_3_span2 } from '../../styles/grid'
 import { mediaQueryTablet } from '../../styles/sizes'
 
