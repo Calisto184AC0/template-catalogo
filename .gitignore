@@ -24,5 +24,4 @@ dist-prev
 *.sln
 *.sw?
 
-src/assets/images
 doc
