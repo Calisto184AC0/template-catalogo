@@ -3,17 +3,26 @@ import Anotacion from '../../../components/Anotacion'
 import Text from '../../../components/Text'
 import { Titulo } from '../../../components/Titulos'
 import useSerie from '../../../hooks/useSerie'
+import AmbienteContainer from '../../../ui-components/AmbienteContainer'
 import StyledSerie from './styles'
 
 const Serie = ({
+    children,
     id,
     config,
     setFullScreenSrc,
     setFullScreenTitulo,
     backgroundColor,
 }) => {
-    const { titulo, descripcion, imgsEjemplo, imgsMuestra, imgsAcabados } =
-        useSerie(config, setFullScreenSrc, setFullScreenTitulo)
+    const {
+        titulo,
+        descripcion,
+        imgsMuestra,
+        imgsAcabados,
+        indicadores,
+        imgAmbiente,
+        imgSelectorAmbiente,
+    } = useSerie(config, setFullScreenSrc, setFullScreenTitulo)
 
     const [isOverflow, setIsOverflow] = useState(false)
     const divEjemplosRef = useRef()
@@ -36,13 +45,14 @@ const Serie = ({
                 />
             ) : undefined}
 
-            <div
-                className='ejemplo-container'
-                onLoad={handleOnLoad}
-                ref={divEjemplosRef}
-            >
-                {imgsEjemplo}
-            </div>
+            <AmbienteContainer onLoad={handleOnLoad} ref={divEjemplosRef}>
+                {imgAmbiente}
+                <AmbienteContainer.SeleccionarMuestra>
+                    {imgSelectorAmbiente}
+                    {indicadores}
+                </AmbienteContainer.SeleccionarMuestra>
+            </AmbienteContainer>
+
             <Text className='text-descripcion'>{descripcion}</Text>
             <Anotacion
                 type='click'
@@ -56,6 +66,7 @@ const Serie = ({
                     <div className='acabado-container'>{imgsAcabados}</div>
                 </>
             ) : undefined}
+            {children}
         </StyledSerie>
     )
 }

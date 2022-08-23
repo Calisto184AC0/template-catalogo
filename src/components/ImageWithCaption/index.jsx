@@ -8,15 +8,22 @@ const ImageWithCaption = ({
     className,
     columnSpan,
     style,
+    mostrarCaption,
+    isGray = false,
 }) => {
-    if (!caption)
+    if (!caption && !mostrarCaption)
         return (
             <StyledImageWithCaption
                 className={className}
                 style={style}
                 columnSpan={columnSpan}
             >
-                <img src={src} alt={alt} onClick={onClickFunc} />
+                <img
+                    src={src}
+                    alt={alt}
+                    onClick={onClickFunc}
+                    className={isGray ? 'gray' : ''}
+                />
             </StyledImageWithCaption>
         )
 
@@ -26,8 +33,13 @@ const ImageWithCaption = ({
             style={style}
             columnSpan={columnSpan}
         >
-            <img src={src} alt={alt} onClick={onClickFunc} />
-            <figcaption>{caption}</figcaption>
+            <img
+                src={src}
+                alt={alt}
+                onClick={onClickFunc}
+                className={isGray ? 'gray' : ''}
+            />
+            <figcaption>{caption || '-'}</figcaption>
         </StyledImageWithCaption>
     )
 }

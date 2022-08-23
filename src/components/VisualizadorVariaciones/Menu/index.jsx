@@ -11,6 +11,7 @@ const Menu = ({
     selectores,
     idMenu,
     changeSeleccionado,
+    volumen,
 }) => {
     const [isOverflow, setIsOverflow] = useState(false)
     const menuContainerRef = useRef()
@@ -43,7 +44,16 @@ const Menu = ({
         let checker = target.tagName !== 'DIV' ? target.parentNode : target
 
         for (let i = 0; i < children.length; i++) {
-            if (checker === children[i]) changeSeleccionado(i, idMenu)
+            if (checker === children[i]) {
+                if (volumen) {
+                    for (const cambio of volumen.listaCambios) {
+                        volumen.idsMenu[cambio].plano.current.src =
+                            volumen.idsMenu[cambio].listaSelector[i]
+                    }
+                    volumen.cleanListaCambios()
+                    break
+                } else changeSeleccionado(i, idMenu)
+            }
         }
     }
 

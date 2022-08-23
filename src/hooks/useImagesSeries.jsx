@@ -4,7 +4,7 @@ import getDataFromModules from '../helpers/getDataFromModules'
 import Enlace from '../modules/06_Diseno/06_1_IndiceSeries/Enlace'
 
 const imagenesAmbienteImports = import.meta.globEager(
-    '../assets/images/Series/**/AMBIENTES/[[:digit:]]*.*.*'
+    '../assets/images/Series/**/EJEMPLO/**'
 )
 
 const imagenesAmbiente = getDataFromModules(imagenesAmbienteImports)

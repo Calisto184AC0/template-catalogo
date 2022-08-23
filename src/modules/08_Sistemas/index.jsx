@@ -2,19 +2,19 @@ import Text from '../../components/Text'
 import { Titulo, Titulo2 } from '../../components/Titulos'
 import StyledSistemas, { Enlaces } from './styles'
 
-import sistemas from '../../assets/images/Sistemas/sistemas.jpg'
+import sistemas from '../../assets/images/Sistemas/sistemas.webp'
 
-import dolckerClip1 from '../../assets/images/Sistemas/sistema-dolcker-clip.jpg'
-import dolckerClip2 from '../../assets/images/Sistemas/dolcker-clip.svg'
+import dolckerClip1 from '../../assets/images/Sistemas/sistema-dolcker-clip.webp'
+import dolckerClip2 from '../../assets/icons/Sistemas/dolcker-clip.svg'
 
-import tc111 from '../../assets/images/Sistemas/sistema-dolcker-tc11.jpg'
-import tc112 from '../../assets/images/Sistemas/dol-hc20.svg'
+import tc111 from '../../assets/images/Sistemas/sistema-dolcker-tc11.webp'
+import tc112 from '../../assets/icons/Sistemas/dol-hc20.svg'
 
-import tc141 from '../../assets/images/Sistemas/sistema-dolcker-tc14.jpg'
-import tc142 from '../../assets/images/Sistemas/dol-hc20.svg'
+import tc141 from '../../assets/images/Sistemas/sistema-dolcker-tc14.webp'
+import tc142 from '../../assets/icons/Sistemas/dol-hc20.svg'
 
-import hc201 from '../../assets/images/Sistemas/sistema-dolcker-hc20.jpg'
-import hc202 from '../../assets/images/Sistemas/dol-hc20.svg'
+import hc201 from '../../assets/images/Sistemas/sistema-dolcker-hc20.webp'
+import hc202 from '../../assets/icons/Sistemas/dol-hc20.svg'
 import ImageWithCaption from '../../components/ImageWithCaption'
 
 const Sistemas = ({ id }) => {
@@ -109,11 +109,13 @@ const Sistemas = ({ id }) => {
                     src={dolckerClip1}
                     alt='Dolcker-clip demostración'
                     columnSpan='5'
+                    isGray
                 />
                 <ImageWithCaption
                     src={dolckerClip2}
                     alt='Dolcker-clip tabla'
                     columnSpan='8'
+                    isGray
                 />
             </StyledSistemas>
 
@@ -137,11 +139,13 @@ const Sistemas = ({ id }) => {
                     src={tc111}
                     alt='DOL-TC11 demostración'
                     columnSpan='5'
+                    isGray
                 />
                 <ImageWithCaption
                     src={tc112}
                     alt='DOL-TC11 tabla'
                     columnSpan='8'
+                    isGray
                 />
             </StyledSistemas>
 
@@ -165,11 +169,13 @@ const Sistemas = ({ id }) => {
                     src={tc141}
                     alt='DOL-TC14 demostración'
                     columnSpan='5'
+                    isGray
                 />
                 <ImageWithCaption
                     src={tc142}
                     alt='DOL-TC14 tabla'
                     columnSpan='8'
+                    isGray
                 />
             </StyledSistemas>
 
@@ -194,11 +200,13 @@ const Sistemas = ({ id }) => {
                     src={hc201}
                     alt='DOL-HC20 demostración'
                     columnSpan='5'
+                    isGray
                 />
                 <ImageWithCaption
                     src={hc202}
                     alt='DOL-HC20 tabla'
                     columnSpan='8'
+                    isGray
                 />
             </StyledSistemas>
         </>

@@ -17,7 +17,7 @@ import { column_5_span7 } from '../../styles/grid'
 const StyledDisenos = styled(Seccion)`
     row-gap: ${DISTANCES.medium};
 
-    .espesores-ejemplos {
+    /* .espesores-ejemplos {
         ${column_5_span7}
 
         ${GridLayout}
@@ -29,11 +29,9 @@ const StyledDisenos = styled(Seccion)`
         img:nth-of-type(2) {
             grid-column: 4 / span 2;
         }
-    }
+    } */
 
     .espesor {
-        grid-row: 2;
-
         ul {
             display: flex;
             flex-direction: column;

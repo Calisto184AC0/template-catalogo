@@ -3,8 +3,8 @@ import ImageWithCaption from '../../components/ImageWithCaption'
 import { Titulo, Titulo2 } from '../../components/Titulos'
 import { COLORS } from '../../global/GlobalStyles'
 import StyledDisenos from './styles'
-import img1 from '../../assets/images/Diseno/catalogo3-1-14.jpg'
-import fondo from '../../assets/images/Diseno/Formato/fondo.jpg'
+import img1 from '../../assets/images/Diseno/catalogo3-1-14.webp'
+import fondo from '../../assets/images/Diseno/Formato/fondo.webp'
 import indicadoresFormato from '../../utils/indicadoresFormato'
 import Anotacion from '../../components/Anotacion'
 import VisualizadorVariaciones from '../../components/VisualizadorVariaciones'
@@ -13,11 +13,11 @@ import VisualizadorRotador from '../../components/VisualizadorRotador'
 import config from '../../configs/configPiezasEspeciales'
 import configAcabados from '../../configs/configAcabados'
 import Series from './06_2_Series'
-import img2 from '../../assets/images/Diseno/Espesores/img1.jpg'
-import img3 from '../../assets/images/Diseno/Espesores/img2.jpg'
-import ranurado11 from '../../assets/images/Diseno/Espesores/ranurado11mm.jpg'
-import ranurado14 from '../../assets/images/Diseno/Espesores/ranurado14.jpg'
-import ranurado20 from '../../assets/images/Diseno/Espesores/ranurado20.jpg'
+import img2 from '../../assets/images/Diseno/Espesores/img1.webp'
+import img3 from '../../assets/images/Diseno/Espesores/img2.webp'
+import ranurado11 from '../../assets/images/Diseno/Espesores/ranurado11mm.webp'
+import ranurado14 from '../../assets/images/Diseno/Espesores/ranurado14.webp'
+import ranurado20 from '../../assets/images/Diseno/Espesores/ranurado20.webp'
 import VisualizadorDesplazador from '../../components/VisualizadorDesplazador'
 import IndiceSeries from './06_1_IndiceSeries'
 
@@ -76,10 +76,6 @@ const Disenos = ({ id }) => {
                 isEspesores
             >
                 <Titulo2>Espesores</Titulo2>
-                <div className='espesores-ejemplos'>
-                    <img src={img2} alt='' />
-                    <img src={img3} alt='' />
-                </div>
                 <div className='espesor espesor-1'>
                     <img src={ranurado11} alt='' />
                     <ul>

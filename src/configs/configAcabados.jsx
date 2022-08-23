@@ -18,7 +18,7 @@ const config = {
     indicadores: [
         { top: '35%', left: '40%' },
         { top: '48%', left: '54%' },
-        { top: '62%', left: '65%' },
+        { top: '60%', left: '65%' },
     ],
     desplazadores: [
         {

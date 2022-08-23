@@ -131,6 +131,7 @@ const reducer = (state, { type, payload }) => {
 }
 
 const getSelectores = ({
+    volumen,
     padre,
     seleccionado,
     selectores,
@@ -143,51 +144,62 @@ const getSelectores = ({
     let hijos = []
 
     selectoresElem = Children.toArray(
-        selectores.map(({ selectorImg, titulo, primerPlano, menu }, index) => {
-            let selectorProps = {
-                selectorImg,
-                titulo,
-                setActualTitulo,
-            }
-
-            if (menu === undefined) {
-                if (seleccionado === index) {
-                    // Esto sirve para que las capas ya tengan un preseleccionado
-                    currentRef.current.src = primerPlano
-                    setActualTitulo(titulo)
-                }
-
-                if (primerPlano === undefined) {
-                    selectorProps.noClick = true
-                } else {
-                    selectorProps.primerPlano = primerPlano
-                    selectorProps.closeMenu = closeMenu
-                    selectorProps.foregroundImgRef = currentRef
-                }
-            } else {
-                const idMenuHijo = getMenu({
-                    padre,
-                    menu,
-                    closeMenu,
-                    currentRef,
+        selectores.map(
+            (
+                { selectorImg, titulo, primerPlano, menu, quitarFondo = false },
+                index
+            ) => {
+                let selectorProps = {
+                    selectorImg,
+                    titulo,
                     setActualTitulo,
-                    ...dispatch,
-                })
+                    quitarFondo,
+                }
 
-                selectorProps.changeMenu = dispatch.changeMenu
-                selectorProps.idMenu = idMenuHijo
+                if (menu === undefined) {
+                    if (seleccionado === index) {
+                        // Esto sirve para que las capas ya tengan un preseleccionado
+                        currentRef.current.src = primerPlano
+                        setActualTitulo(titulo)
+                    }
 
-                hijos.push([index, idMenuHijo])
+                    if (primerPlano === undefined) {
+                        selectorProps.noClick = true
+                    } else {
+                        if (volumen) {
+                            volumen.addIdsMenu(padre, primerPlano, currentRef)
+                        }
+
+                        selectorProps.primerPlano = primerPlano
+                        selectorProps.closeMenu = closeMenu
+                        selectorProps.foregroundImgRef = currentRef
+                    }
+                } else {
+                    const idMenuHijo = getMenu({
+                        padre,
+                        menu,
+                        closeMenu,
+                        currentRef,
+                        setActualTitulo,
+                        ...dispatch,
+                    })
+
+                    selectorProps.changeMenu = dispatch.changeMenu
+                    selectorProps.idMenu = idMenuHijo
+
+                    hijos.push([index, idMenuHijo])
+                }
+
+                return <Selector {...selectorProps} />
             }
-
-            return <Selector {...selectorProps} />
-        })
+        )
     )
 
     return { selectoresElem, hijos }
 }
 
 const getMenu = ({
+    volumen,
     padre,
     menu,
     closeMenu,
@@ -204,6 +216,7 @@ const getMenu = ({
     const seleccionadoAux = seleccionado !== undefined ? seleccionado : -1
 
     const { selectoresElem, hijos } = getSelectores({
+        volumen,
         padre: idMenu,
         seleccionado,
         selectores,
@@ -233,6 +246,7 @@ const getMenu = ({
 }
 
 const getIndicadores = ({
+    volumen,
     config,
     capasRef,
     openMenu,
@@ -245,34 +259,38 @@ const getIndicadores = ({
         Object.entries(config).map(([grupo, indicadores], index) => {
             const currentRef = capasRef[index]
 
-            const indicadoresGrupo = indicadores.map(({ top, left, menu }) => {
-                const idMenu = getMenu({
-                    menu,
-                    closeMenu,
-                    currentRef,
-                    setActualTitulo,
-                    ...dispatch,
-                })
-                const { changeMenu } = dispatch
+            const indicadoresGrupo = indicadores.map(
+                ({ top, left, coord, menu }) => {
+                    const idMenu = getMenu({
+                        volumen,
+                        menu,
+                        closeMenu,
+                        currentRef,
+                        setActualTitulo,
+                        ...dispatch,
+                    })
+                    const { changeMenu } = dispatch
 
-                const indicadorProps = {
-                    top,
-                    left,
-                    idMenu,
-                    changeMenu,
-                    openMenu,
-                    closeMenu,
+                    const indicadorProps = {
+                        coord,
+                        top,
+                        left,
+                        idMenu,
+                        changeMenu,
+                        openMenu,
+                        closeMenu,
+                    }
+
+                    return <Indicador {...indicadorProps} />
                 }
-
-                return <Indicador {...indicadorProps} />
-            })
+            )
 
             return indicadoresGrupo
         })
     )
 }
 
-const useIndicadoresVariaciones = config => {
+const useIndicadoresVariaciones = (config, volumen) => {
     const { capas, capasRef } = getCapas(config)
 
     const [state, dispatch] = useReducer(reducer, {
@@ -291,11 +309,12 @@ const useIndicadoresVariaciones = config => {
             type: ACTIONS.ADD_MENU,
             payload: menu,
         })
-    const changeMenu = idMenu =>
+    const changeMenu = idMenu => {
         dispatch({
             type: ACTIONS.CHANGE_MENU,
             payload: idMenu,
         })
+    }
     const changeSeleccionado = (index, idMenu) =>
         dispatch({
             type: ACTIONS.CHANGE_SELECCIONADO,
@@ -322,6 +341,7 @@ const useIndicadoresVariaciones = config => {
     useEffect(() => {
         addIndicadores(
             getIndicadores({
+                volumen,
                 config,
                 capasRef,
                 setActualTitulo,
@@ -349,6 +369,8 @@ const useIndicadoresVariaciones = config => {
         closeMenu,
         changeSeleccionado,
         idMenu: state.actualIdMenu,
+        changeMenu,
+        openMenu,
     }
 }
 

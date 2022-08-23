@@ -3,11 +3,14 @@ import Text from '../../components/Text'
 import { COLORS } from '../../global/GlobalStyles'
 import StyledFinal from './styles'
 
-const Final = () => {
+const Final = ({ invert = false }) => {
+    const bgColor = invert ? COLORS.gray01 : COLORS.gray08
+    const textColor = invert ? COLORS.gray08 : COLORS.gray01
+
     return (
-        <StyledFinal backgroundColor={COLORS.gray08} fullScreen>
+        <StyledFinal backgroundColor={bgColor} fullScreen>
             <Logo />
-            <Text color={COLORS.gray01}>
+            <Text color={textColor}>
                 El contenido de este catálogo está protegido por la ley de
                 Propiedad Intelectual, Real Decreto Legistlativo 1/1996.
                 Cualquier reproducción del mismo, en parte o en su totalidad,

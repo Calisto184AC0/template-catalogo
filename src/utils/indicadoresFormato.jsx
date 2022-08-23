@@ -4,7 +4,7 @@ const backgroundImports = import.meta.globEager(
     '../assets/images/Diseno/Formato/backgrounds/**'
 )
 const selectImports = import.meta.globEager(
-    '../assets/images/Diseno/Formato/selects/**'
+    '../assets/icons/SelectoresFormato/**'
 )
 
 const backgrounds = getDataFromModules(backgroundImports)

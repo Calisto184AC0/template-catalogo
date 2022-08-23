@@ -18,6 +18,7 @@ export const column_5_span7 = column_start_end(5, 'span 7')
 export const column_5_span6 = column_start_end(5, 'span 6')
 export const column_5_span5 = column_start_end(5, 'span 5')
 export const column_5_span4 = column_start_end(5, 'span 4')
+export const column_5_span3 = column_start_end(5, 'span 3')
 
 export const gridLayoutTemplate = (
     {

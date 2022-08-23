@@ -1,5 +1,7 @@
 import { useState } from 'react'
+import Anotacion from '../../../components/Anotacion'
 import FullScreen from '../../../components/FullScreen'
+import VisualizadorVariaciones from '../../../components/VisualizadorVariaciones'
 import configArquitect from '../../../configs/Series/configArquitect'
 import configBASALT from '../../../configs/Series/configBasalt'
 import configCRETE from '../../../configs/Series/configCrete'
@@ -17,9 +19,34 @@ import configWOOD from '../../../configs/Series/configWood'
 import { COLORS } from '../../../global/GlobalStyles'
 import Serie from './Serie'
 
+import fondo from '../../../assets/images/VolumenVariacion/fondo.jpg'
+import indicadoresFormato from '../../../configs/configVolumenVariacion'
+import { useListaCambios } from '../../../contexts/MultipleOptionsContext'
+import Anotaciones from '../../../components/Anotacion/Anotaciones'
+
 const Series = ({ ids }) => {
     const [fullScreenSrc, setFullScreenSrc] = useState('')
     const [fullScreenTitulo, setFullScreenTitulo] = useState('')
+
+    const { listaCambios, cleanListaCambios, addIdsMenu, idsMenu } =
+        useListaCambios()
+
+    const propsFormato = {
+        anotacion2: {
+            text: 'Selecciona las áreas donde quieras aplicar la pieza',
+            type: 'normal',
+        },
+        anotacion: {
+            text: 'Haz click en el punto para seleccionar la pieza a aplicar',
+            type: 'click',
+        },
+        visualizador: {
+            config: indicadoresFormato,
+            srcfondo: fondo,
+            altFondo: 'Imagen de fondo con indicadores',
+            volumen: { listaCambios, cleanListaCambios, addIdsMenu, idsMenu },
+        },
+    }
 
     return (
         <>
@@ -27,6 +54,7 @@ const Series = ({ ids }) => {
                 imgSrc={fullScreenSrc}
                 setFullScreenSrc={setFullScreenSrc}
                 titulo={fullScreenTitulo}
+                setFullScreenTitulo={setFullScreenTitulo}
                 backgroundColor={COLORS.gray01}
             />
             <Serie
@@ -126,7 +154,13 @@ const Series = ({ ids }) => {
                 setFullScreenSrc={setFullScreenSrc}
                 setFullScreenTitulo={setFullScreenTitulo}
                 backgroundColor={COLORS.gray01}
-            />
+            >
+                <Anotaciones className='anotacion-variaciones'>
+                    <Anotacion {...propsFormato.anotacion2} />
+                    <Anotacion {...propsFormato.anotacion} />
+                </Anotaciones>
+                <VisualizadorVariaciones {...propsFormato.visualizador} />
+            </Serie>
         </>
     )
 }
