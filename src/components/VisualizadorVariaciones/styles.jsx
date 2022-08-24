@@ -29,7 +29,20 @@ const StyledVisualizadorVariaciones = styled.div`
         position: absolute;
         top: 0;
         left: 0;
+        width: 100%;
+        height: 100%;
         z-index: 1;
+        mix-blend-mode: multiply;
+
+        .st0 {
+            fill: none;
+            stroke: ${({ selectedColor }) => selectedColor || '#000'};
+            stroke-width: 0.3;
+            stroke-miterlimit: 10;
+        }
+        .st1 {
+            fill: ${({ selectedColor }) => selectedColor || '#000'};
+        }
     }
 
     .indicadores {

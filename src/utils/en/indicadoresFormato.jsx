@@ -1,3 +1,4 @@
+import SvgComponent from '../../assets/images/Diseno/Formato/ColorSVG'
 import getDataFromModules from '../../helpers/getDataFromModules'
 
 const backgroundImports = import.meta.globEager(
@@ -40,30 +41,8 @@ const config = {
                     {
                         selectorImg: selects[25],
                         titulo: 'Line colors',
-                        menu: {
-                            seleccionado: -1,
-                            selectores: [
-                                {
-                                    selectorImg: selects[29],
-                                    titulo: 'Line color green',
-                                    primerPlano: backgrounds[3],
-                                },
-                                {
-                                    selectorImg: selects[24],
-                                    titulo: 'Line color white',
-                                    primerPlano: backgrounds[1],
-                                },
-                                {
-                                    selectorImg: selects[27],
-                                    titulo: 'Line color red',
-                                    primerPlano: backgrounds[2],
-                                },
-                                {
-                                    selectorImg: selects[26],
-                                    titulo: 'RAL colors',
-                                },
-                            ],
-                        },
+                        primerPlano: <SvgComponent />,
+                        colorPicker: true,
                     },
                     {
                         selectorImg: selects[19],

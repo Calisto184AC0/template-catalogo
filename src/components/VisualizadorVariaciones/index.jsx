@@ -24,6 +24,7 @@ const VisualizadorVariaciones = ({
         changeMenu,
         openMenu,
         anotherElement,
+        selectedColor,
     } = useIndicadoresVariaciones(config, volumen)
 
     const handleClick = e => {
@@ -34,7 +35,10 @@ const VisualizadorVariaciones = ({
 
     if (volumen) {
         return (
-            <StyledVisualizadorVariaciones ref={visRef}>
+            <StyledVisualizadorVariaciones
+                ref={visRef}
+                selectedColor={selectedColor}
+            >
                 <img src={srcfondo} alt={altFondo} />
                 {capas}
                 {anotherElement}
@@ -72,7 +76,7 @@ const VisualizadorVariaciones = ({
     }
 
     return (
-        <StyledVisualizadorVariaciones>
+        <StyledVisualizadorVariaciones selectedColor={selectedColor}>
             <img src={srcfondo} alt={altFondo} />
             {capas}
             {anotherElement}

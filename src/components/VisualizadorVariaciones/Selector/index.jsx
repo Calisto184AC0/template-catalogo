@@ -17,9 +17,8 @@ const Selector = ({
     noClick,
     setAnotherElement,
     colorPicker,
+    setSelectedColor,
 }) => {
-    const [selectedColor, setSelectedColor] = useState('#000000')
-
     const handleClick = () => {
         if (noClick) return
 
@@ -34,6 +33,7 @@ const Selector = ({
             } else {
                 if (typeof primerPlano === 'string') {
                     foregroundImgRef.current.src = primerPlano
+                    setAnotherElement()
                 } else {
                     foregroundImgRef.current.src = ''
                     setAnotherElement(primerPlano)
@@ -44,19 +44,6 @@ const Selector = ({
         }
     }
 
-    useEffect(() => {
-        if (colorPicker === undefined) return
-    }, [selectedColor])
-
-    const handleColorChange = (color = selectedColor) => {
-        // closeMenu()
-
-        // setActualTitulo(titulo)
-        // foregroundImgRef.current.src = primerPlano
-
-        setSelectedColor(color)
-    }
-
     if (colorPicker) {
         return (
             <StyledSelectorLabel onClick={handleClick}>
@@ -64,8 +51,8 @@ const Selector = ({
                 <span>{titulo}</span>
                 <input
                     type='color'
-                    onChange={({ target }) => handleColorChange(target.value)}
-                    value={selectedColor}
+                    onChange={({ target }) => setSelectedColor(target.value)}
+                    value='#000000'
                 />
             </StyledSelectorLabel>
         )

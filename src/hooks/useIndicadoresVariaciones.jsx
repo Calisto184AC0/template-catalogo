@@ -139,6 +139,7 @@ const getSelectores = ({
     currentRef,
     setActualTitulo,
     setAnotherElement,
+    setSelectedColor,
     ...dispatch
 }) => {
     let selectoresElem = []
@@ -164,6 +165,7 @@ const getSelectores = ({
                     quitarFondo,
                     colorPicker,
                     setAnotherElement,
+                    setSelectedColor,
                 }
 
                 if (menu === undefined) {
@@ -191,6 +193,8 @@ const getSelectores = ({
                         closeMenu,
                         currentRef,
                         setActualTitulo,
+                        setAnotherElement,
+                        setSelectedColor,
                         ...dispatch,
                     })
 
@@ -216,6 +220,7 @@ const getMenu = ({
     currentRef,
     setActualTitulo,
     setAnotherElement,
+    setSelectedColor,
     ...dispatch
 }) => {
     const idMenu = Math.floor((1 + Math.random()) * 0x10000)
@@ -235,6 +240,7 @@ const getMenu = ({
         currentRef,
         setActualTitulo,
         setAnotherElement,
+        setSelectedColor,
         ...dispatch,
     })
 
@@ -265,6 +271,7 @@ const getIndicadores = ({
     closeMenu,
     setActualTitulo,
     setAnotherElement,
+    setSelectedColor,
     ...dispatch
 }) => {
     return Children.toArray(
@@ -281,6 +288,7 @@ const getIndicadores = ({
                         currentRef,
                         setActualTitulo,
                         setAnotherElement,
+                        setSelectedColor,
                         ...dispatch,
                     })
                     const { changeMenu } = dispatch
@@ -319,6 +327,7 @@ const useIndicadoresVariaciones = (config, volumen) => {
     const [actualTitulo, setActualTitulo] = useState('')
 
     const [anotherElement, setAnotherElement] = useState()
+    const [selectedColor, setSelectedColor] = useState('#000000')
 
     const addMenu = menu =>
         dispatch({
@@ -367,6 +376,7 @@ const useIndicadoresVariaciones = (config, volumen) => {
                 changeMenu,
                 changeSeleccionado,
                 setAnotherElement,
+                setSelectedColor,
             })
         )
 
@@ -390,6 +400,7 @@ const useIndicadoresVariaciones = (config, volumen) => {
         openMenu,
         anotherElement,
         setAnotherElement,
+        selectedColor,
     }
 }
 
