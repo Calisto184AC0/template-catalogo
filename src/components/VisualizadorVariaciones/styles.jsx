@@ -25,6 +25,13 @@ const StyledVisualizadorVariaciones = styled.div`
         // No pongo más porque ya está definido en img {widht y height 100%}
     }
 
+    > svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
     .indicadores {
         position: absolute;
         top: 0;

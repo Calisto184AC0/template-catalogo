@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useState } from 'react'
 import StyledSelector, { StyledSelectorLabel } from './styles'
 
@@ -14,6 +15,7 @@ const Selector = ({
     changeMenu,
     setActualTitulo,
     noClick,
+    setAnotherElement,
     colorPicker,
 }) => {
     const [selectedColor, setSelectedColor] = useState('#000000')
@@ -30,21 +32,34 @@ const Selector = ({
                 setRotador(primerPlano)
                 foregroundImgRef.current.src = primerPlano[indexRotador]
             } else {
-                foregroundImgRef.current.src = primerPlano
+                if (typeof primerPlano === 'string') {
+                    foregroundImgRef.current.src = primerPlano
+                } else {
+                    foregroundImgRef.current.src = ''
+                    setAnotherElement(primerPlano)
+                }
             }
         } else {
             changeMenu(idMenu)
         }
     }
 
-    const handleColorChange = color => {
+    useEffect(() => {
+        if (colorPicker === undefined) return
+    }, [selectedColor])
+
+    const handleColorChange = (color = selectedColor) => {
+        // closeMenu()
+
+        // setActualTitulo(titulo)
+        // foregroundImgRef.current.src = primerPlano
+
         setSelectedColor(color)
-        console.log('solo un cambio', color)
     }
 
     if (colorPicker) {
         return (
-            <StyledSelectorLabel>
+            <StyledSelectorLabel onClick={handleClick}>
                 <img src={selectorImg} alt={'Selector ' + titulo} />
                 <span>{titulo}</span>
                 <input

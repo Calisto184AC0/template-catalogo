@@ -138,6 +138,7 @@ const getSelectores = ({
     closeMenu,
     currentRef,
     setActualTitulo,
+    setAnotherElement,
     ...dispatch
 }) => {
     let selectoresElem = []
@@ -162,6 +163,7 @@ const getSelectores = ({
                     setActualTitulo,
                     quitarFondo,
                     colorPicker,
+                    setAnotherElement,
                 }
 
                 if (menu === undefined) {
@@ -213,6 +215,7 @@ const getMenu = ({
     closeMenu,
     currentRef,
     setActualTitulo,
+    setAnotherElement,
     ...dispatch
 }) => {
     const idMenu = Math.floor((1 + Math.random()) * 0x10000)
@@ -231,6 +234,7 @@ const getMenu = ({
         closeMenu,
         currentRef,
         setActualTitulo,
+        setAnotherElement,
         ...dispatch,
     })
 
@@ -260,6 +264,7 @@ const getIndicadores = ({
     openMenu,
     closeMenu,
     setActualTitulo,
+    setAnotherElement,
     ...dispatch
 }) => {
     return Children.toArray(
@@ -275,6 +280,7 @@ const getIndicadores = ({
                         closeMenu,
                         currentRef,
                         setActualTitulo,
+                        setAnotherElement,
                         ...dispatch,
                     })
                     const { changeMenu } = dispatch
@@ -311,6 +317,8 @@ const useIndicadoresVariaciones = (config, volumen) => {
     })
 
     const [actualTitulo, setActualTitulo] = useState('')
+
+    const [anotherElement, setAnotherElement] = useState()
 
     const addMenu = menu =>
         dispatch({
@@ -358,6 +366,7 @@ const useIndicadoresVariaciones = (config, volumen) => {
                 addMenu,
                 changeMenu,
                 changeSeleccionado,
+                setAnotherElement,
             })
         )
 
@@ -379,6 +388,8 @@ const useIndicadoresVariaciones = (config, volumen) => {
         idMenu: state.actualIdMenu,
         changeMenu,
         openMenu,
+        anotherElement,
+        setAnotherElement,
     }
 }
 

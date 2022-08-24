@@ -23,6 +23,7 @@ const VisualizadorVariaciones = ({
         changeSeleccionado,
         changeMenu,
         openMenu,
+        anotherElement,
     } = useIndicadoresVariaciones(config, volumen)
 
     const handleClick = e => {
@@ -36,6 +37,7 @@ const VisualizadorVariaciones = ({
             <StyledVisualizadorVariaciones ref={visRef}>
                 <img src={srcfondo} alt={altFondo} />
                 {capas}
+                {anotherElement}
                 {capas.length === 1 ? <span>{actualTitulo}</span> : null}
 
                 <div className='indicadores' onClick={handleClick}>
@@ -73,6 +75,7 @@ const VisualizadorVariaciones = ({
         <StyledVisualizadorVariaciones>
             <img src={srcfondo} alt={altFondo} />
             {capas}
+            {anotherElement}
             {capas.length === 1 ? <span>{actualTitulo}</span> : null}
 
             <div className='indicadores' onClick={handleClick}>
