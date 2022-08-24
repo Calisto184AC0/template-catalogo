@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import Anotacion from '../../../../components/Anotacion'
 import FullScreen from '../../../../components/FullScreen'
 import VisualizadorVariaciones from '../../../../components/VisualizadorVariaciones'
@@ -23,14 +23,21 @@ import fondo from '../../../../assets/images/VolumenVariacion/fondo.jpg'
 import configVolumenSelectores from '../../../../configs/EN/configVolumenVariacion'
 import { useListaCambios } from '../../../../contexts/MultipleOptionsContext'
 import Anotaciones from '../../../../components/Anotacion/Anotaciones'
+import createPDF from '../../../../utils/createPDF'
 
 const Series = ({ ids }) => {
     const [fullScreenSrc, setFullScreenSrc] = useState('')
     const [fullScreenTitulo, setFullScreenTitulo] = useState('')
+    const visRef = useRef(null)
 
     const { listaCambios, cleanListaCambios, addIdsMenu, idsMenu } =
         useListaCambios()
     const propsFormato = {
+        anotacionPDF: {
+            text: 'Click here to download a PDF of your placement',
+            type: 'pdf',
+            onClick: () => createPDF(visRef),
+        },
         anotacion2: {
             text: 'Select the areas where you want to apply the part',
             type: 'normal',
@@ -44,6 +51,7 @@ const Series = ({ ids }) => {
             srcfondo: fondo,
             altFondo: 'Background image with indicators',
             volumen: { listaCambios, cleanListaCambios, addIdsMenu, idsMenu },
+            visRef,
         },
     }
 
@@ -155,6 +163,7 @@ const Series = ({ ids }) => {
                 backgroundColor={COLORS.gray01}
             >
                 <Anotaciones className='anotacion-variaciones'>
+                    <Anotacion {...propsFormato.anotacionPDF} />
                     <Anotacion {...propsFormato.anotacion2} />
                     <Anotacion {...propsFormato.anotacion} />
                 </Anotaciones>

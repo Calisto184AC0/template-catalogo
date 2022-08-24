@@ -37,8 +37,8 @@ const Series = ({ ids }) => {
 
     const propsFormato = {
         anotacionPDF: {
-            text: 'Pulsa aquí para descargar un documento PDF de la pieza',
-            type: 'click',
+            text: 'Haz click aquí para descargar un PDF con tu colocación',
+            type: 'pdf',
             onClick: () => createPDF(visRef),
         },
         anotacion2: {

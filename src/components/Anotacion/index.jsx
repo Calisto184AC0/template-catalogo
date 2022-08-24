@@ -1,6 +1,7 @@
 import click from '../../assets/icons/handdown.svg'
 import normal from '../../assets/icons/handup.svg'
 import swipe from '../../assets/icons/handswipe.svg'
+import pdf from '../../assets/icons/generate-pdf.svg'
 import StyledAnotacion from './styles'
 
 const Anotacion = ({ type, text, className, onClick }) => {
@@ -8,6 +9,7 @@ const Anotacion = ({ type, text, className, onClick }) => {
         click,
         normal,
         swipe,
+        pdf,
     }
 
     return (
