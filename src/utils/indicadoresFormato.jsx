@@ -1,6 +1,7 @@
 import getDataFromModules from '../helpers/getDataFromModules'
-import colorBg from '../assets/images/Diseno/Formato/color.svg'
+import lineColorsBg from '../assets/images/Diseno/Formato/fondoLineColors.png'
 import SvgComponent from '../assets/images/Diseno/Formato/ColorSVG'
+import { Children } from 'react'
 
 const backgroundImports = import.meta.globEager(
     '../assets/images/Diseno/Formato/backgrounds/**'
@@ -42,7 +43,13 @@ const config = {
                     {
                         selectorImg: selects[25],
                         titulo: 'Line colors',
-                        primerPlano: <SvgComponent />,
+                        primerPlano: {
+                            bg: backgrounds[1],
+                            another: Children.toArray([
+                                <SvgComponent className='plano' />,
+                                <SvgComponent className='fondo' />,
+                            ]),
+                        },
                         colorPicker: true,
                         // menu: {
                         //     seleccionado: -1,

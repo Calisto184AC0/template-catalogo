@@ -35,8 +35,8 @@ const Selector = ({
                     foregroundImgRef.current.src = primerPlano
                     setAnotherElement()
                 } else {
-                    foregroundImgRef.current.src = ''
-                    setAnotherElement(primerPlano)
+                    foregroundImgRef.current.src = primerPlano.bg
+                    setAnotherElement(primerPlano.another)
                 }
             }
         } else {
