@@ -1,3 +1,4 @@
+import { Children } from 'react'
 import SvgComponent from '../../assets/images/Diseno/Formato/ColorSVG'
 import getDataFromModules from '../../helpers/getDataFromModules'
 
@@ -41,7 +42,13 @@ const config = {
                     {
                         selectorImg: selects[25],
                         titulo: 'Line colors',
-                        primerPlano: <SvgComponent />,
+                        primerPlano: {
+                            bg: backgrounds[1],
+                            another: Children.toArray([
+                                <SvgComponent className='plano' />,
+                                <SvgComponent className='fondo' />,
+                            ]),
+                        },
                         colorPicker: true,
                     },
                     {
