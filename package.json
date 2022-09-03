@@ -6,7 +6,7 @@
         "dev": "vite",
         "dev-mobile": "vite --host",
         "build": "vite build",
-        "preview": "vite preview"
+        "preview": "vite build && vite preview"
     },
     "dependencies": {
         "jspdf": "^2.5.1",
