@@ -327,7 +327,7 @@ const useIndicadoresVariaciones = (config, volumen) => {
     const [actualTitulo, setActualTitulo] = useState('')
 
     const [anotherElement, setAnotherElement] = useState()
-    const [selectedColor, setSelectedColor] = useState('#000000')
+    const [selectedColor, setSelectedColor] = useState('#3c0000')
 
     const addMenu = menu =>
         dispatch({

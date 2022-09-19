@@ -52,7 +52,7 @@ const Selector = ({
                 <input
                     type='color'
                     onChange={({ target }) => setSelectedColor(target.value)}
-                    value='#000000'
+                    value='#3c0000'
                 />
             </StyledSelectorLabel>
         )

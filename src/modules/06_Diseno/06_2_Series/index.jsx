@@ -166,9 +166,9 @@ const Series = ({ ids }) => {
                 backgroundColor={COLORS.gray01}
             >
                 <Anotaciones className='anotacion-variaciones'>
-                    <Anotacion {...propsFormato.anotacionPDF} />
                     <Anotacion {...propsFormato.anotacion2} />
                     <Anotacion {...propsFormato.anotacion} />
+                    <Anotacion {...propsFormato.anotacionPDF} />
                 </Anotaciones>
                 <VisualizadorVariaciones {...propsFormato.visualizador} />
             </Serie>
