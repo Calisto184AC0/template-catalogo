@@ -20,7 +20,7 @@ const configDescargas = [
         size: '8,4 MB',
     },
     {
-        path: '/downloads/Sistema Dolcker clip.pdf',
+        path: '/downloads/Sistema Dolcker clip ingles.pdf',
         imgSrc: downloadImgSrc['portada dolckerclip'],
         title: 'Systems',
         fileName: 'Dolcker & Clip',
@@ -28,7 +28,7 @@ const configDescargas = [
         size: '6,2 MB',
     },
     {
-        path: '/downloads/Sistema DOTC11.pdf',
+        path: '/downloads/Sistema DOTC11 INGLES.pdf',
         imgSrc: downloadImgSrc['Sistema DOTC11_Pagina_01'],
         title: 'Systems',
         fileName: 'DOL - TC11',
@@ -36,7 +36,7 @@ const configDescargas = [
         size: '6,3 MB',
     },
     {
-        path: '/downloads/Sistema DOHC20.pdf',
+        path: '/downloads/Sistema DOTC14 INGLES.pdf',
         imgSrc: downloadImgSrc['Sistema DOTC14_Pagina_01'],
         title: 'Systems',
         fileName: 'DOL - TC14',
@@ -44,7 +44,7 @@ const configDescargas = [
         size: '5,7 MB',
     },
     {
-        path: '/downloads/Sistema DOHC20.pdf',
+        path: '/downloads/Sistema DOHC20 INGLES.pdf',
         imgSrc: downloadImgSrc['portada DOHC20'],
         title: 'Systems',
         fileName: 'DOL - HC20',
