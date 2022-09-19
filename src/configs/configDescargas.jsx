@@ -34,7 +34,7 @@ const configDescargas = [
         size: '6,3 MB',
     },
     {
-        path: '/downloads/Sistema DOHC20.pdf',
+        path: '/downloads/Sistema DOTC14.pdf',
         imgSrc: downloadImgSrc['Sistema DOTC14_Pagina_01'],
         title: 'Sistemas',
         fileName: 'DOL - TC14',
