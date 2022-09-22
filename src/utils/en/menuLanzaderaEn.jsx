@@ -4,27 +4,27 @@ const menuLanzaderaEn = [
         link: '/en/quienes-somos',
     },
     {
-        title: 'Catálogos',
+        title: 'Catalogs',
         subList: [
             {
-                title: 'Fachadas ventiladas',
+                title: 'Ventilated facades',
                 link: '/en/catalogos/fachadas-ventiladas',
             },
         ],
     },
     {
-        title: 'Contacto',
+        title: 'Contact',
         link: '/en/contacto',
     },
     {
         title: 'Legal',
         subList: [
             {
-                title: 'Aviso legal',
+                title: 'Legal notice',
                 link: '/en/aviso-legal',
             },
             {
-                title: 'Política de privacidad',
+                title: 'Privacy policy',
                 link: '/en/politica-privacidad',
             },
         ],
