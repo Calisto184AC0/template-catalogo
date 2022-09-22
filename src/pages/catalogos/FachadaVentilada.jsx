@@ -47,7 +47,7 @@ const FachadaVentilada = () => {
                 id={[
                     'sistemas',
                     'dolcker-and-clip',
-                    'dol-tc10',
+                    'dol-tc11',
                     'dol-tc14',
                     'dol-hc20',
                 ]}
