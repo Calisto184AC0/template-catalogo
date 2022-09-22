@@ -8,10 +8,10 @@ import dolckerClip1 from '../../assets/images/Sistemas/sistema-dolcker-clip.webp
 import dolckerClip2 from '../../assets/icons/Sistemas/dolcker-clip.svg'
 
 import tc111 from '../../assets/images/Sistemas/sistema-dolcker-tc11.webp'
-import tc112 from '../../assets/icons/Sistemas/dol-hc20.svg'
+import tc112 from '../../assets/icons/Sistemas/dol-tc11.svg'
 
 import tc141 from '../../assets/images/Sistemas/sistema-dolcker-tc14.webp'
-import tc142 from '../../assets/icons/Sistemas/dol-hc20.svg'
+import tc142 from '../../assets/icons/Sistemas/dol-tc14.svg'
 
 import hc201 from '../../assets/images/Sistemas/sistema-dolcker-hc20.webp'
 import hc202 from '../../assets/icons/Sistemas/dol-hc20.svg'
