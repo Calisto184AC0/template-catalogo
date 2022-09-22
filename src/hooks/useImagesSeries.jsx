@@ -30,7 +30,7 @@ const useImagesSeries = () => {
     return Children.toArray(
         enlacesObj.map(({ titulo, src, id }) => {
             return (
-                <Enlace href={id}>
+                <Enlace href={id} className='enlace'>
                     <img src={src} alt={titulo + ' ejemplo'} />
                     <span>{titulo}</span>
                 </Enlace>

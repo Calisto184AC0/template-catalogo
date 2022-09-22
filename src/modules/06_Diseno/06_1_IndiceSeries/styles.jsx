@@ -10,7 +10,7 @@ const SyledIndiceSeries = styled(Seccion)`
         ${column_total}
     }
 
-    ${Enlace} {
+    ${Enlace}, > .enlace {
         grid-column-end: span 2;
         ${mediaQueryTablet(css`
             grid-column-start: 1;
