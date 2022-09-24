@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import ImageWithCaption from '../../../components/ImageWithCaption'
 import { Titulo } from '../../../components/Titulos'
 import { COLORS } from '../../../global/GlobalStyles'
