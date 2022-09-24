@@ -1,9 +1,9 @@
 import { useRef, useState } from 'react'
+import AmbienteContainer from '../../../../components/AmbienteContainer'
 import Anotacion from '../../../../components/Anotacion'
 import Text from '../../../../components/Text'
 import { Titulo } from '../../../../components/Titulos'
 import useSerie from '../../../../hooks/useSerie'
-import AmbienteContainer from '../../../../ui-components/AmbienteContainer'
 import StyledSerie from './styles'
 
 const Serie = ({
