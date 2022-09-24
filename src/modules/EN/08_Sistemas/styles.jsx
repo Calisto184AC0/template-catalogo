@@ -3,7 +3,6 @@ import Seccion from '../../../components/Seccion'
 import Text from '../../../components/Text'
 import { DISTANCES } from '../../../global/GlobalStyles'
 import {
-    column_5_span4,
     column_5_span6,
     column_5_span8,
     gridLayoutTemplate,

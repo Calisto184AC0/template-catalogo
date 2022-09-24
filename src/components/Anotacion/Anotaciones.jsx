@@ -1,12 +1,6 @@
 import styled from 'styled-components'
 import StyledAnotacion from './styles'
-import {
-    DISTANCES,
-    GRID,
-    TABLET_SIZE,
-    TextSmall,
-} from '../../global/GlobalStyles'
-import { column_3_span2 } from '../../styles/grid'
+import { TABLET_SIZE } from '../../global/GlobalStyles'
 
 const Anotaciones = styled.div`
     @media (max-width: ${TABLET_SIZE}) {

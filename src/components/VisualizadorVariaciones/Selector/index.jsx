@@ -1,5 +1,3 @@
-import { useEffect } from 'react'
-import { useState } from 'react'
 import StyledSelector, { StyledSelectorLabel } from './styles'
 
 const Selector = ({

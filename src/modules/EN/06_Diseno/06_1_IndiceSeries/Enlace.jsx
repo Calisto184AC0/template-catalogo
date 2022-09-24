@@ -1,9 +1,5 @@
 import styled from 'styled-components'
-import {
-    DISTANCES,
-    TextMedium,
-    TextSmall,
-} from '../../../../global/GlobalStyles'
+import { TextSmall } from '../../../../global/GlobalStyles'
 
 const Enlace = styled.a`
     display: flex;

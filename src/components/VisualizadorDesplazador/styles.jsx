@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { GRID, TextMedium } from '../../global/GlobalStyles'
+import { TextMedium } from '../../global/GlobalStyles'
 import { column_5_span6 } from '../../styles/grid'
 import { DISTANCES } from '../../styles/sizes'
 import wipe from '../../assets/icons/wipe.svg'

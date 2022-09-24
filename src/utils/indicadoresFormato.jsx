@@ -1,5 +1,4 @@
 import getDataFromModules from '../helpers/getDataFromModules'
-import lineColorsBg from '../assets/images/Diseno/Formato/fondoLineColors.png'
 import SvgComponent from '../assets/images/Diseno/Formato/ColorSVG'
 import { Children } from 'react'
 

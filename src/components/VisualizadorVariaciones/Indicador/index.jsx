@@ -1,6 +1,6 @@
 import StyledIndicador from './styles'
 import openIndicador from '../../../assets/icons/open-indicator.svg'
-import { useContext, useEffect, useState } from 'react'
+import { useContext } from 'react'
 import IsOpenContext from '../../../contexts/IsOpenMenuContext'
 import IndicadorPlano from './IndicadorPlano'
 import { useListaCambios } from '../../../contexts/MultipleOptionsContext'
