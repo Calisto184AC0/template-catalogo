@@ -1,15 +1,17 @@
-import Dolcker from '../../../modules/EN/03_Dolcker'
-import Indice from '../../../modules/EN/02_Indice'
-import Introduccion from '../../../modules/EN/01_Introduccion'
-import Ventajas from '../../../modules/EN/04_Ventajas'
-import Aplicaciones from '../../../modules/EN/05_Aplicaciones'
-import Disenos from '../../../modules/EN/06_Diseno'
-import Caracteristicas from '../../../modules/EN/07_Caracteristicas'
-import Sistemas from '../../../modules/EN/08_Sistemas'
-import Descargas from '../../../modules/EN/09_Descargas'
-import Final from '../../../modules/EN/10_Final'
 import { useRef } from 'react'
 import MultipleOptionsProvider from '../../../contexts/MultipleOptionsContext'
+import {
+    Aplicaciones,
+    Caracteristicas,
+    Descargas,
+    Dolcker,
+    Final,
+    Indice,
+    Introduccion,
+    Sistemas,
+    Ventajas,
+} from '../../../modules/EN'
+import Disenos from '../../../modules/EN/06_Diseno'
 
 const FachadaVentiladaEn = () => {
     const indiceRef = useRef()
